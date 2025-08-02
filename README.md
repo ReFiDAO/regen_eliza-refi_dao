@@ -33,15 +33,10 @@ graph LR
     subgraph "🔧 Plugins"
         P1[plugin-sql<br/>Database Integration]
         P2[plugin-knowledge<br/>RAG Processing]
-        P3[plugin-openai<br/>OpenAI Models]
-        P4[plugin-anthropic<br/>Anthropic Models]
-        P5[plugin-openrouter<br/>OpenRouter Models]
-        P6[plugin-google-genai<br/>Google AI Models]
-        P7[plugin-ollama<br/>Local Models]
-        P8[plugin-discord<br/>Discord Platform]
-        P9[plugin-twitter<br/>Twitter Platform]
-        P10[plugin-telegram<br/>Telegram Platform]
-        P11[plugin-bootstrap<br/>Core Functions]
+        P3[plugin-discord<br/>Discord Platform]
+        P4[plugin-twitter<br/>Twitter Platform]
+        P5[plugin-telegram<br/>Telegram Platform]
+        P6[plugin-bootstrap<br/>Core Functions]
     end
     
     %% Capabilities with plugin subsections
@@ -57,13 +52,6 @@ graph LR
             C5[Document Processing<br/>Content Analysis]
             C6[Vector Search<br/>Semantic Matching]
             C7[Knowledge Base<br/>Specialized Content]
-        end
-        
-        subgraph "LLM Plugin Capabilities"
-            C8[AI Generation<br/>LLM Processing]
-            C9[Natural Language<br/>Understanding]
-            C10[Context Management<br/>Conversation Memory]
-            C11[Response Generation<br/>Tailored Outputs]
         end
         
         subgraph "Platform Plugin Capabilities"
@@ -129,28 +117,18 @@ graph LR
     P2 --> C6
     P2 --> C7
     
-    P3 --> C8
-    P4 --> C8
-    P5 --> C8
-    P6 --> C8
-    P7 --> C8
-    
-    C8 --> C9
-    C8 --> C10
-    C8 --> C11
-    
-    P8 --> C12
-    P9 --> C12
-    P10 --> C12
+    P3 --> C12
+    P4 --> C12
+    P5 --> C12
     
     C12 --> C13
     C12 --> C14
     C12 --> C15
     
-    P11 --> C16
-    P11 --> C17
-    P11 --> C18
-    P11 --> C19
+    P6 --> C16
+    P6 --> C17
+    P6 --> C18
+    P6 --> C19
     
     %% Specialized capabilities (from knowledge and platform plugins)
     P2 --> C20
@@ -166,10 +144,6 @@ graph LR
     C5 --> O1
     C6 --> O1
     C7 --> O1
-    C8 --> O1
-    C9 --> O1
-    C10 --> O1
-    C11 --> O1
     
     C20 --> O2
     C21 --> O2
@@ -187,9 +161,6 @@ graph LR
     C15 --> O4
     C21 --> O4
     
-    C11 --> O5
-    C10 --> O5
-    
     C17 --> O6
     C16 --> O6
 ```
@@ -198,15 +169,14 @@ graph LR
 
 This comprehensive template shows **all available plugins and capabilities** that can be configured for any ReFi agent:
 
-#### **🔧 Available Plugins (11 Total)**
+#### **🔧 Available Plugins (6 Total)**
 - **Core Infrastructure**: SQL Database, Bootstrap Core Functions
-- **Knowledge & AI**: Knowledge RAG, 5 LLM Providers (OpenAI, Anthropic, OpenRouter, Google, Ollama)
+- **Knowledge**: Knowledge RAG
 - **Platform Integrations**: Discord, Twitter, Telegram
 
-#### **⚡ Available Capabilities (24 Total)**
+#### **⚡ Available Capabilities (19 Total)**
 - **Data Management**: Database Storage, Querying, Vector Storage
 - **Knowledge Processing**: RAG Engine, Document Processing, Vector Search, Knowledge Base
-- **AI & Language**: AI Generation, NLP, Context Management, Response Generation
 - **Platform Integration**: Multi-Platform, Platform-Specific, Real-Time, Asynchronous
 - **Operational**: Task Management, Meeting Coordination, Progress Tracking, Team Communication
 - **Community & Local**: Local Knowledge, Community Integration, Regional Context, ReFi Applications
