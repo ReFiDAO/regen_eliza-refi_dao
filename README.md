@@ -986,3 +986,291 @@ bun run test
 # Development mode with hot reload
 bun run dev
 ```
+
+## 🔄 Comprehensive UML Flow Diagram
+
+### Complete ReFi Agent Ecosystem Architecture
+
+```mermaid
+graph TB
+    %% External Input Sources
+    subgraph "🌐 External Platforms"
+        TW[Twitter API]
+        TG[Telegram Bot]
+        DC[Discord Server]
+        WB[Web Interface]
+        US[User Requests]
+    end
+    
+    %% Core Agent Layer
+    subgraph "🤖 Agent Layer"
+        KA[ReFi Knowledge Agent]
+        LA[Local Node Template Agent]
+        DA[DAO Coordinator Agent]
+    end
+    
+    %% ElizaOS Runtime
+    subgraph "⚙️ ElizaOS Runtime"
+        RT[AgentRuntime]
+        MM[Memory System]
+        EV[Event Handler]
+        PL[Plugin Manager]
+    end
+    
+    %% Plugin System
+    subgraph "🔧 Plugin System"
+        SQL[@elizaos/plugin-sql]
+        KNW[@elizaos/plugin-knowledge]
+        OAI[@elizaos/plugin-openai]
+        ANT[@elizaos/plugin-anthropic]
+        ORT[@elizaos/plugin-openrouter]
+        GAI[@elizaos/plugin-google-genai]
+        OLM[@elizaos/plugin-ollama]
+        DSC[@elizaos/plugin-discord]
+        TWT[@elizaos/plugin-twitter]
+        TEL[@elizaos/plugin-telegram]
+        BST[@elizaos/plugin-bootstrap]
+    end
+    
+    %% Knowledge Base
+    subgraph "📚 Knowledge Base"
+        KB1[ReFi Blog Posts<br/>224 Articles]
+        KB2[ReFi Basics<br/>Terminology]
+        KB3[DAO Structure<br/>Organization]
+        KB4[Local Knowledge<br/>Regional Data]
+        KB5[Operational<br/>Procedures]
+    end
+    
+    %% Data Storage
+    subgraph "💾 Data Storage"
+        DB1[Conversation History]
+        DB2[User Interactions]
+        DB3[Knowledge Embeddings]
+        DB4[Project Tracking]
+        DB5[Meeting Records]
+        DB6[Contributor Profiles]
+    end
+    
+    %% Processing Layer
+    subgraph "🧠 Processing Layer"
+        RAG[RAG Engine<br/>Retrieval-Augmented Generation]
+        LLM[LLM Integration<br/>Large Language Models]
+        NLP[Natural Language<br/>Processing]
+        VEC[Vector Search<br/>Similarity Matching]
+    end
+    
+    %% Output Actions
+    subgraph "📤 Output Actions"
+        OA1[Educational Responses]
+        OA2[Localized Guidance]
+        OA3[Operational Tasks]
+        OA4[Community Connections]
+        OA5[Resource Links]
+        OA6[Meeting Agendas]
+        OA7[Progress Reports]
+    end
+    
+    %% External Outputs
+    subgraph "🌍 External Outputs"
+        TW_OUT[Twitter Posts]
+        TG_OUT[Telegram Messages]
+        DC_OUT[Discord Messages]
+        WB_OUT[Web Responses]
+        API_OUT[API Responses]
+    end
+    
+    %% Data Flow Connections
+    %% External Inputs to Agents
+    TW --> KA
+    TG --> KA
+    WB --> KA
+    US --> KA
+    
+    DC --> LA
+    TW --> LA
+    TG --> LA
+    US --> LA
+    
+    TG --> DA
+    US --> DA
+    
+    %% Agents to Runtime
+    KA --> RT
+    LA --> RT
+    DA --> RT
+    
+    %% Runtime to Components
+    RT --> MM
+    RT --> EV
+    RT --> PL
+    
+    %% Plugin Manager to Plugins
+    PL --> SQL
+    PL --> KNW
+    PL --> OAI
+    PL --> ANT
+    PL --> ORT
+    PL --> GAI
+    PL --> OLM
+    PL --> DSC
+    PL --> TWT
+    PL --> TEL
+    PL --> BST
+    
+    %% Knowledge Plugin to Knowledge Base
+    KNW --> RAG
+    RAG --> KB1
+    RAG --> KB2
+    RAG --> KB3
+    RAG --> KB4
+    RAG --> KB5
+    
+    %% LLM Plugins to Processing
+    OAI --> LLM
+    ANT --> LLM
+    ORT --> LLM
+    GAI --> LLM
+    OLM --> LLM
+    
+    %% Processing Layer Connections
+    LLM --> NLP
+    RAG --> VEC
+    VEC --> NLP
+    
+    %% Database Connections
+    SQL --> DB1
+    SQL --> DB2
+    SQL --> DB3
+    SQL --> DB4
+    SQL --> DB5
+    SQL --> DB6
+    
+    %% Processing to Outputs
+    NLP --> OA1
+    NLP --> OA2
+    NLP --> OA3
+    NLP --> OA4
+    NLP --> OA5
+    NLP --> OA6
+    NLP --> OA7
+    
+    %% Outputs to External Platforms
+    OA1 --> TW_OUT
+    OA1 --> TG_OUT
+    OA1 --> WB_OUT
+    
+    OA2 --> DC_OUT
+    OA2 --> TG_OUT
+    OA2 --> WB_OUT
+    
+    OA3 --> TG_OUT
+    OA3 --> API_OUT
+    
+    OA4 --> TW_OUT
+    OA4 --> TG_OUT
+    OA4 --> DC_OUT
+    
+    OA5 --> WB_OUT
+    OA5 --> TG_OUT
+    
+    OA6 --> TG_OUT
+    OA6 --> API_OUT
+    
+    OA7 --> TG_OUT
+    OA7 --> API_OUT
+    
+    %% Platform Plugins to External Outputs
+    TWT --> TW_OUT
+    TEL --> TG_OUT
+    DSC --> DC_OUT
+    
+    %% Memory System Feedback
+    MM --> DB1
+    MM --> DB2
+    MM --> DB3
+    
+    %% Event Handler to Processing
+    EV --> RAG
+    EV --> LLM
+    
+    %% Styling
+    classDef agentClass fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef runtimeClass fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef pluginClass fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef knowledgeClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef storageClass fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    classDef processingClass fill:#f1f8e9,stroke:#33691e,stroke-width:2px
+    classDef outputClass fill:#e0f2f1,stroke:#004d40,stroke-width:2px
+    classDef externalClass fill:#fafafa,stroke:#424242,stroke-width:1px
+    
+    class KA,LA,DA agentClass
+    class RT,MM,EV,PL runtimeClass
+    class SQL,KNW,OAI,ANT,ORT,GAI,OLM,DSC,TWT,TEL,BST pluginClass
+    class KB1,KB2,KB3,KB4,KB5 knowledgeClass
+    class DB1,DB2,DB3,DB4,DB5,DB6 storageClass
+    class RAG,LLM,NLP,VEC processingClass
+    class OA1,OA2,OA3,OA4,OA5,OA6,OA7 outputClass
+    class TW,TG,DC,WB,US,TW_OUT,TG_OUT,DC_OUT,WB_OUT,API_OUT externalClass
+```
+
+### System Flow Description
+
+#### **1. Input Layer (🌐 External Platforms)**
+- **Twitter API**: Public engagement and community outreach
+- **Telegram Bot**: Direct messaging and group interactions
+- **Discord Server**: Community discussions and local node coordination
+- **Web Interface**: Direct user interactions and API access
+- **User Requests**: Internal team requests and coordination tasks
+
+#### **2. Agent Layer (🤖 Agent Layer)**
+- **ReFi Knowledge Agent**: Educational Q&A and community onboarding
+- **Local Node Template Agent**: Regional expertise and local sustainability
+- **DAO Coordinator Agent**: Internal operations and team coordination
+
+#### **3. Runtime Layer (⚙️ ElizaOS Runtime)**
+- **AgentRuntime**: Core execution engine and state management
+- **Memory System**: Persistent storage and context management
+- **Event Handler**: Asynchronous event processing and routing
+- **Plugin Manager**: Dynamic plugin loading and lifecycle management
+
+#### **4. Plugin System (🔧 Plugin System)**
+- **Core Plugins**: SQL database, knowledge RAG, bootstrap functionality
+- **LLM Providers**: OpenAI, Anthropic, OpenRouter, Google, Ollama
+- **Platform Connectors**: Discord, Twitter, Telegram integrations
+
+#### **5. Knowledge Base (📚 Knowledge Base)**
+- **ReFi Content**: 224 blog posts, terminology, DAO structure
+- **Local Knowledge**: Regional data, sustainability initiatives
+- **Operational Data**: Procedures, templates, workflows
+
+#### **6. Processing Layer (🧠 Processing Layer)**
+- **RAG Engine**: Retrieval-augmented generation for knowledge queries
+- **LLM Integration**: Large language model processing and generation
+- **NLP**: Natural language understanding and response generation
+- **Vector Search**: Semantic similarity and content retrieval
+
+#### **7. Data Storage (💾 Data Storage)**
+- **Conversation History**: User interaction logs and context
+- **Knowledge Embeddings**: Vector representations of content
+- **Operational Data**: Project tracking, meeting records, contributor profiles
+
+#### **8. Output Actions (📤 Output Actions)**
+- **Educational Responses**: Knowledge sharing and guidance
+- **Localized Guidance**: Region-specific recommendations
+- **Operational Tasks**: Meeting coordination, progress tracking
+- **Community Connections**: Resource linking and networking
+
+#### **9. External Outputs (🌍 External Outputs)**
+- **Platform Responses**: Messages sent back to external platforms
+- **API Responses**: Programmatic access and integrations
+- **Web Responses**: Direct user interface interactions
+
+### Key Data Flow Patterns
+
+1. **Input → Agent → Runtime → Processing → Output**: Standard request-response flow
+2. **Knowledge Base → RAG → Vector Search → LLM**: Knowledge retrieval and generation
+3. **Memory System → Database → Context**: Persistent state management
+4. **Event Handler → Plugin Manager → Platform Connectors**: Asynchronous event processing
+5. **Processing Layer → Multiple Outputs**: Parallel response generation and routing
+
+This comprehensive UML diagram shows the complete architecture, data flows, and interactions within the ReFi Agent Ecosystem, demonstrating how all components work together to provide specialized AI assistance for regenerative finance initiatives.
