@@ -43,35 +43,12 @@ graph LR
         P6[plugin-bootstrap<br/>Core Functions]
     end
     
-    %% Capabilities with plugin subsections
+    %% Capabilities
     subgraph "⚡ Capabilities"
-        subgraph "SQL Plugin Capabilities"
-            C1[Database Storage<br/>Conversation History]
-            C2[Data Querying<br/>User Interactions]
-            C3[Vector Storage<br/>Knowledge Embeddings]
-        end
-        
-        subgraph "Knowledge Plugin Capabilities"
-            C4[RAG Engine<br/>Retrieval-Augmented Generation]
-            C5[Document Processing<br/>Content Analysis]
-            C6[Vector Search<br/>Semantic Matching]
-            C7[Knowledge Base<br/>Specialized Content]
-        end
-        
-        subgraph "Platform Plugin Capabilities"
-            C12[Multi-Platform<br/>Cross-Channel Support]
-            C13[Platform-Specific<br/>Optimized Responses]
-            C14[Real-Time<br/>Live Interactions]
-            C15[Asynchronous<br/>Event Processing]
-        end
-        
-        subgraph "Bootstrap Plugin Capabilities"
-            C16[Task Management<br/>Workflow Automation]
-            C17[Meeting Coordination<br/>Agenda Management]
-            C18[Progress Tracking<br/>Project Monitoring]
-            C19[Team Communication<br/>Collaboration Tools]
-        end
-        
+        C1[SQL Plugin<br/>• Database Storage<br/>• Data Querying<br/>• Vector Embeddings]
+        C2[Knowledge Plugin<br/>• RAG Processing<br/>• Document Analysis<br/>• Semantic Search]
+        C3[Platform Plugins<br/>• Multi-Channel Support<br/>• Real-Time Interactions<br/>• Event Processing]
+        C4[Bootstrap Plugin<br/>• Task Management<br/>• Meeting Coordination<br/>• Progress Tracking]
     end
     
     %% Output Actions
@@ -102,52 +79,20 @@ graph LR
     
     KR --> P2
     
-    %% Plugins -> Capabilities (by plugin)
+    %% Plugins -> Capabilities
     P1 --> C1
-    P1 --> C2
-    P1 --> C3
-    
-    P2 --> C4
-    P2 --> C5
-    P2 --> C6
-    P2 --> C7
-    
-    P3 --> C12
-    P4 --> C12
-    P5 --> C12
-    
-    C12 --> C13
-    C12 --> C14
-    C12 --> C15
-    
-    P6 --> C16
-    P6 --> C17
-    P6 --> C18
-    P6 --> C19
-
+    P2 --> C2
+    P3 --> C3
+    P4 --> C3
+    P5 --> C3
+    P6 --> C4
     
     %% Capabilities -> Output & Actions
     C1 --> O1
     C2 --> O1
-    C3 --> O1
-    C4 --> O1
-    C5 --> O1
-    C6 --> O1
-    C7 --> O1
-    
-    
-    C16 --> O2
-    C17 --> O2
-    C18 --> O2
-    C19 --> O2
-    
-    C12 --> O3
-    C13 --> O3
-    C14 --> O3
-    C15 --> O3
-    
-    C17 --> O5
-    C16 --> O5
+    C3 --> O3
+    C4 --> O2
+    C4 --> O5
 ```
 
 ## 🌱 Agent-Specific Practical Capabilities
@@ -620,13 +565,13 @@ refi-agent-ecosystem/
 graph TB
     subgraph "ElizaOS Architecture"
         subgraph "Agent Layer"
-            A1[ReF[AI] DAO Community Agent]
-            A2[ReF[AI] Local Node Agent]  
-            A3[ReF[AI] DAO Global Agent]
+            A1["ReF[AI] DAO Community Agent"]
+            A2["ReF[AI] Local Node Agent"]  
+            A3["ReF[AI] DAO Global Agent"]
         end
     
     subgraph "🧠 Core Agent"
-        A1[ReF[AI] DAO Community Agent]
+        A1["ReF[AI] DAO Community Agent"]
         A2[Character: Educational Guide]
         A3[Response Mode: Educational]
     end
@@ -743,7 +688,7 @@ graph LR
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReF[AI] Local Node Agent]
+        A1["ReF[AI] Local Node Agent"]
         A2[Character: Regional Expert]
         A3[Focus: Local Context]
     end
@@ -874,7 +819,7 @@ graph LR
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReF[AI] DAO Global Agent]
+        A1["ReF[AI] DAO Global Agent"]
         A2[Character: Internal Assistant]
         A3[Focus: Operations]
     end
@@ -999,9 +944,9 @@ graph LR
 graph TB
     subgraph "ElizaOS Architecture"
         subgraph "Agent Layer"
-            A1[ReF[AI] DAO Community Agent]
-            A2[ReF[AI] Local Node Agent]  
-            A3[ReF[AI] DAO Global Agent]
+            A1["ReF[AI] DAO Community Agent"]
+            A2["ReF[AI] Local Node Agent"]  
+            A3["ReF[AI] DAO Global Agent"]
         end
         
         subgraph "Plugin System"
@@ -1215,7 +1160,7 @@ graph TB
     
     %% Core Agent Layer
     subgraph "🤖 Agent Layer"
-        KA[ReF[AI] DAO Community Agent]
+        KA["ReF[AI] DAO Community Agent"]
         LA[Local Node Agent]
         DA[DAO Coordinator Agent]
     end
