@@ -150,6 +150,187 @@ graph LR
     C16 --> O5
 ```
 
+## 🌱 ReFi Agent Template - Practical ReFi DAO & Local Node Capabilities
+
+```mermaid
+graph LR
+    %% Input Channels - Contextual to ReFi workflows
+    subgraph "🔌 ReFi Community Channels"
+        I1[ReFi Twitter<br/>Public Engagement]
+        I2[Local Node Discord<br/>Community Coordination]
+        I3[DAO Telegram<br/>Internal Operations]
+        I4[Onboarding Requests<br/>New Member Support]
+    end
+    
+    %% ReFi Knowledge Base
+    subgraph "📚 ReFi Knowledge Sources"
+        K1[224 ReFi Blog Posts<br/>Educational Content]
+        K2[DAO Governance Docs<br/>Structure & Processes]
+        K3[Local Node Guides<br/>Setup & Operations]
+        K4[Contribution Framework<br/>Points & Recognition]
+        K5[Community Covenant<br/>Guidelines & Values]
+        K6[Garden Pools Guide<br/>Funding Mechanisms]
+    end
+    
+    %% Core Plugins (same as template)
+    subgraph "🔧 Core Plugins"
+        P1[plugin-sql<br/>Data Persistence]
+        P2[plugin-knowledge<br/>ReFi Content RAG]
+        P3[plugin-platforms<br/>Multi-Channel Access]
+        P4[plugin-bootstrap<br/>Core Functions]
+    end
+    
+    %% ReFi-Specific Capabilities
+    subgraph "🌍 ReFi DAO Capabilities"
+        subgraph "📖 Onboarding & Education"
+            RC1[ReFi Concept Explanation<br/>Web3 + Regeneration]
+            RC2[Getting Started Guide<br/>Step-by-step Support]
+            RC3[Local Node Discovery<br/>Regional Connections]
+            RC4[Contribution Pathways<br/>How to Participate]
+        end
+        
+        subgraph "🏛️ DAO Operations"
+            RC5[Governance Guidance<br/>Voting & Proposals]
+            RC6[Member Recognition<br/>Contribution Points]
+            RC7[Meeting Coordination<br/>Node & DAO Calls]
+            RC8[Resource Access<br/>Funding & Garden Pools]
+        end
+        
+        subgraph "🌱 Local Node Support"
+            RC9[Local Setup Assistance<br/>Node Establishment]
+            RC10[Regional Knowledge<br/>Climate & Sustainability]
+            RC11[Community Building<br/>Local Networks]
+            RC12[Project Development<br/>ReFi Applications]
+        end
+        
+        subgraph "🤝 Network Coordination"
+            RC13[Cross-Node Connections<br/>Inter-regional Links]
+            RC14[Initiative Matching<br/>Project Collaboration]
+            RC15[Impact Tracking<br/>Regenerative Outcomes]
+            RC16[Compliance Support<br/>Community Standards]
+        end
+    end
+    
+    %% Practical Output Actions
+    subgraph "📤 ReFi-Specific Actions"
+        O1[Onboarding Sequences<br/>New Member Journeys]
+        O2[Local Node Recommendations<br/>Regional Connections]
+        O3[Governance Participation<br/>Voting & Proposals]
+        O4[Resource Discovery<br/>Funding & Support]
+        O5[Project Collaboration<br/>Initiative Matching]
+        O6[Impact Reporting<br/>Regenerative Metrics]
+        O7[Community Guidelines<br/>Covenant Adherence]
+    end
+    
+    %% Data Flow Connections
+    I1 --> P2
+    I2 --> P2
+    I3 --> P2
+    I4 --> P2
+    
+    K1 --> P2
+    K2 --> P2
+    K3 --> P2
+    K4 --> P2
+    K5 --> P2
+    K6 --> P2
+    
+    P1 --> RC5
+    P1 --> RC6
+    P1 --> RC7
+    P1 --> RC15
+    
+    P2 --> RC1
+    P2 --> RC2
+    P2 --> RC3
+    P2 --> RC4
+    P2 --> RC9
+    P2 --> RC10
+    P2 --> RC11
+    P2 --> RC12
+    
+    P3 --> RC13
+    P3 --> RC14
+    P3 --> RC8
+    
+    P4 --> RC16
+    P4 --> RC7
+    
+    RC1 --> O1
+    RC2 --> O1
+    RC3 --> O1
+    RC4 --> O1
+    
+    RC3 --> O2
+    RC10 --> O2
+    RC11 --> O2
+    
+    RC5 --> O3
+    RC6 --> O3
+    
+    RC8 --> O4
+    RC6 --> O4
+    
+    RC12 --> O5
+    RC13 --> O5
+    RC14 --> O5
+    
+    RC15 --> O6
+    RC12 --> O6
+    
+    RC16 --> O7
+    RC5 --> O7
+```
+
+### Practical ReFi Agent Overview
+
+The practical template above focuses on **real-world ReFi DAO and Local Node capabilities** based on actual operational needs and documentation:
+
+#### **🌍 Key Differences from Generic Template**
+
+**📚 Knowledge Sources** - Grounded in actual ReFi documentation:
+- **224 ReFi Blog Posts**: Real educational content for community guidance
+- **DAO Governance Docs**: Actual governance processes and voting mechanisms  
+- **Local Node Guides**: Step-by-step setup and operational procedures
+- **Contribution Framework**: Real points system and recognition processes
+- **Community Covenant**: Actual community guidelines and values
+- **Garden Pools Guide**: Real funding mechanisms and resource access
+
+**🌍 ReFi-Specific Capabilities** - Focused on practical functions:
+
+1. **📖 Onboarding & Education**
+   - ReFi concept explanation combining Web3 and regeneration
+   - Step-by-step getting started guides for new members
+   - Local node discovery to connect people with regional initiatives
+   - Clear contribution pathways showing how to participate
+
+2. **🏛️ DAO Operations** 
+   - Governance guidance for voting and proposal participation
+   - Member recognition through contribution points system
+   - Meeting coordination for node and DAO calls
+   - Resource access to funding and garden pools
+
+3. **🌱 Local Node Support**
+   - Practical setup assistance for establishing new nodes
+   - Regional knowledge about climate and sustainability contexts
+   - Community building support for local networks
+   - Project development guidance for ReFi applications
+
+4. **🤝 Network Coordination**
+   - Cross-node connections for inter-regional collaboration
+   - Initiative matching to connect complementary projects
+   - Impact tracking for regenerative outcomes measurement
+   - Compliance support ensuring community standards adherence
+
+**📤 Practical Actions** - Real-world outputs instead of generic responses:
+- **Onboarding Sequences**: Complete new member journey support
+- **Local Node Recommendations**: Regional connections and setup guidance
+- **Governance Participation**: Voting assistance and proposal guidance
+- **Resource Discovery**: Funding access and support identification
+- **Project Collaboration**: Initiative matching and partnership facilitation
+- **Impact Reporting**: Regenerative metrics and outcome tracking
+- **Community Guidelines**: Covenant adherence and standards compliance
+
 ### Template Agent Overview
 
 This comprehensive template shows **all available plugins and capabilities** that can be configured for any ReFi agent:
