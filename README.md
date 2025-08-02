@@ -382,10 +382,299 @@ graph TB
 
 ## 📊 Agent Template Diagrams
 
+### 1. ReFi Knowledge Agent - Complete System Overview
+
+```mermaid
+graph TB
+    subgraph "🔌 Input Channels"
+        I1[Twitter API]
+        I2[Telegram Bot]
+        I3[Direct Web Interface]
+    end
+    
+    subgraph "🧠 Core Agent"
+        A1[ReFi Knowledge Agent]
+        A2[Character: Educational Guide]
+        A3[Response Mode: Educational]
+    end
+    
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[Knowledge RAG]
+        P3[LLM Providers]
+        P4[Platform Connectors]
+        P5[Bootstrap Core]
+    end
+    
+    subgraph "📚 Knowledge Sources"
+        K1[224 Blog Posts]
+        K2[ReFi Basics]
+        K3[DAO Structure]
+        K4[Local Nodes]
+        K5[Getting Started]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Educational Responses]
+        O2[Resource Links]
+        O3[Community Connections]
+        O4[Next Steps Guide]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Conversation History]
+        D2[User Interactions]
+        D3[Knowledge Embeddings]
+        D4[Response Templates]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    A1 --> P5
+    
+    P2 --> K1
+    P2 --> K2
+    P2 --> K3
+    P2 --> K4
+    P2 --> K5
+    
+    P3 --> L1
+    P3 --> L2
+    P3 --> L3
+    P3 --> L4
+    P3 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
+```
+
+### 2. ReFi Barcelona Agent - Complete System Overview
+
+```mermaid
+graph TB
+    subgraph "🔌 Input Channels"
+        I1[Discord Server]
+        I2[Twitter Local Feed]
+        I3[Telegram Groups]
+        I4[Direct Inquiries]
+    end
+    
+    subgraph "🧠 Core Agent"
+        A1[ReFi Barcelona Agent]
+        A2[Character: Regional Expert]
+        A3[Focus: Local Context]
+    end
+    
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[Knowledge RAG]
+        P3[LLM Providers]
+        P4[Multi-Platform]
+        P5[Bootstrap Core]
+    end
+    
+    subgraph "📍 Local Knowledge"
+        K1[Barcelona Climate Plan]
+        K2[Local Organizations]
+        K3[Regional Projects]
+        K4[Sustainability Hub]
+        K5[Community Resources]
+    end
+    
+    subgraph "🌱 ReFi Integration"
+        R1[Carbon Markets]
+        R2[Tokenization]
+        R3[Community Projects]
+        R4[Impact Metrics]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Localized Responses]
+        O2[Community Connections]
+        O3[Project Recommendations]
+        O4[Action Steps]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Local Context]
+        D2[Community Data]
+        D3[Project Database]
+        D4[Regional Knowledge]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    I4 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    A1 --> P5
+    
+    P2 --> K1
+    P2 --> K2
+    P2 --> K3
+    P2 --> K4
+    P2 --> K5
+    
+    A1 --> R1
+    A1 --> R2
+    A1 --> R3
+    A1 --> R4
+    
+    P3 --> L1
+    P3 --> L2
+    P3 --> L3
+    P3 --> L4
+    P3 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
+```
+
+### 3. ReFi DAO Coordinator - Complete System Overview
+
+```mermaid
+graph TB
+    subgraph "🔌 Input Channels"
+        I1[Telegram Private]
+        I2[Team Requests]
+        I3[Meeting Coordination]
+        I4[Progress Updates]
+    end
+    
+    subgraph "🧠 Core Agent"
+        A1[ReFi DAO Coordinator]
+        A2[Character: Internal Assistant]
+        A3[Focus: Operations]
+    end
+    
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[LLM Providers]
+        P3[Telegram Integration]
+        P4[Bootstrap Core]
+    end
+    
+    subgraph "📋 Operational Areas"
+        O1[Meeting Coordination]
+        O2[Progress Tracking]
+        O3[Contributor Recognition]
+        O4[Documentation]
+    end
+    
+    subgraph "🏗️ Coordination Engine"
+        C1[Agenda Builder]
+        C2[Progress Tracker]
+        C3[Recognition System]
+        C4[Documentation Manager]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Structured Responses]
+        O2[Meeting Agendas]
+        O3[Progress Reports]
+        O4[Action Items]
+        O5[Recognition Announcements]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Meeting Records]
+        D2[Project Tracking]
+        D3[Contributor Profiles]
+        D4[Process Templates]
+        D5[Progress Metrics]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    I4 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    A1 --> C1
+    A1 --> C2
+    A1 --> C3
+    A1 --> C4
+    
+    P2 --> L1
+    P2 --> L2
+    P2 --> L3
+    P2 --> L4
+    P2 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    A1 --> O5
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
+    P1 --> D5
+```
+
 ### 4. Cross-Agent Comparison Matrix
 
 ```mermaid
-graph LR
+graph TB
     subgraph "Agent Types"
         AT1[Knowledge Agent]
         AT2[Barcelona Agent]
@@ -649,47 +938,3 @@ bun run test
 # Development mode with hot reload
 bun run dev
 ```
-
-## 📚 Knowledge Base
-
-### ReFi Knowledge Agent
-- **224 ReFi DAO Blog Posts**: Comprehensive archive of educational content
-- **ReFi Basics**: Core concepts and terminology
-- **DAO Structure**: Governance and organizational information
-- **Local Nodes**: Regional community participation guides
-- **Getting Started**: Onboarding and participation resources
-
-### ReFi Barcelona Agent
-- **Barcelona Resources**: Local sustainability initiatives and organizations
-- **ReFi Context**: Regional regenerative finance applications
-- **Basics**: Local sustainability fundamentals and climate action
-
-### ReFi DAO Coordinator
-- **Operations**: Basic operational procedures and workflows
-- **Coordination**: Contributor recognition and team management systems
-- **Processes**: Meeting templates and organizational processes
-
-## 🤝 Contributing
-
-We welcome contributions to improve the ReFi Agent Ecosystem! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
-
-- Code of Conduct
-- Development Setup
-- Testing Guidelines
-- Pull Request Process
-- Knowledge Base Updates
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🌟 Acknowledgments
-
-- **ReFi DAO Community**: For the extensive knowledge base and educational content
-- **ElizaOS Team**: For the powerful agent framework
-- **Barcelona Sustainability Community**: For local expertise and resources
-- **Open Source Contributors**: For building the foundation of regenerative finance
-
----
-
-**Built with ❤️ for the ReFi community**
