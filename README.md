@@ -17,8 +17,7 @@ graph LR
         I1[Twitter API]
         I2[Telegram Bot]
         I3[Discord Server]
-        I4[Web Interface]
-        I5[API Requests]
+        I4[API Requests]
     end
     
     %% Data Storage (before plugins)
@@ -97,21 +96,18 @@ graph LR
         O4[Community Connections<br/>Network Building]
         O5[Resource Links<br/>Helpful References]
         O6[Meeting Agendas<br/>Structured Planning]
-        O7[Progress Reports<br/>Status Updates]
     end
     
-    %% Connections: Input -> Data Storage & Knowledge Sources
+    %% Connections: Input -> Data Storage & Knowledge Repository
     I1 --> D1
     I2 --> D2
     I3 --> D3
     I4 --> D4
-    I5 --> D5
     
     I1 --> KR
     I2 --> KR
     I3 --> KR
     I4 --> KR
-    I5 --> KR
     
     %% Data Storage & Knowledge Sources -> Plugins
     D1 --> P1
@@ -196,9 +192,6 @@ graph LR
     
     C17 --> O6
     C16 --> O6
-    
-    C18 --> O7
-    C19 --> O7
 ```
 
 ### Template Agent Overview
@@ -221,11 +214,11 @@ This comprehensive template shows **all available plugins and capabilities** tha
 #### **📚 Knowledge Sources (5 Types)**
 - ReFi Blog Posts (224 articles), ReFi Basics, DAO Structure, Local Knowledge, Operational Procedures
 
-#### **🔌 Input Channels (5 Types)**
-- Twitter API, Telegram Bot, Discord Server, Web Interface, API Requests
+#### **🔌 Input Channels (4 Types)**
+- Twitter API, Telegram Bot, Discord Server, API Requests
 
-#### **📤 Output Actions (7 Types)**
-- Educational Responses, Localized Guidance, Operational Tasks, Community Connections, Resource Links, Meeting Agendas, Progress Reports
+#### **📤 Output Actions (6 Types)**
+- Educational Responses, Localized Guidance, Operational Tasks, Community Connections, Resource Links, Meeting Agendas
 
 This template serves as the foundation for creating specialized agents by selecting the appropriate plugins and capabilities for each specific use case.
 
