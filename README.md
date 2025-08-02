@@ -57,12 +57,20 @@ graph TB
         A3[Response Mode: Educational]
     end
     
-    subgraph "🔧 Plugins & Capabilities"
+    subgraph "🔧 Plugins"
         P1[SQL Database]
         P2[Knowledge RAG]
         P3[LLM Providers]
         P4[Platform Connectors]
         P5[Bootstrap Core]
+    end
+    
+    subgraph "⚡ Capabilities"
+        C1[Database Storage]
+        C2[Document Processing]
+        C3[AI Generation]
+        C4[Multi-Platform]
+        C5[Core Functions]
     end
     
     subgraph "📚 Knowledge Sources"
@@ -71,14 +79,6 @@ graph TB
         K3[DAO Structure]
         K4[Local Nodes]
         K5[Getting Started]
-    end
-    
-    subgraph "🤖 LLM Providers"
-        L1[Anthropic Claude]
-        L2[OpenAI GPT]
-        L3[Google Gemini]
-        L4[OpenRouter]
-        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"
@@ -105,17 +105,17 @@ graph TB
     A1 --> P4
     A1 --> P5
     
+    P1 --> C1
+    P2 --> C2
+    P3 --> C3
+    P4 --> C4
+    P5 --> C5
+    
     P2 --> K1
     P2 --> K2
     P2 --> K3
     P2 --> K4
     P2 --> K5
-    
-    P3 --> L1
-    P3 --> L2
-    P3 --> L3
-    P3 --> L4
-    P3 --> L5
     
     A1 --> O1
     A1 --> O2
@@ -169,12 +169,20 @@ graph TB
         A3[Focus: Local Context]
     end
     
-    subgraph "🔧 Plugins & Capabilities"
+    subgraph "🔧 Plugins"
         P1[SQL Database]
         P2[Knowledge RAG]
         P3[LLM Providers]
         P4[Multi-Platform]
         P5[Bootstrap Core]
+    end
+    
+    subgraph "⚡ Capabilities"
+        C1[Database Storage]
+        C2[Local Knowledge]
+        C3[Regional Context]
+        C4[Community Integration]
+        C5[ReFi Applications]
     end
     
     subgraph "📍 Local Knowledge"
@@ -190,14 +198,6 @@ graph TB
         R2[Tokenization]
         R3[Community Projects]
         R4[Impact Metrics]
-    end
-    
-    subgraph "🤖 LLM Providers"
-        L1[Anthropic Claude]
-        L2[OpenAI GPT]
-        L3[Google Gemini]
-        L4[OpenRouter]
-        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"
@@ -224,6 +224,12 @@ graph TB
     A1 --> P3
     A1 --> P4
     A1 --> P5
+    
+    P1 --> C1
+    P2 --> C2
+    P3 --> C3
+    P4 --> C4
+    P5 --> C5
     
     P2 --> K1
     P2 --> K2
@@ -295,11 +301,19 @@ graph TB
         A3[Focus: Operations]
     end
     
-    subgraph "🔧 Plugins & Capabilities"
+    subgraph "🔧 Plugins"
         P1[SQL Database]
         P2[LLM Providers]
         P3[Telegram Integration]
         P4[Bootstrap Core]
+    end
+    
+    subgraph "⚡ Capabilities"
+        C1[Database Storage]
+        C2[Task Management]
+        C3[Meeting Coordination]
+        C4[Progress Tracking]
+        C5[Team Communication]
     end
     
     subgraph "📋 Operational Areas"
@@ -314,14 +328,6 @@ graph TB
         C2[Progress Tracker]
         C3[Recognition System]
         C4[Documentation Manager]
-    end
-    
-    subgraph "🤖 LLM Providers"
-        L1[Anthropic Claude]
-        L2[OpenAI GPT]
-        L3[Google Gemini]
-        L4[OpenRouter]
-        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"
@@ -421,12 +427,20 @@ graph TB
         A3[Response Mode: Educational]
     end
     
-    subgraph "🔧 Plugins & Capabilities"
+    subgraph "🔧 Plugins"
         P1[SQL Database]
         P2[Knowledge RAG]
         P3[LLM Providers]
         P4[Platform Connectors]
         P5[Bootstrap Core]
+    end
+    
+    subgraph "⚡ Capabilities"
+        C1[Database Storage]
+        C2[Document Processing]
+        C3[AI Generation]
+        C4[Multi-Platform]
+        C5[Core Functions]
     end
     
     subgraph "📚 Knowledge Sources"
@@ -435,14 +449,6 @@ graph TB
         K3[DAO Structure]
         K4[Local Nodes]
         K5[Getting Started]
-    end
-    
-    subgraph "🤖 LLM Providers"
-        L1[Anthropic Claude]
-        L2[OpenAI GPT]
-        L3[Google Gemini]
-        L4[OpenRouter]
-        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"
@@ -469,17 +475,17 @@ graph TB
     A1 --> P4
     A1 --> P5
     
+    P1 --> C1
+    P2 --> C2
+    P3 --> C3
+    P4 --> C4
+    P5 --> C5
+    
     P2 --> K1
     P2 --> K2
     P2 --> K3
     P2 --> K4
     P2 --> K5
-    
-    P3 --> L1
-    P3 --> L2
-    P3 --> L3
-    P3 --> L4
-    P3 --> L5
     
     A1 --> O1
     A1 --> O2
@@ -509,12 +515,20 @@ graph TB
         A3[Focus: Local Context]
     end
     
-    subgraph "🔧 Plugins & Capabilities"
+    subgraph "🔧 Plugins"
         P1[SQL Database]
         P2[Knowledge RAG]
         P3[LLM Providers]
         P4[Multi-Platform]
         P5[Bootstrap Core]
+    end
+    
+    subgraph "⚡ Capabilities"
+        C1[Database Storage]
+        C2[Document Processing]
+        C3[AI Generation]
+        C4[Multi-Platform]
+        C5[Core Functions]
     end
     
     subgraph "📍 Local Knowledge"
@@ -530,14 +544,6 @@ graph TB
         R2[Tokenization]
         R3[Community Projects]
         R4[Impact Metrics]
-    end
-    
-    subgraph "🤖 LLM Providers"
-        L1[Anthropic Claude]
-        L2[OpenAI GPT]
-        L3[Google Gemini]
-        L4[OpenRouter]
-        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"
@@ -564,6 +570,12 @@ graph TB
     A1 --> P3
     A1 --> P4
     A1 --> P5
+    
+    P1 --> C1
+    P2 --> C2
+    P3 --> C3
+    P4 --> C4
+    P5 --> C5
     
     P2 --> K1
     P2 --> K2
@@ -610,11 +622,19 @@ graph TB
         A3[Focus: Operations]
     end
     
-    subgraph "🔧 Plugins & Capabilities"
+    subgraph "🔧 Plugins"
         P1[SQL Database]
         P2[LLM Providers]
         P3[Telegram Integration]
         P4[Bootstrap Core]
+    end
+    
+    subgraph "⚡ Capabilities"
+        C1[Database Storage]
+        C2[Document Processing]
+        C3[AI Generation]
+        C4[Multi-Platform]
+        C5[Core Functions]
     end
     
     subgraph "📋 Operational Areas"
@@ -629,14 +649,6 @@ graph TB
         C2[Progress Tracker]
         C3[Recognition System]
         C4[Documentation Manager]
-    end
-    
-    subgraph "🤖 LLM Providers"
-        L1[Anthropic Claude]
-        L2[OpenAI GPT]
-        L3[Google Gemini]
-        L4[OpenRouter]
-        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"

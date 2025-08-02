@@ -10,13 +10,13 @@ This repository contains a collection of specialized AI agents focused on regene
 graph TB
     subgraph "ReFi Agent Ecosystem"
         KA[🎓 ReFi Knowledge Agent<br/>External Q&A & Education]
-        BA[🏛️ ReFi Barcelona Agent<br/>Regional Specialist]
+        LNT[🌍 ReFi Local Node Template<br/>Regional Template]
         CA[🤝 ReFi DAO Coordinator<br/>Internal Operations]
     end
     
     subgraph "Target Audiences"
         EXT[External Users<br/>Newcomers & Community]
-        REG[Regional Users<br/>Barcelona Residents]
+        REG[Regional Users<br/>Local Communities]
         INT[Internal Users<br/>DAO Team Members]
     end
     
@@ -28,24 +28,24 @@ graph TB
     
     subgraph "Knowledge Sources"
         KB1[ReFi Education<br/>224 Blog Posts]
-        KB2[Barcelona Resources<br/>Local Initiatives]
+        KB2[Local Templates<br/>Regional Guides]
         KB3[Operations Manual<br/>Processes & Templates]
     end
     
     KA --> EXT
-    BA --> REG
+    LNT --> REG
     CA --> INT
     
     KA --> TW
     KA --> TG
-    BA --> TW
-    BA --> TG
-    BA --> DC
+    LNT --> TW
+    LNT --> TG
+    LNT --> DC
     CA --> TG
     CA --> DC
     
     KB1 --> KA
-    KB2 --> BA
+    KB2 --> LNT
     KB3 --> CA
 ```
 
@@ -75,23 +75,40 @@ refi-agent-ecosystem/
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
-├── refi-barcelona/                     # 🏛️ Barcelona Regional Specialist Agent
+├── refi-local-node-template/           # 🌍 ReFi Local Node Template
 │   ├── src/
-│   │   ├── character.ts               # Character definition for Barcelona agent
+│   │   ├── character.ts               # Template character definition
 │   │   ├── index.ts                   # Project entry point
 │   │   ├── plugin.ts                  # Custom plugins
 │   │   └── __tests__/                 # Test suites
-│   ├── knowledge/                     # 📍 Barcelona-specific knowledge
-│   │   ├── barcelona/                 # Local initiatives and resources
-│   │   ├── refi/                      # Regional ReFi context
-│   │   └── basics/                    # Local sustainability basics
-│   ├── README.md                      # Agent-specific documentation
-│   └── package.json                   # Agent dependencies
+│   ├── knowledge/                     # 📍 Template knowledge base
+│   │   ├── local-region/              # Regional template content
+│   │   ├── refi/                      # ReFi-specific templates
+│   │   └── basics/                    # Core concepts templates
+│   ├── scripts/                       # 🛠️ Automation scripts
+│   │   ├── setup-local-node.sh        # Interactive setup script
+│   │   └── enhance-template.sh        # Advanced features script
+│   ├── examples/                      # 📋 Example configurations
+│   │   ├── berlin/                    # Berlin example
+│   │   ├── portland/                  # Portland example
+│   │   └── nairobi/                   # Nairobi example
+│   ├── deployment/                    # 🚀 Deployment configurations
+│   │   ├── docker/                    # Docker setup
+│   │   ├── railway/                   # Railway deployment
+│   │   └── fly/                       # Fly.io deployment
+│   ├── docs/                          # 📚 Comprehensive documentation
+│   │   ├── TEMPLATE_USAGE.md          # Usage guide
+│   │   ├── NETWORK_INTEGRATION.md     # Network integration
+│   │   ├── COMPREHENSIVE_GUIDE.md     # Complete guide
+│   │   └── CONTRIBUTING.md            # Contribution guidelines
+│   ├── README.md                      # Template documentation
+│   └── package.json                   # Template dependencies
 │
 ├── refi-dao-coordinator/               # 🤝 Internal Operations Coordinator Agent
 │   ├── src/
-│   │   ├── character.ts               # Character definition for coordinator
+│   │   ├── refiDaoCoordinator.ts      # Character definition for coordinator
 │   │   ├── index.ts                   # Project entry point
+│   │   ├── character.ts               # ElizaOS template (preserved)
 │   │   ├── plugin.ts                  # Custom plugins
 │   │   └── __tests__/                 # Test suites
 │   ├── knowledge/                     # 📋 Operational knowledge base
@@ -181,77 +198,79 @@ settings: {
 }
 ```
 
-### 2. ReFi Barcelona Agent (Regional Specialist)
-**Location**: `refi-barcelona/`
-**Purpose**: Regional expert for Barcelona's green economy and local ReFi initiatives
+### 2. ReFi Local Node Template (Regional Template)
+**Location**: `refi-local-node-template/`
+**Purpose**: Comprehensive template for creating region-specific ReFi agents
 
-**Character Definition**: `refi-barcelona/src/character.ts`
+**Character Definition**: `refi-local-node-template/src/character.ts`
 
 ```mermaid
 graph TD
-    subgraph "Barcelona Agent Context Mapping"
-        Q[Local Query] --> C[Contextualize to Barcelona]
+    subgraph "Local Node Template Flow"
+        Q[Regional Query] --> C[Customize for Region]
         C --> L[Local Knowledge Base]
         L --> R[Regional ReFi Opportunities]
         R --> A[Actionable Local Connections]
     end
     
-    subgraph "Local Resources"
-        L1[Barcelona Climate Plan]
-        L2[Som Energia Cooperative]
-        L3[Fab City Hub]
-        L4[Impact Hub Barcelona]
-        L5[Blue Economy Projects]
+    subgraph "Template Features"
+        T1[Automated Setup Script]
+        T2[Regional Customization]
+        T3[Network Integration]
+        T4[Deployment Configs]
+        T5[Example Configurations]
     end
     
-    subgraph "ReFi Applications"
-        R1[Carbon Credits]
-        R2[Community Solar]
-        R3[Urban Reforestation]
-        R4[Circular Economy]
-        R5[Green Tech Innovation]
+    subgraph "Regional Applications"
+        R1[Berlin Climate Tech]
+        R2[Portland Community Energy]
+        R3[Nairobi Mobile Money]
+        R4[Any Local Region]
     end
     
-    L --> L1
-    L --> L2
-    L --> L3
-    L --> L4
-    L --> L5
+    L --> T1
+    L --> T2
+    L --> T3
+    L --> T4
+    L --> T5
     
     R --> R1
     R --> R2
     R --> R3
     R --> R4
-    R --> R5
 ```
 
 **Core Capabilities**:
-- **Local Expertise**: Barcelona's sustainability landscape and green economy
-- **Target Audience**: Local residents, visitors, and sustainability professionals
-- **Primary Platforms**: Discord, Twitter, Telegram
-- **Response Style**: Knowledgeable, inspiring, action-oriented
+- **Template System**: Complete framework for regional ReFi agent creation
+- **Target Audience**: Local communities wanting to create ReFi agents
+- **Primary Platforms**: Discord, Twitter, Telegram (configurable)
+- **Response Style**: Customizable based on regional context
 
 **Key Features**:
-- Connects ReFi concepts to Barcelona's local context
-- Provides information about local sustainability initiatives
-- Guides users to Barcelona-specific climate action groups
-- Explains carbon markets and environmental tokenization opportunities
-- Bridges traditional and innovative sustainability approaches
+- **Automated Setup**: Interactive script for quick regional customization
+- **Comprehensive Documentation**: Complete guides for setup and deployment
+- **Network Integration**: Built-in ReFi DAO network connectivity
+- **Multi-Platform Support**: Discord, Twitter, Telegram integrations
+- **Deployment Ready**: Docker, Railway, Fly.io configurations
+- **Example Configurations**: Berlin, Portland, Nairobi examples
 
-**Specialized Knowledge Areas**:
-- Barcelona Climate Plan and carbon neutrality goals
-- Local energy cooperatives (Som Energia)
-- Mediterranean blue economy initiatives
-- Community solar and urban reforestation projects
-- Circular economy marketplaces
-- Fab City Hub and Impact Hub Barcelona
-- Local climate tech and impact investing communities
+**Template Components**:
+- **Setup Scripts**: Automated customization for any region
+- **Knowledge Templates**: Structured templates for regional content
+- **Deployment Configurations**: Production-ready deployment options
+- **Network Integration**: ReFi DAO network connectivity
+- **Monitoring & Analytics**: Built-in health checks and metrics
+- **Security Features**: Rate limiting, input validation, CORS
 
 **Settings**:
 ```typescript
 settings: {
   ragKnowledge: true,
-  avatar: 'https://elizaos.github.io/eliza-avatars/Eliza/portrait.png',
+  responseMode: 'regional',
+  maxResponseLength: 1000,
+  supportedLanguages: ['en'],
+  networkIntegration: true,
+  monitoring: true,
 }
 ```
 
@@ -259,7 +278,7 @@ settings: {
 **Location**: `refi-dao-coordinator/`
 **Purpose**: Internal coordination assistant for ReFi DAO organizational tasks
 
-**Character Definition**: `refi-dao-coordinator/src/character.ts`
+**Character Definition**: `refi-dao-coordinator/src/refiDaoCoordinator.ts`
 
 ```mermaid
 graph TB
@@ -369,7 +388,7 @@ cd regen-eliza
 bun install
 
 # Choose your agent and navigate to its directory
-cd refi-knowledge-agent  # or refi-barcelona, refi-dao-coordinator
+cd refi-knowledge-agent  # or refi-local-node-template, refi-dao-coordinator
 ```
 
 #### 3. Configure Environment Variables
@@ -424,7 +443,7 @@ graph TB
     subgraph "ElizaOS Architecture"
         subgraph "Agent Layer"
             A1[ReFi Knowledge Agent]
-            A2[ReFi Barcelona Agent]  
+            A2[ReFi Local Node Template]  
             A3[ReFi DAO Coordinator]
         end
         
@@ -513,7 +532,7 @@ graph LR
     
     subgraph "Agent Projects"
         AP1[refi-knowledge-agent]
-        AP2[refi-barcelona]
+        AP2[refi-local-node-template]
         AP3[refi-dao-coordinator]
     end
     
@@ -626,6 +645,29 @@ flowchart TD
    elizaos start
    ```
 
+### Using the Local Node Template
+
+The ReFi Local Node Template provides a comprehensive starting point for creating region-specific agents:
+
+1. **Setup a New Local Node**:
+   ```bash
+   cd refi-local-node-template
+   ./scripts/setup-local-node.sh
+   # Follow the interactive prompts to customize for your region
+   ```
+
+2. **Customize for Your Region**:
+   - Update agent identity and regional context
+   - Add local organizations and initiatives
+   - Configure regional knowledge base
+   - Set up platform integrations
+
+3. **Deploy Your Local Node**:
+   ```bash
+   elizaos start
+   # Your regional agent is now ready!
+   ```
+
 ### Customizing Existing Agents
 
 1. **Character Modifications**: Update personality, topics, or style in character files
@@ -659,10 +701,10 @@ graph TB
             KB3[Community Resources<br/>Getting Started]
         end
         
-        subgraph "ReFi Barcelona Agent"
-            KB4[Local Initiatives<br/>Barcelona Specific]
-            KB5[Regional Context<br/>Mediterranean Focus]
-            KB6[Action-Oriented<br/>Direct Connections]
+        subgraph "ReFi Local Node Template"
+            KB4[Regional Templates<br/>Customizable Content]
+            KB5[Network Integration<br/>ReFi DAO Connectivity]
+            KB6[Deployment Guides<br/>Setup Instructions]
         end
         
         subgraph "ReFi DAO Coordinator"
@@ -699,10 +741,11 @@ graph TB
 - **Educational Content**: Basic ReFi concepts and getting started guides
 - **Community Resources**: Local Node information and participation guides
 
-### ReFi Barcelona Agent
-- **Local Content**: Barcelona-specific sustainability initiatives and resources
-- **Regional Focus**: Mediterranean and European regenerative finance context
-- **Action-Oriented**: Direct connections to local organizations and projects
+### ReFi Local Node Template
+- **Template Content**: Structured templates for regional customization
+- **Network Integration**: Built-in ReFi DAO network connectivity
+- **Deployment Resources**: Complete setup and deployment guides
+- **Example Configurations**: Berlin, Portland, Nairobi examples
 
 ### ReFi DAO Coordinator
 - **Operational Knowledge**: Internal processes and coordination procedures
