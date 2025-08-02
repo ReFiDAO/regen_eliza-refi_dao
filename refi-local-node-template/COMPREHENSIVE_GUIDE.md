@@ -1,8 +1,8 @@
-# ReFi Local Node Template - Comprehensive Guide
+# ReF[AI] Local Node Template - Comprehensive Guide
 
 ## Overview
 
-The ReFi Local Node Template is a complete solution for creating region-specific ReFi agents that can educate users about regenerative finance, connect them with local sustainability initiatives, and provide insights on regenerative economic models in their specific regional context.
+The ReF[AI] Local Node Template is a complete solution for creating region-specific ReFi agents that can educate users about regenerative finance, connect them with local sustainability initiatives, and provide insights on regenerative economic models in their specific regional context.
 
 ## What is a ReFi Local Node?
 
@@ -391,7 +391,7 @@ Track agent usage and impact:
 
 ## Conclusion
 
-The ReFi Local Node Template provides a complete foundation for creating region-specific ReFi agents that can:
+The ReF[AI] Local Node Template provides a complete foundation for creating region-specific ReFi agents that can:
 
 - **Educate** communities about regenerative finance
 - **Connect** people with local sustainability initiatives

@@ -1,8 +1,8 @@
-# ReFi Knowledge Agent
+# ReF[AI] DAO Community Agent
 
 ## Overview
 
-The ReFi Knowledge Agent is an external-facing Q&A bot designed to help people understand regenerative finance (ReFi) concepts and get involved with ReFi DAO. This agent serves as a helpful educational guide that answers common questions about ReFi basics, ReFi DAO structure, Local Nodes, and how to participate in the regenerative finance movement.
+The ReF[AI] DAO Community Agent is an external-facing Q&A bot designed to help people understand regenerative finance (ReFi) concepts and get involved with ReFi DAO. This agent serves as a helpful educational guide that answers common questions about ReFi basics, ReFi DAO structure, Local Nodes, and how to participate in the regenerative finance movement.
 
 ## Core Purpose
 
@@ -13,7 +13,7 @@ The ReFi Knowledge Agent is an external-facing Q&A bot designed to help people u
 
 ## Character Profile
 
-**Name**: ReFi Assistant  
+**Name**: ReF[AI] DAO Community Agent  
 **Personality**: Helpful, educational, friendly, patient, encouraging  
 **Expertise**: Regenerative finance basics, ReFi DAO overview, Local Nodes, community participation  
 **Tone**: Simple, clear language with actionable next steps  
@@ -233,7 +233,7 @@ bun run test platforms
 
 ## 🔧 Plugin Configuration
 
-The ReFi Knowledge Agent uses the following ElizaOS plugins with conditional loading based on environment variables:
+The ReF[AI] DAO Community Agent uses the following ElizaOS plugins with conditional loading based on environment variables:
 
 ```typescript
 plugins: [
@@ -268,7 +268,7 @@ graph TB
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi Knowledge Agent]
+        A1[ReF[AI] DAO Community Agent]
         A2[Character: Educational Guide]
         A3[Response Mode: Educational]
     end
@@ -348,7 +348,7 @@ graph TB
 
 ### Core Components
 
-The ReFi Knowledge Agent is built using ElizaOS core components:
+The ReF[AI] DAO Community Agent is built using ElizaOS core components:
 
 - **Character Definition**: Educational personality, knowledge, and behavior configuration
 - **Plugin System**: Modular capabilities (SQL, knowledge, platform integrations)

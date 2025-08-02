@@ -1,13 +1,13 @@
 {
   "name": "regen-eliza",
   "version": "1.0.0",
-  "description": "ReFi Agent Ecosystem - Specialized AI agents for Regenerative Finance built on ElizaOS",
+  "description": "ReF[AI] Agent Ecosystem - Specialized AI agents for Regenerative Finance built on ElizaOS",
   "type": "module",
   "private": true,
   "workspaces": [
     "packages/*",
     "refi-knowledge-agent",
-    "refi-barcelona",
+    "refi-local-node-template",
     "refi-dao-coordinator",
     "my-agent"
   ],

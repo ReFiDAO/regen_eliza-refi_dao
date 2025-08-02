@@ -150,186 +150,411 @@ graph LR
     C16 --> O5
 ```
 
-## 🌱 ReFi Agent Template - Practical ReFi DAO & Local Node Capabilities
+## 🌱 Agent-Specific Practical Capabilities
+
+### 1. ReF[AI] DAO Community Agent - External Education & Onboarding
 
 ```mermaid
 graph LR
-    %% Input Channels - Contextual to ReFi workflows
-    subgraph "🔌 ReFi Community Channels"
-        I1[ReFi Twitter<br/>Public Engagement]
-        I2[Local Node Discord<br/>Community Coordination]
-        I3[DAO Telegram<br/>Internal Operations]
+    %% Input Channels - External facing
+    subgraph "🔌 Public Engagement Channels"
+        I1[ReFi Twitter<br/>Public Outreach]
+        I2[Telegram Community<br/>Public Groups]
+        I3[Web Interface<br/>Direct Inquiries]
         I4[Onboarding Requests<br/>New Member Support]
     end
     
-    %% ReFi Knowledge Base
-    subgraph "📚 ReFi Knowledge Sources"
+    %% Educational Knowledge Base
+    subgraph "📚 Educational Knowledge Sources"
         K1[224 ReFi Blog Posts<br/>Educational Content]
-        K2[DAO Governance Docs<br/>Structure & Processes]
-        K3[Local Node Guides<br/>Setup & Operations]
-        K4[Contribution Framework<br/>Points & Recognition]
-        K5[Community Covenant<br/>Guidelines & Values]
-        K6[Garden Pools Guide<br/>Funding Mechanisms]
+        K2[ReFi Basics Guide<br/>Concepts & Terminology]
+        K3[Getting Started Guide<br/>Onboarding Steps]
+        K4[Community Covenant<br/>Values & Guidelines]
+        K5[Local Node Directory<br/>Regional Options]
     end
     
-    %% Core Plugins (same as template)
-    subgraph "🔧 Core Plugins"
-        P1[plugin-sql<br/>Data Persistence]
-        P2[plugin-knowledge<br/>ReFi Content RAG]
-        P3[plugin-platforms<br/>Multi-Channel Access]
+    %% Core Plugins for Education
+    subgraph "🔧 Education-Focused Plugins"
+        P1[plugin-knowledge<br/>Educational RAG]
+        P2[plugin-twitter<br/>Public Platform]
+        P3[plugin-telegram<br/>Community Access]
         P4[plugin-bootstrap<br/>Core Functions]
     end
     
-    %% ReFi-Specific Capabilities
-    subgraph "🌍 ReFi DAO Capabilities"
-        subgraph "📖 Onboarding & Education"
-            RC1[ReFi Concept Explanation<br/>Web3 + Regeneration]
-            RC2[Getting Started Guide<br/>Step-by-step Support]
-            RC3[Local Node Discovery<br/>Regional Connections]
-            RC4[Contribution Pathways<br/>How to Participate]
+    %% Educational Capabilities
+    subgraph "🎓 Educational Capabilities"
+        subgraph "📖 ReFi Education"
+            EC1[ReFi Concept Explanation<br/>Web3 + Regeneration]
+            EC2[Terminology Guide<br/>Clear Definitions]
+            EC3[Use Case Examples<br/>Real-world Applications]
+            EC4[FAQ Responses<br/>Common Questions]
         end
         
-        subgraph "🏛️ DAO Operations"
-            RC5[Governance Guidance<br/>Voting & Proposals]
-            RC6[Member Recognition<br/>Contribution Points]
-            RC7[Meeting Coordination<br/>Node & DAO Calls]
-            RC8[Resource Access<br/>Funding & Garden Pools]
+        subgraph "🚀 Onboarding Support"
+            EC5[Getting Started Guide<br/>Step-by-step Journey]
+            EC6[Community Introduction<br/>Welcome & Orientation]
+            EC7[Local Node Discovery<br/>Find Your Region]
+            EC8[Contribution Pathways<br/>How to Participate]
         end
         
-        subgraph "🌱 Local Node Support"
-            RC9[Local Setup Assistance<br/>Node Establishment]
-            RC10[Regional Knowledge<br/>Climate & Sustainability]
-            RC11[Community Building<br/>Local Networks]
-            RC12[Project Development<br/>ReFi Applications]
-        end
-        
-        subgraph "🤝 Network Coordination"
-            RC13[Cross-Node Connections<br/>Inter-regional Links]
-            RC14[Initiative Matching<br/>Project Collaboration]
-            RC15[Impact Tracking<br/>Regenerative Outcomes]
-            RC16[Compliance Support<br/>Community Standards]
+        subgraph "🤝 Community Connection"
+            EC9[Resource Linking<br/>Helpful References]
+            EC10[Next Steps Guidance<br/>Action Recommendations]
+            EC11[Community Guidelines<br/>Values & Behavior]
+            EC12[Support Networks<br/>Finding Help]
         end
     end
     
-    %% Practical Output Actions
-    subgraph "📤 ReFi-Specific Actions"
-        O1[Onboarding Sequences<br/>New Member Journeys]
-        O2[Local Node Recommendations<br/>Regional Connections]
-        O3[Governance Participation<br/>Voting & Proposals]
-        O4[Resource Discovery<br/>Funding & Support]
-        O5[Project Collaboration<br/>Initiative Matching]
-        O6[Impact Reporting<br/>Regenerative Metrics]
-        O7[Community Guidelines<br/>Covenant Adherence]
+    %% Educational Output Actions
+    subgraph "📤 Educational Actions"
+        O1[Concept Explanations<br/>Clear & Accessible]
+        O2[Onboarding Sequences<br/>New Member Journeys]
+        O3[Resource Recommendations<br/>Helpful Links]
+        O4[Community Connections<br/>Network Introductions]
+        O5[Next Step Guidance<br/>Action Pathways]
     end
     
     %% Data Flow Connections
-    I1 --> P2
-    I2 --> P2
-    I3 --> P2
-    I4 --> P2
+    I1 --> P1
+    I2 --> P1
+    I3 --> P1
+    I4 --> P1
+    
+    K1 --> P1
+    K2 --> P1
+    K3 --> P1
+    K4 --> P1
+    K5 --> P1
+    
+    P1 --> EC1
+    P1 --> EC2
+    P1 --> EC3
+    P1 --> EC4
+    P1 --> EC5
+    P1 --> EC6
+    P1 --> EC7
+    P1 --> EC8
+    
+    P2 --> EC9
+    P3 --> EC10
+    P4 --> EC11
+    P4 --> EC12
+    
+    EC1 --> O1
+    EC2 --> O1
+    EC3 --> O1
+    EC4 --> O1
+    
+    EC5 --> O2
+    EC6 --> O2
+    EC7 --> O2
+    EC8 --> O2
+    
+    EC9 --> O3
+    EC10 --> O3
+    
+    EC11 --> O4
+    EC12 --> O4
+    
+    EC7 --> O5
+    EC8 --> O5
+```
+
+### 2. ReF[AI] DAO Global Agent - Internal Operations & Coordination
+
+```mermaid
+graph LR
+    %% Input Channels - Internal operations
+    subgraph "🔌 Internal Communication Channels"
+        I1[DAO Telegram<br/>Private Operations]
+        I2[Team Slack<br/>Coordination]
+        I3[Meeting Requests<br/>Scheduling & Agendas]
+        I4[Progress Updates<br/>Status Reports]
+    end
+    
+    %% Operational Knowledge Base
+    subgraph "📚 Operational Knowledge Sources"
+        K1[DAO Governance Docs<br/>Structure & Processes]
+        K2[Contribution Framework<br/>Points & Recognition]
+        K3[Meeting Templates<br/>Agendas & Procedures]
+        K4[Garden Pools Guide<br/>Funding Mechanisms]
+        K5[Process Documentation<br/>Workflows & SOPs]
+    end
+    
+    %% Core Plugins for Operations
+    subgraph "🔧 Operations-Focused Plugins"
+        P1[plugin-sql<br/>Data Tracking]
+        P2[plugin-telegram<br/>Internal Comms]
+        P3[plugin-knowledge<br/>Process RAG]
+        P4[plugin-bootstrap<br/>Task Management]
+    end
+    
+    %% Operational Capabilities
+    subgraph "🏛️ Operational Capabilities"
+        subgraph "📋 DAO Operations"
+            OC1[Governance Guidance<br/>Voting & Proposals]
+            OC2[Process Documentation<br/>Workflow Support]
+            OC3[Resource Access<br/>Funding & Garden Pools]
+            OC4[Policy Guidance<br/>Rules & Procedures]
+        end
+        
+        subgraph "🎯 Task Management"
+            OC5[Meeting Coordination<br/>Scheduling & Agendas]
+            OC6[Progress Tracking<br/>Project Monitoring]
+            OC7[Task Assignment<br/>Responsibility Allocation]
+            OC8[Deadline Management<br/>Timeline Tracking]
+        end
+        
+        subgraph "🏆 Recognition & Coordination"
+            OC9[Member Recognition<br/>Contribution Points]
+            OC10[Achievement Tracking<br/>Impact Measurement]
+            OC11[Team Communication<br/>Updates & Announcements]
+            OC12[Performance Reporting<br/>Metrics & Analytics]
+        end
+    end
+    
+    %% Operational Output Actions
+    subgraph "📤 Operational Actions"
+        O1[Meeting Agendas<br/>Structured Planning]
+        O2[Progress Reports<br/>Status Updates]
+        O3[Task Assignments<br/>Clear Responsibilities]
+        O4[Recognition Announcements<br/>Member Achievements]
+        O5[Resource Allocation<br/>Funding Guidance]
+        O6[Process Optimization<br/>Workflow Improvements]
+    end
+    
+    %% Data Flow Connections
+    I1 --> P1
+    I2 --> P1
+    I3 --> P1
+    I4 --> P1
+    
+    K1 --> P3
+    K2 --> P3
+    K3 --> P3
+    K4 --> P3
+    K5 --> P3
+    
+    P1 --> OC6
+    P1 --> OC9
+    P1 --> OC10
+    P1 --> OC12
+    
+    P2 --> OC11
+    P2 --> OC5
+    
+    P3 --> OC1
+    P3 --> OC2
+    P3 --> OC3
+    P3 --> OC4
+    
+    P4 --> OC5
+    P4 --> OC7
+    P4 --> OC8
+    
+    OC5 --> O1
+    OC2 --> O1
+    
+    OC6 --> O2
+    OC10 --> O2
+    OC12 --> O2
+    
+    OC7 --> O3
+    OC8 --> O3
+    
+    OC9 --> O4
+    OC10 --> O4
+    
+    OC3 --> O5
+    OC4 --> O5
+    
+    OC2 --> O6
+    OC8 --> O6
+```
+
+### 3. ReF[AI] Local Node Agent - Regional Expertise & Community Building
+
+```mermaid
+graph LR
+    %% Input Channels - Regional focus
+    subgraph "🔌 Regional Community Channels"
+        I1[Local Node Discord<br/>Community Hub]
+        I2[Regional Twitter<br/>Local Outreach]
+        I3[Local Events<br/>In-person Connections]
+        I4[Sustainability Inquiries<br/>Project Requests]
+    end
+    
+    %% Regional Knowledge Base
+    subgraph "📚 Regional Knowledge Sources"
+        K1[Local Node Guides<br/>Setup & Operations]
+        K2[Regional Climate Data<br/>Environmental Context]
+        K3[Local Organizations<br/>Community Partners]
+        K4[Sustainability Projects<br/>Local Initiatives]
+        K5[Regional Opportunities<br/>Funding & Resources]
+    end
+    
+    %% Core Plugins for Regional Support
+    subgraph "🔧 Regional-Focused Plugins"
+        P1[plugin-discord<br/>Community Platform]
+        P2[plugin-knowledge<br/>Regional RAG]
+        P3[plugin-sql<br/>Local Data]
+        P4[plugin-bootstrap<br/>Community Functions]
+    end
+    
+    %% Regional Capabilities
+    subgraph "🌍 Regional Capabilities"
+        subgraph "🌱 Local Node Support"
+            RC1[Local Setup Assistance<br/>Node Establishment]
+            RC2[Community Building<br/>Network Development]
+            RC3[Regional Knowledge<br/>Local Context]
+            RC4[Sustainability Guidance<br/>Environmental Action]
+        end
+        
+        subgraph "🤝 Community Development"
+            RC5[Partnership Building<br/>Organization Connections]
+            RC6[Event Coordination<br/>Local Gatherings]
+            RC7[Project Development<br/>Initiative Support]
+            RC8[Network Expansion<br/>Member Recruitment]
+        end
+        
+        subgraph "🌿 Regenerative Applications"
+            RC9[Carbon Projects<br/>Climate Action]
+            RC10[Circular Economy<br/>Resource Optimization]
+            RC11[Impact Measurement<br/>Outcome Tracking]
+            RC12[Innovation Support<br/>New Solutions]
+        end
+    end
+    
+    %% Regional Output Actions
+    subgraph "📤 Regional Actions"
+        O1[Local Recommendations<br/>Regional Connections]
+        O2[Setup Guidance<br/>Node Establishment]
+        O3[Project Collaboration<br/>Initiative Matching]
+        O4[Community Events<br/>Local Engagement]
+        O5[Impact Reporting<br/>Regional Metrics]
+        O6[Sustainability Plans<br/>Action Roadmaps]
+    end
+    
+    %% Data Flow Connections
+    I1 --> P1
+    I2 --> P1
+    I3 --> P1
+    I4 --> P1
     
     K1 --> P2
     K2 --> P2
     K3 --> P2
     K4 --> P2
     K5 --> P2
-    K6 --> P2
     
-    P1 --> RC5
+    P1 --> RC2
     P1 --> RC6
-    P1 --> RC7
-    P1 --> RC15
+    P1 --> RC8
     
     P2 --> RC1
-    P2 --> RC2
     P2 --> RC3
     P2 --> RC4
+    P2 --> RC7
     P2 --> RC9
     P2 --> RC10
-    P2 --> RC11
-    P2 --> RC12
     
-    P3 --> RC13
-    P3 --> RC14
-    P3 --> RC8
+    P3 --> RC11
+    P3 --> RC5
     
-    P4 --> RC16
-    P4 --> RC7
+    P4 --> RC12
+    P4 --> RC6
     
-    RC1 --> O1
-    RC2 --> O1
     RC3 --> O1
     RC4 --> O1
+    RC5 --> O1
     
-    RC3 --> O2
-    RC10 --> O2
-    RC11 --> O2
+    RC1 --> O2
+    RC2 --> O2
     
-    RC5 --> O3
-    RC6 --> O3
+    RC7 --> O3
+    RC9 --> O3
+    RC10 --> O3
     
-    RC8 --> O4
     RC6 --> O4
+    RC8 --> O4
     
-    RC12 --> O5
-    RC13 --> O5
-    RC14 --> O5
+    RC11 --> O5
+    RC9 --> O5
+    RC10 --> O5
     
-    RC15 --> O6
+    RC4 --> O6
     RC12 --> O6
-    
-    RC16 --> O7
-    RC5 --> O7
 ```
 
-### Practical ReFi Agent Overview
+### Agent-Specific Practical Overview
 
-The practical template above focuses on **real-world ReFi DAO and Local Node capabilities** based on actual operational needs and documentation:
+The three specialized diagrams above focus on **real-world capabilities** tailored to each agent's specific role and operational context:
 
-#### **🌍 Key Differences from Generic Template**
+#### **🎯 Agent-Specific Focus Areas**
 
-**📚 Knowledge Sources** - Grounded in actual ReFi documentation:
-- **224 ReFi Blog Posts**: Real educational content for community guidance
-- **DAO Governance Docs**: Actual governance processes and voting mechanisms  
-- **Local Node Guides**: Step-by-step setup and operational procedures
-- **Contribution Framework**: Real points system and recognition processes
-- **Community Covenant**: Actual community guidelines and values
-- **Garden Pools Guide**: Real funding mechanisms and resource access
+Each agent is specialized for distinct operational contexts and user needs:
 
-**🌍 ReFi-Specific Capabilities** - Focused on practical functions:
+### **1. 🎓 ReF[AI] DAO Community Agent - External Education & Onboarding**
 
-1. **📖 Onboarding & Education**
-   - ReFi concept explanation combining Web3 and regeneration
-   - Step-by-step getting started guides for new members
-   - Local node discovery to connect people with regional initiatives
-   - Clear contribution pathways showing how to participate
+**Primary Focus**: Public-facing education and community onboarding  
+**Target Audience**: Newcomers, potential members, public community  
+**Key Platforms**: Twitter, public Telegram groups, web interface  
 
-2. **🏛️ DAO Operations** 
-   - Governance guidance for voting and proposal participation
-   - Member recognition through contribution points system
-   - Meeting coordination for node and DAO calls
-   - Resource access to funding and garden pools
+**Specialized Capabilities**:
+- **Educational Content**: Clear ReFi concept explanations and terminology guides
+- **Onboarding Support**: Step-by-step getting started journeys for new members
+- **Community Connection**: Local node discovery and contribution pathway guidance
+- **Resource Linking**: Helpful references and next step recommendations
 
-3. **🌱 Local Node Support**
-   - Practical setup assistance for establishing new nodes
-   - Regional knowledge about climate and sustainability contexts
-   - Community building support for local networks
-   - Project development guidance for ReFi applications
+**Unique Knowledge Sources**:
+- 224 ReFi blog posts for comprehensive educational content
+- ReFi basics guides for clear concept explanation
+- Community covenant for values alignment
+- Local node directory for regional connections
 
-4. **🤝 Network Coordination**
-   - Cross-node connections for inter-regional collaboration
-   - Initiative matching to connect complementary projects
-   - Impact tracking for regenerative outcomes measurement
-   - Compliance support ensuring community standards adherence
+### **2. 🏛️ ReF[AI] DAO Global Agent - Internal Operations & Coordination**
 
-**📤 Practical Actions** - Real-world outputs instead of generic responses:
-- **Onboarding Sequences**: Complete new member journey support
-- **Local Node Recommendations**: Regional connections and setup guidance
-- **Governance Participation**: Voting assistance and proposal guidance
-- **Resource Discovery**: Funding access and support identification
-- **Project Collaboration**: Initiative matching and partnership facilitation
-- **Impact Reporting**: Regenerative metrics and outcome tracking
-- **Community Guidelines**: Covenant adherence and standards compliance
+**Primary Focus**: Internal DAO operations and team coordination  
+**Target Audience**: DAO team members, contributors, internal stakeholders  
+**Key Platforms**: Private Telegram, team Slack, internal systems  
+
+**Specialized Capabilities**:
+- **DAO Operations**: Governance guidance, voting support, policy assistance
+- **Task Management**: Meeting coordination, progress tracking, deadline management
+- **Recognition Systems**: Contribution points, achievement tracking, performance reporting
+- **Resource Management**: Garden pools access, funding allocation, process optimization
+
+**Unique Knowledge Sources**:
+- DAO governance documentation for decision-making processes
+- Contribution framework for member recognition
+- Meeting templates and procedural workflows
+- Garden pools guide for funding mechanisms
+
+### **3. 🌍 ReF[AI] Local Node Agent - Regional Expertise & Community Building**
+
+**Primary Focus**: Regional sustainability and local community development  
+**Target Audience**: Local residents, sustainability professionals, regional organizations  
+**Key Platforms**: Discord community hubs, regional Twitter, local events  
+
+**Specialized Capabilities**:
+- **Local Node Support**: Setup assistance, community building, regional context
+- **Community Development**: Partnership building, event coordination, network expansion
+- **Regenerative Applications**: Carbon projects, circular economy, impact measurement
+- **Regional Integration**: Local organization connections, sustainability project development
+
+**Unique Knowledge Sources**:
+- Local node guides for community establishment
+- Regional climate data and environmental context
+- Local organization directories and partnership opportunities
+- Sustainability project databases and funding resources
+
+#### **🔧 Shared Technical Foundation**
+
+All agents share core ElizaOS plugins but optimize for their specific use cases:
+- **Common**: SQL database, knowledge RAG, bootstrap functions
+- **Community Agent**: Enhanced Twitter/Telegram for public engagement
+- **Global Agent**: Advanced SQL for data tracking and Telegram for internal comms
+- **Local Node Agent**: Discord optimization and regional data management
 
 ### Template Agent Overview
 
@@ -389,7 +614,7 @@ refi-agent-ecosystem/
 
 ## 🤖 Agent Specifications
 
-### 1. ReFi Knowledge Agent (External-Facing)
+### 1. ReF[AI] DAO Community Agent (External-Facing)
 **Location**: `refi-knowledge-agent/`
 **Purpose**: Educational Q&A assistant for ReFi concepts and community onboarding
 
@@ -404,7 +629,7 @@ graph LR
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi Knowledge Agent]
+        A1[ReF[AI] DAO Community Agent]
         A2[Character: Educational Guide]
         A3[Response Mode: Educational]
     end
@@ -505,7 +730,7 @@ graph LR
 - Community onboarding guides (`knowledge/getting-started/`)
 - 224 ReFi DAO blog posts for comprehensive context (`knowledge/ReFi DAO Blog Posts/`)
 
-### 2. ReFi Local Node Template Agent (Regional Specialist)
+### 2. ReF[AI] Local Node Agent (Regional Specialist)
 **Location**: `refi-local-node-template/`
 **Purpose**: Regional expert for a specific local region's green economy and local ReFi initiatives
 
@@ -521,7 +746,7 @@ graph LR
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi Local Node Template Agent]
+        A1[ReF[AI] Local Node Agent]
         A2[Character: Regional Expert]
         A3[Focus: Local Context]
     end
@@ -636,7 +861,7 @@ graph LR
 - Circular economy marketplaces
 - Local climate tech and impact investing communities
 
-### 3. ReFi DAO Coordinator (Internal Operations)
+### 3. ReF[AI] DAO Global Agent (Internal Operations)
 **Location**: `refi-dao-coordinator/`
 **Purpose**: Internal coordination assistant for ReFi DAO organizational tasks
 
@@ -652,7 +877,7 @@ graph LR
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi DAO Coordinator]
+        A1[ReF[AI] DAO Global Agent]
         A2[Character: Internal Assistant]
         A3[Focus: Operations]
     end
@@ -771,7 +996,7 @@ graph LR
 
 ## 📊 Agent Template Diagrams
 
-### 1. ReFi Knowledge Agent - Complete System Overview
+### 1. ReF[AI] DAO Community Agent - Complete System Overview
 
 ```mermaid
 graph LR
@@ -782,7 +1007,7 @@ graph LR
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi Knowledge Agent]
+        A1[ReF[AI] DAO Community Agent]
         A2[Character: Educational Guide]
         A3[Response Mode: Educational]
     end
@@ -863,7 +1088,7 @@ graph LR
     P1 --> D4
 ```
 
-### 2. ReFi Local Node Template Agent - Complete System Overview
+### 2. ReF[AI] Local Node Agent - Complete System Overview
 
 ```mermaid
 graph LR
@@ -875,7 +1100,7 @@ graph LR
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi Local Node Template Agent]
+        A1[ReF[AI] Local Node Agent]
         A2[Character: Regional Expert]
         A3[Focus: Local Context]
     end
@@ -966,7 +1191,7 @@ graph LR
     P1 --> D4
 ```
 
-### 3. ReFi DAO Coordinator - Complete System Overview
+### 3. ReF[AI] DAO Global Agent - Complete System Overview
 
 ```mermaid
 graph LR
@@ -978,7 +1203,7 @@ graph LR
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi DAO Coordinator]
+        A1[ReF[AI] DAO Global Agent]
         A2[Character: Internal Assistant]
         A3[Focus: Operations]
     end
@@ -1077,7 +1302,7 @@ graph LR
 graph TB
     subgraph "Agent Types"
         AT1[Knowledge Agent]
-        AT2[Local Node Template]
+        AT2[Local Node Agent]
         AT3[DAO Coordinator]
     end
     
@@ -1140,9 +1365,9 @@ graph TB
 graph TB
     subgraph "ElizaOS Architecture"
         subgraph "Agent Layer"
-            A1[ReFi Knowledge Agent]
-            A2[ReFi Local Node Template]  
-            A3[ReFi DAO Coordinator]
+            A1[ReF[AI] DAO Community Agent]
+            A2[ReF[AI] Local Node Agent]  
+            A3[ReF[AI] DAO Global Agent]
         end
         
         subgraph "Plugin System"
@@ -1312,15 +1537,15 @@ This project uses a monorepo structure with:
 Each agent can be run independently:
 
 ```bash
-# ReFi Knowledge Agent
+# ReF[AI] DAO Community Agent
 cd refi-knowledge-agent
 bun run start
 
-# ReFi Local Node Template Agent
+# ReF[AI] Local Node Agent
 cd refi-local-node-template
 bun run start
 
-# ReFi DAO Coordinator
+# ReF[AI] DAO Global Agent
 cd refi-dao-coordinator
 bun run start
 ```
@@ -1356,8 +1581,8 @@ graph TB
     
     %% Core Agent Layer
     subgraph "🤖 Agent Layer"
-        KA[ReFi Knowledge Agent]
-        LA[Local Node Template Agent]
+        KA[ReF[AI] DAO Community Agent]
+        LA[Local Node Agent]
         DA[DAO Coordinator Agent]
     end
     
@@ -1575,7 +1800,7 @@ graph TB
 - **User Requests**: Internal team requests and coordination tasks
 
 #### **2. Agent Layer (🤖 Agent Layer)**
-- **ReFi Knowledge Agent**: Educational Q&A and community onboarding
+- **ReF[AI] DAO Community Agent**: Educational Q&A and community onboarding
 - **Local Node Template Agent**: Regional expertise and local sustainability
 - **DAO Coordinator Agent**: Internal operations and team coordination
 

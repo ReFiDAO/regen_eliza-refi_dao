@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# ReFi Local Node Template Enhancement Script
+# ReF[AI] Local Node Template Enhancement Script
 # This script adds additional features and improvements to the template
 
 set -e
 
-echo "🚀 ReFi Local Node Template Enhancement"
+echo "🚀 ReF[AI] Local Node Template Enhancement"
 echo "======================================="
 echo ""
 
@@ -34,7 +34,7 @@ echo "📝 Creating example configurations..."
 cat > examples/berlin/README.md << 'EOF'
 # ReFi Berlin Example
 
-This is an example of how the ReFi Local Node Template can be customized for Berlin, Germany.
+This is an example of how the ReF[AI] Local Node Template can be customized for Berlin, Germany.
 
 ## Key Customizations
 
@@ -59,7 +59,7 @@ EOF
 cat > examples/portland/README.md << 'EOF'
 # ReFi Portland Example
 
-This is an example of how the ReFi Local Node Template can be customized for Portland, Oregon.
+This is an example of how the ReF[AI] Local Node Template can be customized for Portland, Oregon.
 
 ## Key Customizations
 
@@ -84,7 +84,7 @@ EOF
 cat > examples/nairobi/README.md << 'EOF'
 # ReFi Nairobi Example
 
-This is an example of how the ReFi Local Node Template can be customized for Nairobi, Kenya.
+This is an example of how the ReF[AI] Local Node Template can be customized for Nairobi, Kenya.
 
 ## Key Customizations
 
@@ -411,9 +411,9 @@ EOF
 
 # Create contribution guidelines
 cat > CONTRIBUTING.md << 'EOF'
-# Contributing to ReFi Local Node Template
+# Contributing to ReF[AI] Local Node Template
 
-Thank you for your interest in contributing to the ReFi Local Node Template! This document provides guidelines for contributing to the template and helping improve it for the broader ReFi community.
+Thank you for your interest in contributing to the ReF[AI] Local Node Template! This document provides guidelines for contributing to the template and helping improve it for the broader ReFi community.
 
 ## How to Contribute
 
@@ -509,7 +509,7 @@ If you have questions about contributing:
 3. Join the ReFi DAO Discord
 4. Create a discussion issue
 
-Thank you for helping make the ReFi Local Node Template better for everyone!
+Thank you for helping make the ReF[AI] Local Node Template better for everyone!
 EOF
 
 echo "🎯 Creating performance optimization files..."

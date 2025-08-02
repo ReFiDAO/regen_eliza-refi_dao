@@ -1,10 +1,10 @@
-# ReFi Local Node Agent Template
+# ReF[AI] Local Node Agent Template
 
 An ElizaOS agent template specialized in Regenerative Finance (ReFi) and local sustainability ecosystem development. This template provides a foundation for creating region-specific ReFi agents that can educate users about regenerative finance concepts, connect them with local sustainability initiatives, and provide insights on regenerative economic models in their specific regional context.
 
 ## Overview
 
-The ReFi Local Node Agent Template is designed to:
+The ReF[AI] Local Node Agent Template is designed to:
 - **Educate** users about regenerative finance concepts and applications
 - **Connect** people with local sustainability initiatives and regional organizations  
 - **Guide** individuals and organizations in implementing ReFi projects
@@ -202,7 +202,7 @@ Built on ElizaOS with:
 
 ## Contributing
 
-To contribute to the ReFi Local Node Agent Template:
+To contribute to the ReF[AI] Local Node Agent Template:
 1. Add new knowledge document templates
 2. Improve customization instructions
 3. Add new platform integrations

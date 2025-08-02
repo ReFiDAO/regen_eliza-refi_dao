@@ -1,8 +1,8 @@
-# ReFi DAO Coordinator
+# ReF[AI] DAO Global Agent
 
 ## Overview
 
-The ReFi DAO Coordinator is an internal coordination assistant designed to help with organizational tasks, information sharing, and team coordination within ReFi DAO operations. This agent serves as a reliable operational support system that provides simple progress tracking, meeting coordination, and task management for the DAO community.
+The ReF[AI] DAO Global Agent is an internal coordination assistant designed to help with organizational tasks, information sharing, and team coordination within ReFi DAO operations. This agent serves as a reliable operational support system that provides simple progress tracking, meeting coordination, and task management for the DAO community.
 
 ## Core Purpose
 
@@ -14,7 +14,7 @@ The ReFi DAO Coordinator is an internal coordination assistant designed to help 
 
 ## Character Profile
 
-**Name**: ReFi DAO Coordinator  
+**Name**: ReF[AI] DAO Global Agent  
 **Personality**: Organized, helpful, reliable, clear, professional  
 **Expertise**: DAO operations, meeting coordination, task tracking, contributor recognition  
 **Tone**: Professional but friendly, structured, action-oriented  
@@ -268,7 +268,7 @@ Track coordination effectiveness through:
 
 ## 🔧 Plugin Configuration
 
-The ReFi DAO Coordinator uses the following ElizaOS plugins with conditional loading based on environment variables:
+The ReF[AI] DAO Global Agent uses the following ElizaOS plugins with conditional loading based on environment variables:
 
 ```typescript
 plugins: [
@@ -302,7 +302,7 @@ graph TB
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi DAO Coordinator]
+        A1[ReF[AI] DAO Global Agent]
         A2[Character: Internal Assistant]
         A3[Focus: Operations]
     end
@@ -395,7 +395,7 @@ graph TB
 
 ### Core Components
 
-The ReFi DAO Coordinator is built using ElizaOS core components:
+The ReF[AI] DAO Global Agent is built using ElizaOS core components:
 
 - **Character Definition**: Internal assistant personality, operational focus, and professional behavior
 - **Plugin System**: Modular capabilities (SQL, LLM providers, Telegram integration)

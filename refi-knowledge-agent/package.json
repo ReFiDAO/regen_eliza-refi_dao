@@ -1,6 +1,6 @@
 {
   "name": "refi-knowledge-agent",
-  "description": "ReFi Knowledge Agent - External Q&A bot for regenerative finance and ReFi DAO education",
+  "description": "ReF[AI] DAO Community Agent - External Q&A bot for regenerative finance and ReFi DAO education",
   "version": "0.1.0",
   "type": "module",
   "main": "dist/src/index.js",

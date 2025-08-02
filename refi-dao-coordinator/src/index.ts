@@ -3,7 +3,7 @@ import starterPlugin from './plugin.ts';
 import { refiDaoCoordinator } from './refiDaoCoordinator.ts';
 
 const initCharacter = ({ runtime }: { runtime: IAgentRuntime }) => {
-  logger.info('Initializing ReFi DAO Coordinator');
+  logger.info('Initializing ReF[AI] DAO Global Agent');
   logger.info('Name: ', refiDaoCoordinator.name);
 };
 

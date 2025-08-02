@@ -1,6 +1,6 @@
-# ReFi Local Node Template Usage Guide
+# ReF[AI] Local Node Template Usage Guide
 
-This guide explains how to use the ReFi Local Node Agent Template to create a region-specific ReFi agent for your local community.
+This guide explains how to use the ReF[AI] Local Node Agent Template to create a region-specific ReFi agent for your local community.
 
 ## What is a ReFi Local Node?
 

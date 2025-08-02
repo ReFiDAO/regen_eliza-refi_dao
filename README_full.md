@@ -9,9 +9,9 @@ This repository contains a collection of specialized AI agents focused on regene
 ```mermaid
 graph TB
     subgraph "ReFi Agent Ecosystem"
-        KA[🎓 ReFi Knowledge Agent<br/>External Q&A & Education]
-        LNT[🌍 ReFi Local Node Template<br/>Regional Template]
-        CA[🤝 ReFi DAO Coordinator<br/>Internal Operations]
+        KA[🎓 ReF[AI] DAO Community Agent<br/>External Q&A & Education]
+        LNT[🌍 ReF[AI] Local Node Agent<br/>Regional Template]
+        CA[🤝 ReF[AI] DAO Global Agent<br/>Internal Operations]
     end
     
     subgraph "Target Audiences"
@@ -75,7 +75,7 @@ refi-agent-ecosystem/
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
-├── refi-local-node-template/           # 🌍 ReFi Local Node Template
+├── refi-local-node-template/           # 🌍 ReF[AI] Local Node Agent
 │   ├── src/
 │   │   ├── character.ts               # Template character definition
 │   │   ├── index.ts                   # Project entry point
@@ -137,7 +137,7 @@ refi-agent-ecosystem/
 
 ## 🤖 Agent Specifications
 
-### 1. ReFi Knowledge Agent (External-Facing)
+### 1. ReF[AI] DAO Community Agent (External-Facing)
 **Location**: `refi-knowledge-agent/`
 **Purpose**: Educational Q&A assistant for ReFi concepts and community onboarding
 
@@ -145,7 +145,7 @@ refi-agent-ecosystem/
 
 ```mermaid
 graph LR
-    subgraph "ReFi Knowledge Agent Flow"
+    subgraph "ReF[AI] DAO Community Agent Flow"
         U[User Question] --> P[Process Query]
         P --> K[Knowledge Base<br/>224 Blog Posts<br/>Educational Content]
         K --> G[Generate Educational Response]
@@ -198,7 +198,7 @@ settings: {
 }
 ```
 
-### 2. ReFi Local Node Template (Regional Template)
+### 2. ReF[AI] Local Node Agent (Regional Template)
 **Location**: `refi-local-node-template/`
 **Purpose**: Comprehensive template for creating region-specific ReFi agents
 
@@ -274,7 +274,7 @@ settings: {
 }
 ```
 
-### 3. ReFi DAO Coordinator (Internal Operations)
+### 3. ReF[AI] DAO Global Agent (Internal Operations)
 **Location**: `refi-dao-coordinator/`
 **Purpose**: Internal coordination assistant for ReFi DAO organizational tasks
 
@@ -442,9 +442,9 @@ After starting, your agent will be available at:
 graph TB
     subgraph "ElizaOS Architecture"
         subgraph "Agent Layer"
-            A1[ReFi Knowledge Agent]
-            A2[ReFi Local Node Template]  
-            A3[ReFi DAO Coordinator]
+            A1[ReF[AI] DAO Community Agent]
+            A2[ReF[AI] Local Node Agent]  
+            A3[ReF[AI] DAO Global Agent]
         end
         
         subgraph "Plugin System"
@@ -647,7 +647,7 @@ flowchart TD
 
 ### Using the Local Node Template
 
-The ReFi Local Node Template provides a comprehensive starting point for creating region-specific agents:
+The ReF[AI] Local Node Agent provides a comprehensive starting point for creating region-specific agents:
 
 1. **Setup a New Local Node**:
    ```bash
@@ -695,19 +695,19 @@ LOG_LEVEL=debug elizaos start  # Debug mode
 ```mermaid
 graph TB
     subgraph "Knowledge Architecture"
-        subgraph "ReFi Knowledge Agent"
+        subgraph "ReF[AI] DAO Community Agent"
             KB1[224 Blog Posts<br/>JSON Format]
             KB2[Educational Content<br/>Markdown]
             KB3[Community Resources<br/>Getting Started]
         end
         
-        subgraph "ReFi Local Node Template"
+        subgraph "ReF[AI] Local Node Agent"
             KB4[Regional Templates<br/>Customizable Content]
             KB5[Network Integration<br/>ReFi DAO Connectivity]
             KB6[Deployment Guides<br/>Setup Instructions]
         end
         
-        subgraph "ReFi DAO Coordinator"
+        subgraph "ReF[AI] DAO Global Agent"
             KB7[Operational Procedures<br/>Templates]
             KB8[Team Resources<br/>Recognition Frameworks]
             KB9[Process Documentation<br/>Meeting Templates]
@@ -736,18 +736,18 @@ graph TB
     RP3 --> RP4
 ```
 
-### ReFi Knowledge Agent
+### ReF[AI] DAO Community Agent
 - **Blog Posts**: 224 curated ReFi DAO blog posts in JSON format
 - **Educational Content**: Basic ReFi concepts and getting started guides
 - **Community Resources**: Local Node information and participation guides
 
-### ReFi Local Node Template
+### ReF[AI] Local Node Agent
 - **Template Content**: Structured templates for regional customization
 - **Network Integration**: Built-in ReFi DAO network connectivity
 - **Deployment Resources**: Complete setup and deployment guides
 - **Example Configurations**: Berlin, Portland, Nairobi examples
 
-### ReFi DAO Coordinator
+### ReF[AI] DAO Global Agent
 - **Operational Knowledge**: Internal processes and coordination procedures
 - **Team Resources**: Contributor guidelines and recognition frameworks
 - **Process Documentation**: Meeting templates and progress tracking systems

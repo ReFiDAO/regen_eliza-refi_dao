@@ -3,7 +3,7 @@ import starterPlugin from './plugin.ts';
 import { refiKnowledgeAgent } from './refiKnowledgeAgent.ts';
 
 const initCharacter = ({ runtime }: { runtime: IAgentRuntime }) => {
-  logger.info('Initializing ReFi Knowledge Agent');
+  logger.info('Initializing ReF[AI] DAO Community Agent');
   logger.info('Name: ', refiKnowledgeAgent.name);
 };
 
