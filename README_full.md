@@ -59,7 +59,7 @@ refi-agent-ecosystem/
 ├── tsconfig.json                       # TypeScript configuration
 ├── bunfig.toml                         # Bun package manager configuration
 │
-├── refi-knowledge-agent/               # 🎓 External Q&A and Education Agent
+├── refi-dao-community-agent/           # 🌱 ReF[AI] DAO Community Agent
 │   ├── src/
 │   │   ├── refiKnowledgeAgent.ts      # Character definition for knowledge agent
 │   │   ├── index.ts                   # Project entry point
@@ -75,7 +75,7 @@ refi-agent-ecosystem/
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
-├── refi-local-node-template/           # 🌍 ReF[AI] Local Node Agent
+├── refi-local-node-agent/              # 🌍 ReF[AI] Local Node Agent
 │   ├── src/
 │   │   ├── character.ts               # Template character definition
 │   │   ├── index.ts                   # Project entry point
@@ -104,7 +104,7 @@ refi-agent-ecosystem/
 │   ├── README.md                      # Template documentation
 │   └── package.json                   # Template dependencies
 │
-├── refi-dao-coordinator/               # 🤝 Internal Operations Coordinator Agent
+├── refi-dao-global-agent/              # 🌐 ReF[AI] DAO Global Agent
 │   ├── src/
 │   │   ├── refiDaoCoordinator.ts      # Character definition for coordinator
 │   │   ├── index.ts                   # Project entry point
@@ -138,10 +138,10 @@ refi-agent-ecosystem/
 ## 🤖 Agent Specifications
 
 ### 1. ReF[AI] DAO Community Agent (External-Facing)
-**Location**: `refi-knowledge-agent/`
+**Location**: `refi-dao-community-agent/`
 **Purpose**: Educational Q&A assistant for ReFi concepts and community onboarding
 
-**Character Definition**: `refi-knowledge-agent/src/refiKnowledgeAgent.ts`
+**Character Definition**: `refi-dao-community-agent/src/refiKnowledgeAgent.ts`
 
 ```mermaid
 graph LR
@@ -199,10 +199,10 @@ settings: {
 ```
 
 ### 2. ReF[AI] Local Node Agent (Regional Template)
-**Location**: `refi-local-node-template/`
+**Location**: `refi-local-node-agent/`
 **Purpose**: Comprehensive template for creating region-specific ReFi agents
 
-**Character Definition**: `refi-local-node-template/src/character.ts`
+**Character Definition**: `refi-local-node-agent/src/character.ts`
 
 ```mermaid
 graph TD
@@ -275,10 +275,10 @@ settings: {
 ```
 
 ### 3. ReF[AI] DAO Global Agent (Internal Operations)
-**Location**: `refi-dao-coordinator/`
+**Location**: `refi-dao-global-agent/`
 **Purpose**: Internal coordination assistant for ReFi DAO organizational tasks
 
-**Character Definition**: `refi-dao-coordinator/src/refiDaoCoordinator.ts`
+**Character Definition**: `refi-dao-global-agent/src/refiDaoCoordinator.ts`
 
 ```mermaid
 graph TB
@@ -388,7 +388,7 @@ cd regen-eliza
 bun install
 
 # Choose your agent and navigate to its directory
-cd refi-knowledge-agent  # or refi-local-node-template, refi-dao-coordinator
+cd refi-dao-community-agent  # or refi-local-node-agent, refi-dao-global-agent
 ```
 
 #### 3. Configure Environment Variables
@@ -531,9 +531,9 @@ graph LR
     end
     
     subgraph "Agent Projects"
-        AP1[refi-knowledge-agent]
-        AP2[refi-local-node-template]
-        AP3[refi-dao-coordinator]
+        AP1[refi-dao-community-agent]
+        AP2[refi-local-node-agent]
+        AP3[refi-dao-global-agent]
     end
     
     subgraph "Shared Dependencies"
@@ -651,7 +651,7 @@ The ReF[AI] Local Node Agent provides a comprehensive starting point for creatin
 
 1. **Setup a New Local Node**:
    ```bash
-   cd refi-local-node-template
+   cd refi-local-node-agent
    ./scripts/setup-local-node.sh
    # Follow the interactive prompts to customize for your region
    ```
@@ -682,7 +682,7 @@ The ReF[AI] Local Node Agent provides a comprehensive starting point for creatin
 bun install                    # Install all dependencies
 
 # Navigate to specific agent
-cd refi-knowledge-agent
+cd refi-dao-community-agent
 
 # Development cycle
 elizaos test                   # Test changes
