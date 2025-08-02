@@ -260,88 +260,69 @@ plugins: [
 ## 📊 Data Flow Architecture
 
 ```mermaid
-graph TB
-    subgraph "🔌 Input Channels"
-        I1[Twitter API]
-        I2[Telegram Bot]
-        I3[Direct Web Interface]
+graph LR
+    %% User Input
+    subgraph "👤 User Input"
+        USR1["Public Questions<br/>ReFi Newcomers"]
+        USR2["Community Seekers<br/>Onboarding Needs"]
+        USR3["Educational Requests<br/>Learning Goals"]
     end
     
-    subgraph "🧠 Core Agent"
-        A1[ReF[AI] DAO Community Agent]
-        A2[Character: Educational Guide]
-        A3[Response Mode: Educational]
+    %% Plugins
+    subgraph "🔧 Plugins"
+        PLG1["Knowledge RAG<br/>Educational Content"]
+        PLG2["Platform Connectors<br/>Twitter • Telegram"]
+        PLG3["LLM Providers<br/>OpenAI • Anthropic"]
+        PLG4["SQL Database<br/>Data Storage"]
     end
     
-    subgraph "🔧 Plugins & Capabilities"
-        P1[SQL Database]
-        P2[Knowledge RAG]
-        P3[LLM Providers]
-        P4[Platform Connectors]
-        P5[Bootstrap Core]
+    %% Capabilities
+    subgraph "⚡ Capabilities"
+        CAP1["Educational Responses"]
+        CAP2["Resource Links"]
+        CAP3["Community Connections"]
+        CAP4["Next Steps Guide"]
     end
     
-    subgraph "📚 Knowledge Sources"
-        K1[224 Blog Posts]
-        K2[ReFi Basics]
-        K3[DAO Structure]
-        K4[Local Nodes]
-        K5[Getting Started]
+    %% Knowledge
+    subgraph "📚 Knowledge"
+        KB1["224 ReFi Blog Posts<br/>Comprehensive Content"]
+        KB2["ReFi Basics<br/>Terminology & Concepts"]
+        KB3["Getting Started<br/>Onboarding Flows"]
+        KB4["DAO Structure<br/>Governance Info"]
     end
     
-    subgraph "🤖 LLM Providers"
-        L1[Anthropic Claude]
-        L2[OpenAI GPT]
-        L3[Google Gemini]
-        L4[OpenRouter]
-        L5[Ollama Local]
+    %% Output
+    subgraph "📤 Output"
+        OUT1["Twitter<br/>Public Outreach"]
+        OUT2["Telegram<br/>Community Groups"]
+        OUT3["Web Interface<br/>Direct Responses"]
     end
     
-    subgraph "📤 Output & Actions"
-        O1[Educational Responses]
-        O2[Resource Links]
-        O3[Community Connections]
-        O4[Next Steps Guide]
-    end
+    %% Data Flow
+    USR1 --> PLG1
+    USR2 --> PLG2
+    USR3 --> PLG3
     
-    subgraph "💾 Data Storage"
-        D1[Conversation History]
-        D2[User Interactions]
-        D3[Knowledge Embeddings]
-        D4[Response Templates]
-    end
+    PLG1 --> KB1
+    PLG1 --> KB2
+    PLG1 --> KB3
+    PLG1 --> KB4
     
-    I1 --> A1
-    I2 --> A1
-    I3 --> A1
+    PLG1 --> CAP1
+    PLG2 --> CAP2
+    PLG3 --> CAP3
+    PLG4 --> CAP4
     
-    A1 --> P1
-    A1 --> P2
-    A1 --> P3
-    A1 --> P4
-    A1 --> P5
+    KB1 --> CAP1
+    KB2 --> CAP2
+    KB3 --> CAP3
+    KB4 --> CAP4
     
-    P2 --> K1
-    P2 --> K2
-    P2 --> K3
-    P2 --> K4
-    P2 --> K5
-    
-    P3 --> L1
-    P3 --> L2
-    P3 --> L3
-    P3 --> L4
-    P3 --> L5
-    
-    A1 --> O1
-    A1 --> O2
-    A1 --> O3
-    A1 --> O4
-    
-    P1 --> D1
-    P1 --> D2
-    P1 --> D3
-    P1 --> D4
+    CAP1 --> OUT1
+    CAP2 --> OUT2
+    CAP3 --> OUT3
+    CAP4 --> OUT1
 ```
 
 ## 🏗️ Technical Architecture

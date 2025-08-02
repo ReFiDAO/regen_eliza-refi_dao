@@ -293,102 +293,69 @@ plugins: [
 ## 📊 Data Flow Architecture
 
 ```mermaid
-graph TB
-    subgraph "🔌 Input Channels"
-        I1[Telegram Private]
-        I2[Team Requests]
-        I3[Meeting Coordination]
-        I4[Progress Updates]
+graph LR
+    %% User Input
+    subgraph "👤 User Input"
+        USR1["Team Coordination<br/>Internal Requests"]
+        USR2["Meeting Needs<br/>Scheduling Requests"]
+        USR3["Process Queries<br/>DAO Operations"]
     end
     
-    subgraph "🧠 Core Agent"
-        A1[ReF[AI] DAO Global Agent]
-        A2[Character: Internal Assistant]
-        A3[Focus: Operations]
+    %% Plugins
+    subgraph "🔧 Plugins"
+        PLG1["SQL Database<br/>Data Management"]
+        PLG2["Platform Connectors<br/>Telegram • APIs"]
+        PLG3["LLM Providers<br/>AI Generation"]
+        PLG4["Bootstrap<br/>Task Management"]
     end
     
-    subgraph "🔧 Plugins & Capabilities"
-        P1[SQL Database]
-        P2[LLM Providers]
-        P3[Telegram Integration]
-        P4[Bootstrap Core]
+    %% Capabilities
+    subgraph "⚡ Capabilities"
+        CAP1["Meeting Coordination"]
+        CAP2["Progress Tracking"]
+        CAP3["Contributor Recognition"]
+        CAP4["Process Management"]
     end
     
-    subgraph "📋 Operational Areas"
-        O1[Meeting Coordination]
-        O2[Progress Tracking]
-        O3[Contributor Recognition]
-        O4[Documentation]
+    %% Knowledge
+    subgraph "📚 Knowledge"
+        KB1["DAO Governance<br/>Procedures & Policies"]
+        KB2["Meeting Templates<br/>Agendas & Workflows"]
+        KB3["Contribution Framework<br/>Recognition System"]
+        KB4["Process Documentation<br/>Best Practices"]
     end
     
-    subgraph "🏗️ Coordination Engine"
-        C1[Agenda Builder]
-        C2[Progress Tracker]
-        C3[Recognition System]
-        C4[Documentation Manager]
+    %% Output
+    subgraph "📤 Output"
+        OUT1["Private Telegram<br/>Team Coordination"]
+        OUT2["API Responses<br/>System Integration"]
+        OUT3["Meeting Systems<br/>Scheduling Results"]
     end
     
-    subgraph "🤖 LLM Providers"
-        L1[Anthropic Claude]
-        L2[OpenAI GPT]
-        L3[Google Gemini]
-        L4[OpenRouter]
-        L5[Ollama Local]
-    end
+    %% Data Flow
+    USR1 --> PLG1
+    USR2 --> PLG2
+    USR3 --> PLG3
     
-    subgraph "📤 Output & Actions"
-        O1[Structured Responses]
-        O2[Meeting Agendas]
-        O3[Progress Reports]
-        O4[Action Items]
-        O5[Recognition Announcements]
-    end
+    PLG1 --> KB1
+    PLG2 --> KB2
+    PLG3 --> KB3
+    PLG4 --> KB4
     
-    subgraph "💾 Data Storage"
-        D1[Meeting Records]
-        D2[Project Tracking]
-        D3[Contributor Profiles]
-        D4[Process Templates]
-        D5[Progress Metrics]
-    end
+    PLG1 --> CAP1
+    PLG2 --> CAP2
+    PLG3 --> CAP3
+    PLG4 --> CAP4
     
-    I1 --> A1
-    I2 --> A1
-    I3 --> A1
-    I4 --> A1
+    KB1 --> CAP1
+    KB2 --> CAP2
+    KB3 --> CAP3
+    KB4 --> CAP4
     
-    A1 --> P1
-    A1 --> P2
-    A1 --> P3
-    A1 --> P4
-    
-    A1 --> O1
-    A1 --> O2
-    A1 --> O3
-    A1 --> O4
-    
-    A1 --> C1
-    A1 --> C2
-    A1 --> C3
-    A1 --> C4
-    
-    P2 --> L1
-    P2 --> L2
-    P2 --> L3
-    P2 --> L4
-    P2 --> L5
-    
-    A1 --> O1
-    A1 --> O2
-    A1 --> O3
-    A1 --> O4
-    A1 --> O5
-    
-    P1 --> D1
-    P1 --> D2
-    P1 --> D3
-    P1 --> D4
-    P1 --> D5
+    CAP1 --> OUT1
+    CAP2 --> OUT2
+    CAP3 --> OUT3
+    CAP4 --> OUT1
 ```
 
 ## 🏗️ Technical Architecture
