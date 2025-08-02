@@ -12,30 +12,15 @@ This repository contains a collection of specialized AI agents focused on regene
 
 ```mermaid
 graph LR
-    %% External Interfaces
-    subgraph "🌐 External Interfaces"
-        EXT1["Public Platforms<br/>Twitter • Telegram • Discord"]
-        EXT2["Internal Channels<br/>Private Teams • APIs"]
-        EXT3["Knowledge Sources<br/>ReFi Content • Local Data"]
-    end
-    
-    %% Agent Layer - Three Specialized Agents
-    subgraph "🤖 Agent Layer"
-        subgraph "Agent Specializations"
-            A1["ReF[AI] DAO Community Agent<br/>Education & Onboarding"]
-            A2["ReF[AI] DAO Global Agent<br/>DAO Operations"]
-            A3["ReF[AI] Local Node Agent<br/>Regional Expertise"]
-        end
-    end
-    
-    %% ElizaOS Core Runtime
-    subgraph "⚙️ ElizaOS Runtime"
-        RT["AgentRuntime<br/>State Composition"]
-        MEM["Memory System<br/>Conversations • Facts • Relationships"]
+    %% User Input
+    subgraph "👤 User Input"
+        USR1["Public Users<br/>Questions & Requests"]
+        USR2["Internal Team<br/>Coordination Needs"]
+        USR3["Local Communities<br/>Regional Inquiries"]
     end
     
     %% Plugin System
-    subgraph "🔧 Plugin System"
+    subgraph "🔧 Plugins"
         PLG1["Knowledge RAG<br/>Document Processing"]
         PLG2["SQL Database<br/>Data Persistence"]
         PLG3["Platform Connectors<br/>Multi-Channel Support"]
@@ -43,68 +28,52 @@ graph LR
     end
     
     %% Core Capabilities
-    subgraph "⚡ Core Capabilities"
+    subgraph "⚡ Capabilities"
         CAP1["Educational Responses<br/>ReFi Knowledge Sharing"]
         CAP2["Regional Guidance<br/>Local Sustainability"]
         CAP3["Operational Support<br/>DAO Coordination"]
         CAP4["Community Building<br/>Network Connections"]
     end
     
-    %% Specialized Knowledge Bases
-    subgraph "📚 Knowledge Bases"
+    %% Knowledge Bases
+    subgraph "📚 Knowledge"
         KB1["ReFi Education<br/>224 Blog Posts • Terminology"]
         KB2["Regional Data<br/>Local Climate • Organizations"]
         KB3["Operations<br/>Governance • Procedures"]
     end
     
+    %% Output
+    subgraph "📤 Output"
+        OUT1["Public Platforms<br/>Twitter • Telegram • Discord"]
+        OUT2["Internal Channels<br/>Private Teams • APIs"]
+        OUT3["Community Responses<br/>Direct Support"]
+    end
+    
     %% Data Flow
-    EXT1 --> A1
-    EXT1 --> A2
-    EXT2 --> A3
-    EXT3 --> KB1
-    EXT3 --> KB2
-    EXT3 --> KB3
-    
-    A1 --> RT
-    A2 --> RT
-    A3 --> RT
-    
-    RT --> PLG1
-    RT --> PLG2
-    RT --> PLG3
-    RT --> PLG4
-    RT --> MEM
+    USR1 --> PLG1
+    USR2 --> PLG2
+    USR3 --> PLG3
     
     PLG1 --> KB1
-    PLG1 --> KB2
-    PLG1 --> KB3
+    PLG2 --> KB2
+    PLG3 --> KB3
+    PLG4 --> KB1
+    PLG4 --> KB2
+    PLG4 --> KB3
     
     PLG1 --> CAP1
-    PLG2 --> CAP1
-    PLG3 --> CAP1
-    PLG4 --> CAP1
-    
-    PLG1 --> CAP2
     PLG2 --> CAP2
-    PLG3 --> CAP2
-    PLG4 --> CAP2
-    
-    PLG1 --> CAP3
-    PLG2 --> CAP3
     PLG3 --> CAP3
-    PLG4 --> CAP3
-    
-    PLG1 --> CAP4
-    PLG2 --> CAP4
-    PLG3 --> CAP4
     PLG4 --> CAP4
     
-    CAP1 --> EXT1
-    CAP2 --> EXT1
-    CAP3 --> EXT2
-    CAP4 --> EXT1
+    KB1 --> CAP1
+    KB2 --> CAP2
+    KB3 --> CAP3
     
-    MEM --> PLG2
+    CAP1 --> OUT1
+    CAP2 --> OUT2
+    CAP3 --> OUT3
+    CAP4 --> OUT1
 ```
 
 ## 🌱 Agent-Specific Architectures
@@ -115,56 +84,46 @@ graph LR
 
 ```mermaid
 graph LR
-    %% External Interfaces - Public Focus
-    subgraph "🌐 Public Interfaces"
-        PUB1["Twitter<br/>Public Outreach"]
-        PUB2["Telegram<br/>Community Groups"]
-        PUB3["Web Interface<br/>Direct Inquiries"]
+    %% User Input
+    subgraph "👤 User Input"
+        USR1["Public Questions<br/>ReFi Newcomers"]
+        USR2["Community Seekers<br/>Onboarding Needs"]
+        USR3["Educational Requests<br/>Learning Goals"]
     end
     
-    %% ReF[AI] DAO Community Agent
-    subgraph "🤖 ReF[AI] DAO Community Agent"
-        CA["Education & Onboarding<br/>Public-Facing"]
-    end
-    
-    %% ElizaOS Runtime
-    subgraph "⚙️ ElizaOS Runtime"
-        RT1["AgentRuntime"]
-        MEM1["Memory System"]
-    end
-    
-    %% Educational Plugins
-    subgraph "🔧 Educational Plugins"
+    %% Plugins
+    subgraph "🔧 Plugins"
         PLG1["Knowledge RAG<br/>Educational Content"]
         PLG2["Platform Connectors<br/>Twitter • Telegram"]
         PLG3["LLM Providers<br/>OpenAI • Anthropic"]
     end
     
-    %% Educational Capabilities
-    subgraph "⚡ Educational Capabilities"
+    %% Capabilities
+    subgraph "⚡ Capabilities"
         CAP1["ReFi Concept Explanation"]
         CAP2["Onboarding Guidance"]
         CAP3["Community Connections"]
         CAP4["Resource Recommendations"]
     end
     
-    %% Educational Knowledge
-    subgraph "📚 Educational Knowledge"
+    %% Knowledge
+    subgraph "📚 Knowledge"
         KB1["224 ReFi Blog Posts<br/>Comprehensive Content"]
         KB2["ReFi Basics<br/>Terminology & Concepts"]
         KB3["Getting Started<br/>Onboarding Flows"]
     end
     
-    %% Data Flow
-    PUB1 --> CA
-    PUB2 --> CA
-    PUB3 --> CA
+    %% Output
+    subgraph "📤 Output"
+        OUT1["Twitter<br/>Public Outreach"]
+        OUT2["Telegram<br/>Community Groups"]
+        OUT3["Web Interface<br/>Direct Responses"]
+    end
     
-    CA --> RT1
-    RT1 --> PLG1
-    RT1 --> PLG2
-    RT1 --> PLG3
-    RT1 --> MEM1
+    %% Data Flow
+    USR1 --> PLG1
+    USR2 --> PLG2
+    USR3 --> PLG3
     
     PLG1 --> KB1
     PLG1 --> KB2
@@ -175,10 +134,14 @@ graph LR
     PLG3 --> CAP3
     PLG1 --> CAP4
     
-    CAP1 --> PUB1
-    CAP2 --> PUB2
-    CAP3 --> PUB3
-    CAP4 --> PUB2
+    KB1 --> CAP1
+    KB2 --> CAP2
+    KB3 --> CAP3
+    
+    CAP1 --> OUT1
+    CAP2 --> OUT2
+    CAP3 --> OUT3
+    CAP4 --> OUT2
 ```
 
 **🎯 Target Audience**: Public, newcomers  
@@ -193,70 +156,64 @@ graph LR
 
 ```mermaid
 graph LR
-    %% External Interfaces - Internal Focus
-    subgraph "🌐 Internal Interfaces"
-        INT1["Private Telegram<br/>Team Coordination"]
-        INT2["API Requests<br/>System Integration"]
-        INT3["Meeting Systems<br/>Scheduling"]
+    %% User Input
+    subgraph "👤 User Input"
+        USR1["Team Coordination<br/>Internal Requests"]
+        USR2["Meeting Needs<br/>Scheduling Requests"]
+        USR3["Process Queries<br/>DAO Operations"]
     end
     
-    %% ReF[AI] DAO Global Agent
-    subgraph "🤖 ReF[AI] DAO Global Agent"
-        GA["DAO Operations<br/>Internal Coordination"]
+    %% Plugins
+    subgraph "🔧 Plugins"
+        PLG1["SQL Database<br/>Data Management"]
+        PLG2["Platform Connectors<br/>Telegram • APIs"]
+        PLG3["Bootstrap<br/>Task Management"]
     end
     
-    %% ElizaOS Runtime
-    subgraph "⚙️ ElizaOS Runtime"
-        RT3["AgentRuntime"]
-        MEM3["Memory System"]
+    %% Capabilities
+    subgraph "⚡ Capabilities"
+        CAP1["Meeting Coordination"]
+        CAP2["Progress Tracking"]
+        CAP3["Contributor Recognition"]
+        CAP4["Process Management"]
     end
     
-    %% Operational Plugins
-    subgraph "🔧 Operational Plugins"
-        PLG7["SQL Database<br/>Data Management"]
-        PLG8["Platform Connectors<br/>Telegram • APIs"]
-        PLG9["Bootstrap<br/>Task Management"]
+    %% Knowledge
+    subgraph "📚 Knowledge"
+        KB1["DAO Governance<br/>Procedures & Policies"]
+        KB2["Meeting Templates<br/>Agendas & Workflows"]
+        KB3["Contribution Framework<br/>Recognition System"]
     end
     
-    %% Operational Capabilities
-    subgraph "⚡ Operational Capabilities"
-        CAP9["Meeting Coordination"]
-        CAP10["Progress Tracking"]
-        CAP11["Contributor Recognition"]
-        CAP12["Process Management"]
-    end
-    
-    %% Operational Knowledge
-    subgraph "📚 Operational Knowledge"
-        KB7["DAO Governance<br/>Procedures & Policies"]
-        KB8["Meeting Templates<br/>Agendas & Workflows"]
-        KB9["Contribution Framework<br/>Recognition System"]
+    %% Output
+    subgraph "📤 Output"
+        OUT1["Private Telegram<br/>Team Coordination"]
+        OUT2["API Responses<br/>System Integration"]
+        OUT3["Meeting Systems<br/>Scheduling Results"]
     end
     
     %% Data Flow
-    INT1 --> GA
-    INT2 --> GA
-    INT3 --> GA
+    USR1 --> PLG1
+    USR2 --> PLG2
+    USR3 --> PLG3
     
-    GA --> RT3
-    RT3 --> PLG7
-    RT3 --> PLG8
-    RT3 --> PLG9
-    RT3 --> MEM3
+    PLG1 --> KB1
+    PLG2 --> KB2
+    PLG3 --> KB3
     
-    PLG7 --> KB7
-    PLG8 --> KB8
-    PLG9 --> KB9
+    PLG1 --> CAP1
+    PLG2 --> CAP2
+    PLG3 --> CAP3
+    PLG1 --> CAP4
     
-    PLG7 --> CAP9
-    PLG8 --> CAP10
-    PLG9 --> CAP11
-    PLG7 --> CAP12
+    KB1 --> CAP1
+    KB2 --> CAP2
+    KB3 --> CAP3
     
-    CAP9 --> INT1
-    CAP10 --> INT2
-    CAP11 --> INT3
-    CAP12 --> INT1
+    CAP1 --> OUT1
+    CAP2 --> OUT2
+    CAP3 --> OUT3
+    CAP4 --> OUT1
 ```
 
 **🎯 Target Audience**: Internal team  
@@ -271,70 +228,64 @@ graph LR
 
 ```mermaid
 graph LR
-    %% External Interfaces - Regional Focus
-    subgraph "🌐 Regional Interfaces"
-        REG1["Discord<br/>Community Hubs"]
-        REG2["Twitter<br/>Local Outreach"]
-        REG3["Local Events<br/>In-Person"]
+    %% User Input
+    subgraph "👤 User Input"
+        USR1["Local Communities<br/>Regional Questions"]
+        USR2["Sustainability Seekers<br/>Project Inquiries"]
+        USR3["Partnership Requests<br/>Collaboration Needs"]
     end
     
-    %% ReF[AI] Local Node Agent
-    subgraph "🤖 ReF[AI] Local Node Agent"
-        LNA["Regional Expertise<br/>Community Building"]
+    %% Plugins
+    subgraph "🔧 Plugins"
+        PLG1["Knowledge RAG<br/>Regional Content"]
+        PLG2["Platform Connectors<br/>Discord • Twitter"]
+        PLG3["SQL Database<br/>Local Data Tracking"]
     end
     
-    %% ElizaOS Runtime
-    subgraph "⚙️ ElizaOS Runtime"
-        RT2["AgentRuntime"]
-        MEM2["Memory System"]
+    %% Capabilities
+    subgraph "⚡ Capabilities"
+        CAP1["Local Setup Assistance"]
+        CAP2["Community Development"]
+        CAP3["Sustainability Projects"]
+        CAP4["Regional Partnerships"]
     end
     
-    %% Regional Plugins
-    subgraph "🔧 Regional Plugins"
-        PLG4["Knowledge RAG<br/>Regional Content"]
-        PLG5["Platform Connectors<br/>Discord • Twitter"]
-        PLG6["SQL Database<br/>Local Data Tracking"]
+    %% Knowledge
+    subgraph "📚 Knowledge"
+        KB1["Local Climate Data<br/>Environmental Context"]
+        KB2["Local Organizations<br/>Community Partners"]
+        KB3["Sustainability Projects<br/>Regional Initiatives"]
     end
     
-    %% Regional Capabilities
-    subgraph "⚡ Regional Capabilities"
-        CAP5["Local Setup Assistance"]
-        CAP6["Community Development"]
-        CAP7["Sustainability Projects"]
-        CAP8["Regional Partnerships"]
-    end
-    
-    %% Regional Knowledge
-    subgraph "📚 Regional Knowledge"
-        KB4["Local Climate Data<br/>Environmental Context"]
-        KB5["Local Organizations<br/>Community Partners"]
-        KB6["Sustainability Projects<br/>Regional Initiatives"]
+    %% Output
+    subgraph "📤 Output"
+        OUT1["Discord<br/>Community Hubs"]
+        OUT2["Twitter<br/>Local Outreach"]
+        OUT3["Local Events<br/>In-Person Support"]
     end
     
     %% Data Flow
-    REG1 --> LNA
-    REG2 --> LNA
-    REG3 --> LNA
+    USR1 --> PLG1
+    USR2 --> PLG2
+    USR3 --> PLG3
     
-    LNA --> RT2
-    RT2 --> PLG4
-    RT2 --> PLG5
-    RT2 --> PLG6
-    RT2 --> MEM2
+    PLG1 --> KB1
+    PLG2 --> KB2
+    PLG3 --> KB3
     
-    PLG4 --> KB4
-    PLG4 --> KB5
-    PLG4 --> KB6
+    PLG1 --> CAP1
+    PLG2 --> CAP2
+    PLG3 --> CAP3
+    PLG1 --> CAP4
     
-    PLG4 --> CAP5
-    PLG5 --> CAP6
-    PLG6 --> CAP7
-    PLG4 --> CAP8
+    KB1 --> CAP1
+    KB2 --> CAP2
+    KB3 --> CAP3
     
-    CAP5 --> REG1
-    CAP6 --> REG2
-    CAP7 --> REG3
-    CAP8 --> REG1
+    CAP1 --> OUT1
+    CAP2 --> OUT2
+    CAP3 --> OUT3
+    CAP4 --> OUT1
 ```
 
 **🎯 Target Audience**: Local nodes & communities  
