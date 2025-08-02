@@ -22,6 +22,10 @@ graph LR
     
     %% Data Storage (before plugins)
     subgraph "💾 Data Storage"
+        D1[Conversation History]
+        D2[User Interactions]
+        D3[Knowledge Embeddings]
+        D4[Project Tracking]
     end
     
     %% Knowledge Repository (before plugins)
@@ -68,22 +72,15 @@ graph LR
             C19[Team Communication<br/>Collaboration Tools]
         end
         
-        subgraph "Specialized Capabilities"
-            C20[Local Knowledge<br/>Regional Expertise]
-            C21[Community Integration<br/>Network Building]
-            C22[Regional Context<br/>Local Initiatives]
-            C23[ReFi Applications<br/>Sustainability Focus]
-        end
     end
     
     %% Output Actions
     subgraph "📤 Output & Actions"
         O1[Educational Responses<br/>Knowledge Sharing]
-        O2[Localized Guidance<br/>Regional Expertise]
-        O3[Operational Tasks<br/>Coordination & Management]
-        O4[Community Connections<br/>Network Building]
-        O5[Resource Links<br/>Helpful References]
-        O6[Meeting Agendas<br/>Structured Planning]
+        O2[Operational Tasks<br/>Coordination & Management]
+        O3[Community Connections<br/>Network Building]
+        O4[Resource Links<br/>Helpful References]
+        O5[Meeting Agendas<br/>Structured Planning]
     end
     
     %% Connections: Input -> Data Storage & Knowledge Repository
@@ -102,8 +99,6 @@ graph LR
     D2 --> P1
     D3 --> P2
     D4 --> P1
-    D5 --> P1
-    D6 --> P1
     
     KR --> P2
     
@@ -129,12 +124,7 @@ graph LR
     P6 --> C17
     P6 --> C18
     P6 --> C19
-    
-    %% Specialized capabilities (from knowledge and platform plugins)
-    P2 --> C20
-    P2 --> C21
-    P2 --> C22
-    P2 --> C23
+
     
     %% Capabilities -> Output & Actions
     C1 --> O1
@@ -145,24 +135,19 @@ graph LR
     C6 --> O1
     C7 --> O1
     
-    C20 --> O2
-    C21 --> O2
-    C22 --> O2
-    C23 --> O2
     
-    C16 --> O3
-    C17 --> O3
-    C18 --> O3
-    C19 --> O3
+    C16 --> O2
+    C17 --> O2
+    C18 --> O2
+    C19 --> O2
     
-    C12 --> O4
-    C13 --> O4
-    C14 --> O4
-    C15 --> O4
-    C21 --> O4
+    C12 --> O3
+    C13 --> O3
+    C14 --> O3
+    C15 --> O3
     
-    C17 --> O6
-    C16 --> O6
+    C17 --> O5
+    C16 --> O5
 ```
 
 ### Template Agent Overview
@@ -187,8 +172,8 @@ This comprehensive template shows **all available plugins and capabilities** tha
 #### **🔌 Input Channels (4 Types)**
 - Twitter API, Telegram Bot, Discord Server, API Requests
 
-#### **📤 Output Actions (6 Types)**
-- Educational Responses, Localized Guidance, Operational Tasks, Community Connections, Resource Links, Meeting Agendas
+#### **📤 Output Actions (5 Types)**
+- Educational Responses, Operational Tasks, Community Connections, Resource Links, Meeting Agendas
 
 This template serves as the foundation for creating specialized agents by selecting the appropriate plugins and capabilities for each specific use case.
 
