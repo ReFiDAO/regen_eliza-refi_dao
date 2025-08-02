@@ -107,36 +107,247 @@ graph TB
     MEM --> PLG2
 ```
 
-## 🌱 Agent Specializations
+## 🌱 Agent-Specific Architectures
 
-The master architecture above shows how three specialized agents share the same ElizaOS foundation while focusing on different aspects of the ReFi ecosystem:
+### 1. 🎓 Community Agent - Education & Onboarding
 
-### **🎯 Agent Focus Areas**
+```mermaid
+graph TB
+    %% External Interfaces - Public Focus
+    subgraph "🌐 Public Interfaces"
+        PUB1[Twitter<br/>Public Outreach]
+        PUB2[Telegram<br/>Community Groups]
+        PUB3[Web Interface<br/>Direct Inquiries]
+    end
+    
+    %% Community Agent
+    subgraph "🤖 Community Agent"
+        CA[Education & Onboarding<br/>Public-Facing]
+    end
+    
+    %% ElizaOS Runtime
+    subgraph "⚙️ ElizaOS Runtime"
+        RT1[AgentRuntime]
+        MEM1[Memory System]
+    end
+    
+    %% Educational Plugins
+    subgraph "🔧 Educational Plugins"
+        PLG1[Knowledge RAG<br/>Educational Content]
+        PLG2[Platform Connectors<br/>Twitter • Telegram]
+        PLG3[LLM Providers<br/>OpenAI • Anthropic]
+    end
+    
+    %% Educational Capabilities
+    subgraph "⚡ Educational Capabilities"
+        CAP1[ReFi Concept Explanation]
+        CAP2[Onboarding Guidance]
+        CAP3[Community Connections]
+        CAP4[Resource Recommendations]
+    end
+    
+    %% Educational Knowledge
+    subgraph "📚 Educational Knowledge"
+        KB1[224 ReFi Blog Posts<br/>Comprehensive Content]
+        KB2[ReFi Basics<br/>Terminology & Concepts]
+        KB3[Getting Started<br/>Onboarding Flows]
+    end
+    
+    %% Data Flow
+    PUB1 --> CA
+    PUB2 --> CA
+    PUB3 --> CA
+    
+    CA --> RT1
+    RT1 --> PLG1
+    RT1 --> PLG2
+    RT1 --> PLG3
+    RT1 --> MEM1
+    
+    PLG1 --> KB1
+    PLG1 --> KB2
+    PLG1 --> KB3
+    
+    PLG1 --> CAP1
+    PLG2 --> CAP2
+    PLG3 --> CAP3
+    PLG1 --> CAP4
+    
+    CAP1 --> PUB1
+    CAP2 --> PUB2
+    CAP3 --> PUB3
+    CAP4 --> PUB2
+```
 
-### **1. 🎓 Community Agent - Education & Onboarding**
-- **Target**: Public audiences, newcomers to ReFi
-- **Platforms**: Twitter, public Telegram, web interface
-- **Focus**: Educational content, onboarding flows, community connections
-- **Knowledge**: 224 ReFi blog posts, terminology guides, getting started content
+### 2. 🌍 Local Node Agent - Regional Expertise
 
-### **2. 🌍 Local Node Agent - Regional Expertise** 
-- **Target**: Local communities, sustainability professionals
-- **Platforms**: Discord hubs, regional Twitter, local events
-- **Focus**: Local context, regional partnerships, sustainability projects
-- **Knowledge**: Climate data, local organizations, regional opportunities
+```mermaid
+graph TB
+    %% External Interfaces - Regional Focus
+    subgraph "🌐 Regional Interfaces"
+        REG1[Discord<br/>Community Hubs]
+        REG2[Twitter<br/>Local Outreach]
+        REG3[Local Events<br/>In-Person]
+    end
+    
+    %% Local Node Agent
+    subgraph "🤖 Local Node Agent"
+        LNA[Regional Expertise<br/>Community Building]
+    end
+    
+    %% ElizaOS Runtime
+    subgraph "⚙️ ElizaOS Runtime"
+        RT2[AgentRuntime]
+        MEM2[Memory System]
+    end
+    
+    %% Regional Plugins
+    subgraph "🔧 Regional Plugins"
+        PLG4[Knowledge RAG<br/>Regional Content]
+        PLG5[Platform Connectors<br/>Discord • Twitter]
+        PLG6[SQL Database<br/>Local Data Tracking]
+    end
+    
+    %% Regional Capabilities
+    subgraph "⚡ Regional Capabilities"
+        CAP5[Local Setup Assistance]
+        CAP6[Community Development]
+        CAP7[Sustainability Projects]
+        CAP8[Regional Partnerships]
+    end
+    
+    %% Regional Knowledge
+    subgraph "📚 Regional Knowledge"
+        KB4[Local Climate Data<br/>Environmental Context]
+        KB5[Local Organizations<br/>Community Partners]
+        KB6[Sustainability Projects<br/>Regional Initiatives]
+    end
+    
+    %% Data Flow
+    REG1 --> LNA
+    REG2 --> LNA
+    REG3 --> LNA
+    
+    LNA --> RT2
+    RT2 --> PLG4
+    RT2 --> PLG5
+    RT2 --> PLG6
+    RT2 --> MEM2
+    
+    PLG4 --> KB4
+    PLG4 --> KB5
+    PLG4 --> KB6
+    
+    PLG4 --> CAP5
+    PLG5 --> CAP6
+    PLG6 --> CAP7
+    PLG4 --> CAP8
+    
+    CAP5 --> REG1
+    CAP6 --> REG2
+    CAP7 --> REG3
+    CAP8 --> REG1
+```
 
-### **3. 🏛️ Global Agent - DAO Operations**
-- **Target**: Internal team members, contributors
-- **Platforms**: Private Telegram, team channels, APIs  
-- **Focus**: Governance, task coordination, process management
-- **Knowledge**: DAO procedures, meeting templates, contribution frameworks
+### 3. 🏛️ Global Agent - DAO Operations
 
-### **🔧 Shared Foundation**
+```mermaid
+graph TB
+    %% External Interfaces - Internal Focus
+    subgraph "🌐 Internal Interfaces"
+        INT1[Private Telegram<br/>Team Coordination]
+        INT2[API Requests<br/>System Integration]
+        INT3[Meeting Systems<br/>Scheduling]
+    end
+    
+    %% Global Agent
+    subgraph "🤖 Global Agent"
+        GA[DAO Operations<br/>Internal Coordination]
+    end
+    
+    %% ElizaOS Runtime
+    subgraph "⚙️ ElizaOS Runtime"
+        RT3[AgentRuntime]
+        MEM3[Memory System]
+    end
+    
+    %% Operational Plugins
+    subgraph "🔧 Operational Plugins"
+        PLG7[SQL Database<br/>Data Management]
+        PLG8[Platform Connectors<br/>Telegram • APIs]
+        PLG9[Bootstrap<br/>Task Management]
+    end
+    
+    %% Operational Capabilities
+    subgraph "⚡ Operational Capabilities"
+        CAP9[Meeting Coordination]
+        CAP10[Progress Tracking]
+        CAP11[Contributor Recognition]
+        CAP12[Process Management]
+    end
+    
+    %% Operational Knowledge
+    subgraph "📚 Operational Knowledge"
+        KB7[DAO Governance<br/>Procedures & Policies]
+        KB8[Meeting Templates<br/>Agendas & Workflows]
+        KB9[Contribution Framework<br/>Recognition System]
+    end
+    
+    %% Data Flow
+    INT1 --> GA
+    INT2 --> GA
+    INT3 --> GA
+    
+    GA --> RT3
+    RT3 --> PLG7
+    RT3 --> PLG8
+    RT3 --> PLG9
+    RT3 --> MEM3
+    
+    PLG7 --> KB7
+    PLG8 --> KB8
+    PLG9 --> KB9
+    
+    PLG7 --> CAP9
+    PLG8 --> CAP10
+    PLG9 --> CAP11
+    PLG7 --> CAP12
+    
+    CAP9 --> INT1
+    CAP10 --> INT2
+    CAP11 --> INT3
+    CAP12 --> INT1
+```
 
-All agents use the same ElizaOS core with specialized configurations:
-- **Common Plugins**: Knowledge RAG, SQL Database, LLM Providers, Bootstrap
+## 🔄 Agent Comparison
+
+| Aspect | 🎓 Community Agent | 🌍 Local Node Agent | 🏛️ Global Agent |
+|--------|-------------------|---------------------|-----------------|
+| **🎯 Target Audience** | Public, newcomers | Local communities | Internal team |
+| **🌐 Primary Platforms** | Twitter, Telegram | Discord, Twitter | Private Telegram |
+| **⚡ Core Capabilities** | Education, Onboarding | Regional expertise | Operations, Coordination |
+| **📚 Knowledge Focus** | ReFi concepts, Blog posts | Local data, Climate info | DAO governance, Processes |
+| **🔧 Plugin Emphasis** | Knowledge RAG, Social | Knowledge RAG, Data tracking | SQL Database, Task management |
+
+### 🔧 Shared Foundation
+
+All three agents share the same ElizaOS architecture with specialized configurations:
+- **Common Runtime**: AgentRuntime, Memory System, Plugin Manager
+- **Core Plugins**: Knowledge RAG, SQL Database, LLM Providers, Bootstrap  
 - **Platform Connectors**: Discord, Twitter, Telegram (conditionally loaded)
-- **Specialized Knowledge**: Agent-specific content optimized for their role
+- **Specialized Content**: Agent-specific knowledge bases and capabilities
+
+### 🔄 Data Flow Summary
+
+The master architecture shows a clean flow:
+
+1. **Input**: External platforms feed requests to specialized agents
+2. **Processing**: ElizaOS runtime coordinates plugins and knowledge processing  
+3. **Knowledge**: RAG system retrieves relevant content from specialized knowledge bases
+4. **Generation**: LLM providers generate contextual responses
+5. **Output**: Responses flow back through platform connectors to users
+
+Each agent shares this same underlying flow while specializing in different knowledge domains and platform optimizations.
 
 ## 📂 Repository Structure
 
@@ -261,14 +472,3 @@ bun run test
 bun run dev
 ```
 
-## 🔄 Data Flow Summary
-
-The master architecture shows a clean flow:
-
-1. **Input**: External platforms feed requests to specialized agents
-2. **Processing**: ElizaOS runtime coordinates plugins and knowledge processing  
-3. **Knowledge**: RAG system retrieves relevant content from specialized knowledge bases
-4. **Generation**: LLM providers generate contextual responses
-5. **Output**: Responses flow back through platform connectors to users
-
-Each agent shares this same underlying flow while specializing in different knowledge domains and platform optimizations.
