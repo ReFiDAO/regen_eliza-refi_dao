@@ -23,21 +23,11 @@ graph LR
     
     %% Data Storage (before plugins)
     subgraph "💾 Data Storage"
-        D1[Conversation History]
-        D2[User Interactions]
-        D3[Knowledge Embeddings]
-        D4[Project Tracking]
-        D5[Meeting Records]
-        D6[Contributor Profiles]
     end
     
-    %% Knowledge Sources (before plugins)
-    subgraph "📚 Knowledge Sources"
-        K1[ReFi Blog Posts<br/>224 Articles]
-        K2[ReFi Basics<br/>Terminology]
-        K3[DAO Structure<br/>Organization]
-        K4[Local Knowledge<br/>Regional Data]
-        K5[Operational<br/>Procedures]
+    %% Knowledge Repository (before plugins)
+    subgraph "📚 Knowledge Repository"
+        KR[Knowledge Repository<br/>ReFi Content, Local Data,<br/>Operational Procedures]
     end
     
     %% Plugins
@@ -117,11 +107,11 @@ graph LR
     I4 --> D4
     I5 --> D5
     
-    I1 --> K1
-    I2 --> K2
-    I3 --> K3
-    I4 --> K4
-    I5 --> K5
+    I1 --> KR
+    I2 --> KR
+    I3 --> KR
+    I4 --> KR
+    I5 --> KR
     
     %% Data Storage & Knowledge Sources -> Plugins
     D1 --> P1
@@ -131,11 +121,7 @@ graph LR
     D5 --> P1
     D6 --> P1
     
-    K1 --> P2
-    K2 --> P2
-    K3 --> P2
-    K4 --> P2
-    K5 --> P2
+    KR --> P2
     
     %% Plugins -> Capabilities (by plugin)
     P1 --> C1
