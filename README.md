@@ -6,208 +6,139 @@ A comprehensive framework for ReFi (Regenerative Finance) AI agents built on Eli
 
 This repository contains a collection of specialized AI agents focused on regenerative finance, sustainability, and community coordination. Each agent is designed to serve specific roles within the ReFi ecosystem, from education and community building to operational coordination.
 
+```mermaid
+graph TB
+    subgraph "ReFi Agent Ecosystem"
+        KA[🎓 ReFi Knowledge Agent<br/>External Q&A & Education]
+        LNT[🌍 ReFi Local Node Template<br/>Regional Template]
+        CA[🤝 ReFi DAO Coordinator<br/>Internal Operations]
+    end
+    
+    subgraph "Target Audiences"
+        EXT[External Users<br/>Newcomers & Community]
+        REG[Regional Users<br/>Local Communities]
+        INT[Internal Users<br/>DAO Team Members]
+    end
+    
+    subgraph "Platforms"
+        TW[Twitter/X]
+        TG[Telegram]
+        DC[Discord]
+    end
+    
+    subgraph "Knowledge Sources"
+        KB1[ReFi Education<br/>224 Blog Posts]
+        KB2[Local Templates<br/>Regional Guides]
+        KB3[Operations Manual<br/>Processes & Templates]
+    end
+    
+    KA --> EXT
+    LNT --> REG
+    CA --> INT
+    
+    KA --> TW
+    KA --> TG
+    LNT --> TW
+    LNT --> TG
+    LNT --> DC
+    CA --> TG
+    CA --> DC
+    
+    KB1 --> KA
+    KB2 --> LNT
+    KB3 --> CA
+```
+
 ## 🤖 ReFi Agent Template - Complete Plugin & Capability Overview
 
 ```mermaid
-graph TB
-    %% Core Agent
-    subgraph "🧠 ReFi Agent Template"
-        AGENT[ReFi Agent Core]
-        CHAR[Character Definition]
-        RUNTIME[ElizaOS Runtime]
-    end
-    
-    %% All Available Plugins
-    subgraph "🔧 All Available Plugins"
-        subgraph "Core Infrastructure"
-            SQL[plugin-sql<br/>Database Integration]
-            BST[plugin-bootstrap<br/>Core Functions]
-        end
-        
-        subgraph "Knowledge & AI"
-            KNW[plugin-knowledge<br/>RAG Processing]
-            OAI[plugin-openai<br/>OpenAI Models]
-            ANT[plugin-anthropic<br/>Anthropic Models]
-            ORT[plugin-openrouter<br/>OpenRouter Models]
-            GAI[plugin-google-genai<br/>Google AI Models]
-            OLM[plugin-ollama<br/>Local Models]
-        end
-        
-        subgraph "Platform Integrations"
-            DSC[plugin-discord<br/>Discord Platform]
-            TWT[plugin-twitter<br/>Twitter Platform]
-            TEL[plugin-telegram<br/>Telegram Platform]
-        end
-    end
-    
-    %% All Available Capabilities
-    subgraph "⚡ All Available Capabilities"
-        subgraph "Data Management"
-            DB_STORAGE[Database Storage<br/>Conversation History]
-            DB_QUERY[Data Querying<br/>User Interactions]
-            DB_EMBED[Vector Storage<br/>Knowledge Embeddings]
-        end
-        
-        subgraph "Knowledge Processing"
-            RAG_ENGINE[RAG Engine<br/>Retrieval-Augmented Generation]
-            DOC_PROC[Document Processing<br/>Content Analysis]
-            VEC_SEARCH[Vector Search<br/>Semantic Matching]
-            KNOWLEDGE_BASE[Knowledge Base<br/>Specialized Content]
-        end
-        
-        subgraph "AI & Language"
-            AI_GEN[AI Generation<br/>LLM Processing]
-            NLP[Natural Language<br/>Understanding]
-            CONTEXT[Context Management<br/>Conversation Memory]
-            RESPONSE[Response Generation<br/>Tailored Outputs]
-        end
-        
-        subgraph "Platform Integration"
-            MULTI_PLAT[Multi-Platform<br/>Cross-Channel Support]
-            PLAT_SPEC[Platform-Specific<br/>Optimized Responses]
-            REAL_TIME[Real-Time<br/>Live Interactions]
-            ASYNC[Asynchronous<br/>Event Processing]
-        end
-        
-        subgraph "Operational"
-            TASK_MGMT[Task Management<br/>Workflow Automation]
-            MEETING_COORD[Meeting Coordination<br/>Agenda Management]
-            PROGRESS_TRACK[Progress Tracking<br/>Project Monitoring]
-            TEAM_COMM[Team Communication<br/>Collaboration Tools]
-        end
-        
-        subgraph "Community & Local"
-            LOCAL_KNOW[Local Knowledge<br/>Regional Expertise]
-            COMMUNITY_INT[Community Integration<br/>Network Building]
-            REGIONAL_CTX[Regional Context<br/>Local Initiatives]
-            REFI_APPS[ReFi Applications<br/>Sustainability Focus]
-        end
-    end
-    
-    %% Knowledge Sources
-    subgraph "📚 Knowledge Sources"
-        KB_BLOGS[ReFi Blog Posts<br/>224 Articles]
-        KB_BASICS[ReFi Basics<br/>Terminology & Concepts]
-        KB_DAO[DAO Structure<br/>Organization & Governance]
-        KB_LOCAL[Local Knowledge<br/>Regional Data]
-        KB_OPS[Operational<br/>Procedures & Templates]
-    end
-    
-    %% Input Channels
+graph LR
     subgraph "🔌 Input Channels"
-        IN_TW[Twitter API<br/>Public Engagement]
-        IN_TG[Telegram Bot<br/>Direct Messaging]
-        IN_DC[Discord Server<br/>Community Discussions]
-        IN_WB[Web Interface<br/>Direct Access]
-        IN_API[API Requests<br/>Programmatic Access]
+        I1[Twitter API]
+        I2[Telegram Bot]
+        I3[Direct Web Interface]
     end
     
-    %% Output Actions
-    subgraph "📤 Output Actions"
-        OUT_EDU[Educational Responses<br/>Knowledge Sharing]
-        OUT_LOCAL[Localized Guidance<br/>Regional Expertise]
-        OUT_OPS[Operational Tasks<br/>Coordination & Management]
-        OUT_COMM[Community Connections<br/>Network Building]
-        OUT_RES[Resource Links<br/>Helpful References]
-        OUT_AGENDA[Meeting Agendas<br/>Structured Planning]
-        OUT_REPORTS[Progress Reports<br/>Status Updates]
+    subgraph "🧠 Core Agent"
+        A1[ReFi Knowledge Agent]
+        A2[Character: Educational Guide]
+        A3[Response Mode: Educational]
     end
     
-    %% Connections - Core to Plugins
-    AGENT --> SQL
-    AGENT --> BST
-    AGENT --> KNW
-    AGENT --> OAI
-    AGENT --> ANT
-    AGENT --> ORT
-    AGENT --> GAI
-    AGENT --> OLM
-    AGENT --> DSC
-    AGENT --> TWT
-    AGENT --> TEL
+    subgraph "💾 Data Storage"
+        D1[Conversation History]
+        D2[User Interactions]
+        D3[Knowledge Embeddings]
+        D4[Response Templates]
+    end
     
-    %% Plugins to Capabilities
-    SQL --> DB_STORAGE
-    SQL --> DB_QUERY
-    SQL --> DB_EMBED
+    subgraph "📚 Knowledge Sources"
+        K1[224 Blog Posts]
+        K2[ReFi Basics]
+        K3[DAO Structure]
+        K4[Local Nodes]
+        K5[Getting Started]
+    end
     
-    KNW --> RAG_ENGINE
-    KNW --> DOC_PROC
-    KNW --> VEC_SEARCH
-    KNW --> KNOWLEDGE_BASE
+    subgraph "🔧 Plugins"
+        P1[SQL Database]
+        P2[Knowledge RAG]
+        P3[LLM Providers]
+        P4[Platform Connectors]
+        P5[Bootstrap Core]
+    end
     
-    OAI --> AI_GEN
-    ANT --> AI_GEN
-    ORT --> AI_GEN
-    GAI --> AI_GEN
-    OLM --> AI_GEN
+    subgraph "⚡ Capabilities"
+        C1[Database Storage]
+        C2[Document Processing]
+        C3[AI Generation]
+        C4[Multi-Platform]
+        C5[Core Functions]
+    end
     
-    AI_GEN --> NLP
-    AI_GEN --> CONTEXT
-    AI_GEN --> RESPONSE
+    subgraph "📤 Output & Actions"
+        O1[Educational Responses]
+        O2[Resource Links]
+        O3[Community Connections]
+        O4[Next Steps Guide]
+    end
     
-    DSC --> MULTI_PLAT
-    TWT --> MULTI_PLAT
-    TEL --> MULTI_PLAT
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
     
-    MULTI_PLAT --> PLAT_SPEC
-    MULTI_PLAT --> REAL_TIME
-    MULTI_PLAT --> ASYNC
+    A1 --> D1
+    A1 --> D2
+    A1 --> D3
+    A1 --> D4
     
-    BST --> TASK_MGMT
-    BST --> MEETING_COORD
-    BST --> PROGRESS_TRACK
-    BST --> TEAM_COMM
+    A1 --> K1
+    A1 --> K2
+    A1 --> K3
+    A1 --> K4
+    A1 --> K5
     
-    %% Knowledge Sources
-    KNW --> KB_BLOGS
-    KNW --> KB_BASICS
-    KNW --> KB_DAO
-    KNW --> KB_LOCAL
-    KNW --> KB_OPS
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    A1 --> P5
     
-    %% Input to Core
-    IN_TW --> AGENT
-    IN_TG --> AGENT
-    IN_DC --> AGENT
-    IN_WB --> AGENT
-    IN_API --> AGENT
+    P1 --> C1
+    P2 --> C2
+    P3 --> C3
+    P4 --> C4
+    P5 --> C5
     
-    %% Capabilities to Outputs
-    DB_STORAGE --> OUT_EDU
-    DB_STORAGE --> OUT_LOCAL
-    DB_STORAGE --> OUT_OPS
+    C1 --> O1
+    C2 --> O1
+    C3 --> O1
+    C4 --> O1
+    C5 --> O1
     
-    RAG_ENGINE --> OUT_EDU
-    KNOWLEDGE_BASE --> OUT_EDU
-    
-    LOCAL_KNOW --> OUT_LOCAL
-    REGIONAL_CTX --> OUT_LOCAL
-    
-    TASK_MGMT --> OUT_OPS
-    MEETING_COORD --> OUT_AGENDA
-    PROGRESS_TRACK --> OUT_REPORTS
-    
-    COMMUNITY_INT --> OUT_COMM
-    MULTI_PLAT --> OUT_COMM
-    
-    RESPONSE --> OUT_RES
-    CONTEXT --> OUT_RES
-    
-    %% Styling
-    classDef agentClass fill:#e1f5fe,stroke:#01579b,stroke-width:3px
-    classDef pluginClass fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    classDef capabilityClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    classDef knowledgeClass fill:#fce4ec,stroke:#880e4f,stroke-width:2px
-    classDef inputClass fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef outputClass fill:#e0f2f1,stroke:#004d40,stroke-width:2px
-    
-    class AGENT,CHAR,RUNTIME agentClass
-    class SQL,BST,KNW,OAI,ANT,ORT,GAI,OLM,DSC,TWT,TEL pluginClass
-    class DB_STORAGE,DB_QUERY,DB_EMBED,RAG_ENGINE,DOC_PROC,VEC_SEARCH,KNOWLEDGE_BASE,AI_GEN,NLP,CONTEXT,RESPONSE,MULTI_PLAT,PLAT_SPEC,REAL_TIME,ASYNC,TASK_MGMT,MEETING_COORD,PROGRESS_TRACK,TEAM_COMM,LOCAL_KNOW,COMMUNITY_INT,REGIONAL_CTX,REFI_APPS capabilityClass
-    class KB_BLOGS,KB_BASICS,KB_DAO,KB_LOCAL,KB_OPS knowledgeClass
-    class IN_TW,IN_TG,IN_DC,IN_WB,IN_API inputClass
-    class OUT_EDU,OUT_LOCAL,OUT_OPS,OUT_COMM,OUT_RES,OUT_AGENDA,OUT_REPORTS outputClass
+    C1 --> O2
+    C2 --> O3
+    C3 --> O4
 ```
 
 ### Template Agent Overview
