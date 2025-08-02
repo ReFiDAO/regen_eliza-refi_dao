@@ -17,7 +17,7 @@ A ReFi Local Node is a place-based community that serves as a living laboratory 
 
 1. **Run the setup script:**
    ```bash
-   cd refi-local-node-template
+   cd refi-local-node-agent
    ./scripts/setup-local-node.sh
    ```
 

@@ -1,5 +1,5 @@
 {
-  "name": "refi-dao-coordinator",
+  "name": "refi-dao-global-agent",
   "description": "ReF[AI] DAO Global Agent - Internal coordination assistant for ReFi DAO operations and task management",
   "version": "0.1.0",
   "type": "module",

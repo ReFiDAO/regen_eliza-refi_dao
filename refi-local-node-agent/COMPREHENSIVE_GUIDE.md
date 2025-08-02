@@ -49,7 +49,7 @@ A ReFi Local Node is a place-based community that serves as a living laboratory 
 1. **Clone or download the template**:
    ```bash
    git clone <template-repository>
-   cd refi-local-node-template
+   cd refi-local-node-agent
    ```
 
 2. **Run the setup script**:
@@ -125,7 +125,7 @@ A ReFi Local Node is a place-based community that serves as a living laboratory 
 ## Template Structure
 
 ```
-refi-local-node-template/
+refi-local-node-agent/
 ├── src/                          # Source code
 │   ├── character.ts              # Agent configuration
 │   ├── index.ts                  # Main entry point

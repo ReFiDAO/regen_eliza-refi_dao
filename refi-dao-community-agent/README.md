@@ -78,7 +78,7 @@ The agent draws from a comprehensive knowledge base including:
 1. **Clone or download the project**:
    ```bash
    git clone [repository-url]
-   cd refi-knowledge-agent
+   cd refi-dao-community-agent
    ```
 
 2. **Install dependencies**:
@@ -155,7 +155,7 @@ DATABASE_URL=your_database_url
 
 ### Project Structure
 ```
-refi-knowledge-agent/
+refi-dao-community-agent/
 ├── src/
 │   ├── character.ts        # Agent character configuration
 │   ├── index.ts           # Main entry point

@@ -22,7 +22,7 @@ echo "Setting up ReFi $REGION_NAME agent..."
 
 # Update package.json
 echo "📦 Updating package.json..."
-sed -i.bak "s/refi-local-node-template/refi-$REGION_NAME/g" package.json
+sed -i.bak "s/refi-local-node-agent/refi-$REGION_NAME/g" package.json
 sed -i.bak "s/ElizaOS agent template for ReFi Local Nodes/ReFi $REGION_NAME agent/g" package.json
 
 # Update character.ts
@@ -57,7 +57,7 @@ fi
 
 # Update README
 echo "📖 Updating README..."
-sed -i.bak "s/refi-local-node-template/refi-$REGION_NAME/g" README.md
+sed -i.bak "s/refi-local-node-agent/refi-$REGION_NAME/g" README.md
 sed -i.bak "s/ReFi Local Node Agent Template/ReFi $REGION_NAME Agent/g" README.md
 
 # Create customization checklist

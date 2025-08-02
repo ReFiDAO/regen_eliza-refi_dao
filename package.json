@@ -6,9 +6,9 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "refi-knowledge-agent",
-    "refi-local-node-template",
-    "refi-dao-coordinator",
+    "refi-dao-community-agent",
+    "refi-dao-global-agent", 
+    "refi-local-node-agent",
     "my-agent"
   ],
   "scripts": {

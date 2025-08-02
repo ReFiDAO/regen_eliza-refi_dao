@@ -1,5 +1,5 @@
 {
-  "name": "refi-local-node-template",
+  "name": "refi-local-node-agent",
   "description": "ElizaOS agent template for ReF[AI] Local Nodes - customizable for any region",
   "version": "0.1.0",
   "type": "module",

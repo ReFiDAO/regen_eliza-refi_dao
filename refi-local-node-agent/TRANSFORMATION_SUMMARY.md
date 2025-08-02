@@ -8,11 +8,11 @@ This document summarizes the transformation of the ReFi Barcelona agent into a g
 
 ### 1. Directory Structure
 - **Before**: `refi-barcelona/`
-- **After**: `refi-local-node-template/`
+- **After**: `refi-local-node-agent/`
 
 ### 2. Package Configuration
 - **Before**: `"name": "refi-barcelona"`
-- **After**: `"name": "refi-local-node-template"`
+- **After**: `"name": "refi-local-node-agent"`
 - **Before**: `"description": "Project starter for elizaOS"`
 - **After**: `"description": "ElizaOS agent template for ReFi Local Nodes - customizable for any region"`
 
@@ -76,7 +76,7 @@ This document summarizes the transformation of the ReFi Barcelona agent into a g
 ## Template Structure
 
 ```
-refi-local-node-template/
+refi-local-node-agent/
 ├── src/
 │   ├── character.ts              # Generic agent configuration
 │   ├── index.ts                  # Main entry point

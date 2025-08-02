@@ -46,7 +46,7 @@ The agent includes comprehensive knowledge templates about:
 
 1. **Navigate to the project directory:**
    ```bash
-   cd refi-local-node-template
+   cd refi-local-node-agent
    ```
 
 2. **Install dependencies:**

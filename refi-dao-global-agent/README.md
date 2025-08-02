@@ -75,7 +75,7 @@ The coordinator draws from operational knowledge including:
 1. **Clone or download the project**:
    ```bash
    git clone [repository-url]
-   cd refi-dao-coordinator
+   cd refi-dao-global-agent
    ```
 
 2. **Install dependencies**:
@@ -175,7 +175,7 @@ AIRTABLE_API_KEY=your_airtable_key
 
 ### Project Structure
 ```
-refi-dao-coordinator/
+refi-dao-global-agent/
 ├── src/
 │   ├── character.ts        # Coordinator character configuration
 │   ├── index.ts           # Main entry point
