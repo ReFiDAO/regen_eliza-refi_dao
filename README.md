@@ -1019,17 +1019,17 @@ graph TB
     
     %% Plugin System
     subgraph "🔧 Plugin System"
-        SQL[@elizaos/plugin-sql]
-        KNW[@elizaos/plugin-knowledge]
-        OAI[@elizaos/plugin-openai]
-        ANT[@elizaos/plugin-anthropic]
-        ORT[@elizaos/plugin-openrouter]
-        GAI[@elizaos/plugin-google-genai]
-        OLM[@elizaos/plugin-ollama]
-        DSC[@elizaos/plugin-discord]
-        TWT[@elizaos/plugin-twitter]
-        TEL[@elizaos/plugin-telegram]
-        BST[@elizaos/plugin-bootstrap]
+        SQL[plugin-sql]
+        KNW[plugin-knowledge]
+        OAI[plugin-openai]
+        ANT[plugin-anthropic]
+        ORT[plugin-openrouter]
+        GAI[plugin-google-genai]
+        OLM[plugin-ollama]
+        DSC[plugin-discord]
+        TWT[plugin-twitter]
+        TEL[plugin-telegram]
+        BST[plugin-bootstrap]
     end
     
     %% Knowledge Base
