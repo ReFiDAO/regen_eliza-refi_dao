@@ -1,14 +1,17 @@
 {
-  "name": "refi-barcelona",
-  "description": "Project starter for elizaOS",
+  "name": "refi-local-node-template",
+  "description": "ElizaOS agent template for ReFi Local Nodes - customizable for any region",
   "version": "0.1.0",
   "type": "module",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
-    "project",
-    "elizaos"
+    "refi",
+    "local-node",
+    "template",
+    "elizaos",
+    "regenerative-finance"
   ],
   "repository": {
     "type": "git",
