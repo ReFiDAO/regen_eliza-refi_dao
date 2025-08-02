@@ -179,3 +179,185 @@ For questions about:
 ---
 
 **Ready to explore regenerative finance in Barcelona? Start chatting with the agent at http://localhost:3000!**
+
+## 🔧 Plugin Configuration
+
+The ReFi Barcelona Agent uses the following ElizaOS plugins with conditional loading based on environment variables:
+
+```typescript
+plugins: [
+  // Core Database & Knowledge Infrastructure
+  '@elizaos/plugin-sql',                    // Database storage for conversations & memory
+  '@elizaos/plugin-knowledge',              // RAG processing for Barcelona-specific content
+  
+  // LLM Providers (Conditional Loading)
+  ...(process.env.ANTHROPIC_API_KEY ? ['@elizaos/plugin-anthropic'] : []),
+  ...(process.env.OPENROUTER_API_KEY ? ['@elizaos/plugin-openrouter'] : []),
+  ...(process.env.OPENAI_API_KEY ? ['@elizaos/plugin-openai'] : []),
+  ...(process.env.GOOGLE_GENERATIVE_AI_API_KEY ? ['@elizaos/plugin-google-genai'] : []),
+  ...(process.env.OLLAMA_API_ENDPOINT ? ['@elizaos/plugin-ollama'] : []),
+  
+  // Platform Integrations (Multi-platform for local community)
+  ...(process.env.DISCORD_API_TOKEN ? ['@elizaos/plugin-discord'] : []),
+  ...(process.env.TWITTER_API_KEY ? ['@elizaos/plugin-twitter'] : []),
+  ...(process.env.TELEGRAM_BOT_TOKEN ? ['@elizaos/plugin-telegram'] : []),
+  
+  // Core Functionality
+  '@elizaos/plugin-bootstrap',              // Essential agent behaviors
+]
+```
+
+## 📊 Data Flow Architecture
+
+```mermaid
+graph TB
+    subgraph "🔌 Input Channels"
+        I1[Discord Server]
+        I2[Twitter Local Feed]
+        I3[Telegram Groups]
+        I4[Direct Inquiries]
+    end
+    
+    subgraph "🧠 Core Agent"
+        A1[ReFi Barcelona Agent]
+        A2[Character: Regional Expert]
+        A3[Focus: Local Context]
+    end
+    
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[Knowledge RAG]
+        P3[LLM Providers]
+        P4[Multi-Platform]
+        P5[Bootstrap Core]
+    end
+    
+    subgraph "📍 Local Knowledge"
+        K1[Barcelona Climate Plan]
+        K2[Local Organizations]
+        K3[Regional Projects]
+        K4[Sustainability Hub]
+        K5[Community Resources]
+    end
+    
+    subgraph "🌱 ReFi Integration"
+        R1[Carbon Markets]
+        R2[Tokenization]
+        R3[Community Projects]
+        R4[Impact Metrics]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Localized Responses]
+        O2[Community Connections]
+        O3[Project Recommendations]
+        O4[Action Steps]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Local Context]
+        D2[Community Data]
+        D3[Project Database]
+        D4[Regional Knowledge]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    I4 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    A1 --> P5
+    
+    P2 --> K1
+    P2 --> K2
+    P2 --> K3
+    P2 --> K4
+    P2 --> K5
+    
+    A1 --> R1
+    A1 --> R2
+    A1 --> R3
+    A1 --> R4
+    
+    P3 --> L1
+    P3 --> L2
+    P3 --> L3
+    P3 --> L4
+    P3 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
+```
+
+## 🏗️ Technical Architecture
+
+### Core Components
+
+The ReFi Barcelona Agent is built using ElizaOS core components:
+
+- **Character Definition**: Regional expert personality, local knowledge, and Barcelona-focused behavior
+- **Plugin System**: Modular capabilities (SQL, knowledge, multi-platform integrations)
+- **Knowledge Base**: RAG-enabled document processing for Barcelona-specific content
+- **Platform Connectors**: Discord, Twitter, Telegram integrations for local community engagement
+- **Runtime Environment**: ElizaOS agent runtime with full feature support
+
+### Local Context Processing Flow
+
+```mermaid
+graph TD
+    subgraph "Barcelona Agent Context Mapping"
+        Q[Local Query] --> C[Contextualize to Barcelona]
+        C --> L[Local Knowledge Base]
+        L --> R[Regional ReFi Opportunities]
+        R --> A[Actionable Local Connections]
+    end
+    
+    subgraph "Local Resources"
+        L1[Barcelona Climate Plan]
+        L2[Som Energia Cooperative]
+        L3[Fab City Hub]
+        L4[Impact Hub Barcelona]
+        L5[Blue Economy Projects]
+    end
+    
+    subgraph "ReFi Applications"
+        R1[Carbon Credits]
+        R2[Community Solar]
+        R3[Urban Reforestation]
+        R4[Circular Economy]
+        R5[Green Tech Innovation]
+    end
+    
+    L --> L1
+    L --> L2
+    L --> L3
+    L --> L4
+    L --> L5
+    
+    R --> R1
+    R --> R2
+    R --> R3
+    R --> R4
+    R --> R5
+```
+
+---

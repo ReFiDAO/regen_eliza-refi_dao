@@ -265,3 +265,171 @@ Track coordination effectiveness through:
 ---
 
 **Mission**: Support efficient, organized, and transparent operations within ReFi DAO by providing reliable coordination assistance, task management, and team communication support that enables the community to focus on regenerative impact.
+
+## 🔧 Plugin Configuration
+
+The ReFi DAO Coordinator uses the following ElizaOS plugins with conditional loading based on environment variables:
+
+```typescript
+plugins: [
+  // Core Database Infrastructure
+  '@elizaos/plugin-sql',                    // Database storage for operations & tracking
+  
+  // LLM Providers (Conditional Loading)
+  ...(process.env.ANTHROPIC_API_KEY ? ['@elizaos/plugin-anthropic'] : []),
+  ...(process.env.OPENROUTER_API_KEY ? ['@elizaos/plugin-openrouter'] : []),
+  ...(process.env.OPENAI_API_KEY ? ['@elizaos/plugin-openai'] : []),
+  ...(process.env.GOOGLE_GENERATIVE_AI_API_KEY ? ['@elizaos/plugin-google-genai'] : []),
+  ...(process.env.OLLAMA_API_ENDPOINT ? ['@elizaos/plugin-ollama'] : []),
+  
+  // Platform Integration (Internal Focus)
+  ...(process.env.TELEGRAM_BOT_TOKEN ? ['@elizaos/plugin-telegram'] : []),
+  
+  // Core Functionality
+  '@elizaos/plugin-bootstrap',              // Essential agent behaviors
+]
+```
+
+## 📊 Data Flow Architecture
+
+```mermaid
+graph TB
+    subgraph "🔌 Input Channels"
+        I1[Telegram Private]
+        I2[Team Requests]
+        I3[Meeting Coordination]
+        I4[Progress Updates]
+    end
+    
+    subgraph "🧠 Core Agent"
+        A1[ReFi DAO Coordinator]
+        A2[Character: Internal Assistant]
+        A3[Focus: Operations]
+    end
+    
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[LLM Providers]
+        P3[Telegram Integration]
+        P4[Bootstrap Core]
+    end
+    
+    subgraph "📋 Operational Areas"
+        O1[Meeting Coordination]
+        O2[Progress Tracking]
+        O3[Contributor Recognition]
+        O4[Documentation]
+    end
+    
+    subgraph "🏗️ Coordination Engine"
+        C1[Agenda Builder]
+        C2[Progress Tracker]
+        C3[Recognition System]
+        C4[Documentation Manager]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Structured Responses]
+        O2[Meeting Agendas]
+        O3[Progress Reports]
+        O4[Action Items]
+        O5[Recognition Announcements]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Meeting Records]
+        D2[Project Tracking]
+        D3[Contributor Profiles]
+        D4[Process Templates]
+        D5[Progress Metrics]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    I4 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    A1 --> C1
+    A1 --> C2
+    A1 --> C3
+    A1 --> C4
+    
+    P2 --> L1
+    P2 --> L2
+    P2 --> L3
+    P2 --> L4
+    P2 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    A1 --> O5
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
+    P1 --> D5
+```
+
+## 🏗️ Technical Architecture
+
+### Core Components
+
+The ReFi DAO Coordinator is built using ElizaOS core components:
+
+- **Character Definition**: Internal assistant personality, operational focus, and professional behavior
+- **Plugin System**: Modular capabilities (SQL, LLM providers, Telegram integration)
+- **Operational Focus**: Task management, meeting coordination, progress tracking
+- **Platform Connectors**: Telegram integration for internal team communication
+- **Runtime Environment**: ElizaOS agent runtime with operational support features
+
+### DAO Coordination Workflow
+
+```mermaid
+graph TB
+    subgraph "DAO Coordination Workflow"
+        T[Team Request] --> A[Assess Task Type]
+        A --> M[Meeting Coordination]
+        A --> P[Progress Tracking]
+        A --> C[Contributor Recognition]
+        A --> D[Documentation]
+        
+        M --> M1[Agenda Creation]
+        M --> M2[Scheduling]
+        M --> M3[Follow-up]
+        
+        P --> P1[Grant Tracking]
+        P --> P2[Project Monitoring]
+        P --> P3[Deadline Management]
+        
+        C --> C1[Achievement Recognition]
+        C --> C2[Team Highlights]
+        C --> C3[Contribution Tracking]
+        
+        D --> D1[Process Templates]
+        D --> D2[Meeting Notes]
+        D --> D3[Progress Reports]
+    end
+```
+
+---

@@ -230,3 +230,157 @@ bun run test platforms
 ---
 
 **Mission**: Help people understand and participate in regenerative finance by providing accessible, educational, and actionable guidance about ReFi concepts and community involvement.
+
+## 🔧 Plugin Configuration
+
+The ReFi Knowledge Agent uses the following ElizaOS plugins with conditional loading based on environment variables:
+
+```typescript
+plugins: [
+  // Core Database & Knowledge Infrastructure
+  '@elizaos/plugin-sql',                    // Database storage for conversations & memory
+  '@elizaos/plugin-knowledge',              // RAG processing for 224+ ReFi documents
+  
+  // LLM Providers (Conditional Loading)
+  ...(process.env.ANTHROPIC_API_KEY ? ['@elizaos/plugin-anthropic'] : []),
+  ...(process.env.OPENROUTER_API_KEY ? ['@elizaos/plugin-openrouter'] : []),
+  ...(process.env.OPENAI_API_KEY ? ['@elizaos/plugin-openai'] : []),
+  ...(process.env.GOOGLE_GENERATIVE_AI_API_KEY ? ['@elizaos/plugin-google-genai'] : []),
+  ...(process.env.OLLAMA_API_ENDPOINT ? ['@elizaos/plugin-ollama'] : []),
+  
+  // Platform Integrations
+  ...(process.env.TWITTER_API_KEY ? ['@elizaos/plugin-twitter'] : []),
+  ...(process.env.TELEGRAM_BOT_TOKEN ? ['@elizaos/plugin-telegram'] : []),
+  
+  // Core Functionality
+  '@elizaos/plugin-bootstrap',              // Essential agent behaviors
+]
+```
+
+## 📊 Data Flow Architecture
+
+```mermaid
+graph TB
+    subgraph "🔌 Input Channels"
+        I1[Twitter API]
+        I2[Telegram Bot]
+        I3[Direct Web Interface]
+    end
+    
+    subgraph "🧠 Core Agent"
+        A1[ReFi Knowledge Agent]
+        A2[Character: Educational Guide]
+        A3[Response Mode: Educational]
+    end
+    
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[Knowledge RAG]
+        P3[LLM Providers]
+        P4[Platform Connectors]
+        P5[Bootstrap Core]
+    end
+    
+    subgraph "📚 Knowledge Sources"
+        K1[224 Blog Posts]
+        K2[ReFi Basics]
+        K3[DAO Structure]
+        K4[Local Nodes]
+        K5[Getting Started]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Educational Responses]
+        O2[Resource Links]
+        O3[Community Connections]
+        O4[Next Steps Guide]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Conversation History]
+        D2[User Interactions]
+        D3[Knowledge Embeddings]
+        D4[Response Templates]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    A1 --> P5
+    
+    P2 --> K1
+    P2 --> K2
+    P2 --> K3
+    P2 --> K4
+    P2 --> K5
+    
+    P3 --> L1
+    P3 --> L2
+    P3 --> L3
+    P3 --> L4
+    P3 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
+```
+
+## 🏗️ Technical Architecture
+
+### Core Components
+
+The ReFi Knowledge Agent is built using ElizaOS core components:
+
+- **Character Definition**: Educational personality, knowledge, and behavior configuration
+- **Plugin System**: Modular capabilities (SQL, knowledge, platform integrations)
+- **Knowledge Base**: RAG-enabled document processing for 224+ ReFi documents
+- **Platform Connectors**: Twitter, Telegram integrations for community engagement
+- **Runtime Environment**: ElizaOS agent runtime with full feature support
+
+### Knowledge Processing Flow
+
+```mermaid
+graph LR
+    subgraph "Knowledge Processing"
+        U[User Question] --> P[Process Query]
+        P --> K[Knowledge Base<br/>224 Blog Posts<br/>Educational Content]
+        K --> G[Generate Educational Response]
+        G --> R[Response with<br/>Next Steps & Resources]
+        R --> A[Action Items<br/>Community Links]
+    end
+    
+    subgraph "Knowledge Categories"
+        K1[ReFi Basics]
+        K2[DAO Structure]
+        K3[Local Nodes]
+        K4[Getting Started]
+        K5[Blog Archive]
+    end
+    
+    K --> K1
+    K --> K2
+    K --> K3
+    K --> K4
+    K --> K5
+```
+
+---

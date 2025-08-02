@@ -6,49 +6,6 @@ A comprehensive framework for ReFi (Regenerative Finance) AI agents built on Eli
 
 This repository contains a collection of specialized AI agents focused on regenerative finance, sustainability, and community coordination. Each agent is designed to serve specific roles within the ReFi ecosystem, from education and community building to operational coordination.
 
-```mermaid
-graph TB
-    subgraph "ReFi Agent Ecosystem"
-        KA[🎓 ReFi Knowledge Agent<br/>External Q&A & Education]
-        BA[🏛️ ReFi Barcelona Agent<br/>Regional Specialist]
-        CA[🤝 ReFi DAO Coordinator<br/>Internal Operations]
-    end
-    
-    subgraph "Target Audiences"
-        EXT[External Users<br/>Newcomers & Community]
-        REG[Regional Users<br/>Barcelona Residents]
-        INT[Internal Users<br/>DAO Team Members]
-    end
-    
-    subgraph "Platforms"
-        TW[Twitter/X]
-        TG[Telegram]
-        DC[Discord]
-    end
-    
-    subgraph "Knowledge Sources"
-        KB1[ReFi Education<br/>224 Blog Posts]
-        KB2[Barcelona Resources<br/>Local Initiatives]
-        KB3[Operations Manual<br/>Processes & Templates]
-    end
-    
-    KA --> EXT
-    BA --> REG
-    CA --> INT
-    
-    KA --> TW
-    KA --> TG
-    BA --> TW
-    BA --> TG
-    BA --> DC
-    CA --> TG
-    CA --> DC
-    
-    KB1 --> KA
-    KB2 --> BA
-    KB3 --> CA
-```
-
 ## 📂 Repository Structure
 
 ```
@@ -61,44 +18,19 @@ refi-agent-ecosystem/
 │
 ├── refi-knowledge-agent/               # 🎓 External Q&A and Education Agent
 │   ├── src/
-│   │   ├── refiKnowledgeAgent.ts      # Character definition for knowledge agent
-│   │   ├── index.ts                   # Project entry point
-│   │   ├── character.ts               # ElizaOS template (preserved)
-│   │   ├── plugin.ts                  # Custom plugins
-│   │   └── __tests__/                 # Test suites
 │   ├── knowledge/                     # 📚 Knowledge base for ReFi education
-│   │   ├── refi-basics/               # Core ReFi concepts
-│   │   ├── refi-dao/                  # DAO structure and governance
-│   │   ├── local-nodes/               # Regional community information
-│   │   ├── getting-started/           # Onboarding guides
-│   │   └── ReFi DAO Blog Posts/       # 224 curated blog posts
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
 ├── refi-barcelona/                     # 🏛️ Barcelona Regional Specialist Agent
 │   ├── src/
-│   │   ├── character.ts               # Character definition for Barcelona agent
-│   │   ├── index.ts                   # Project entry point
-│   │   ├── plugin.ts                  # Custom plugins
-│   │   └── __tests__/                 # Test suites
 │   ├── knowledge/                     # 📍 Barcelona-specific knowledge
-│   │   ├── barcelona/                 # Local initiatives and resources
-│   │   ├── refi/                      # Regional ReFi context
-│   │   └── basics/                    # Local sustainability basics
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
 ├── refi-dao-coordinator/               # 🤝 Internal Operations Coordinator Agent
 │   ├── src/
-│   │   ├── refiDaoCoordinator.ts      # Character definition for coordinator
-│   │   ├── index.ts                   # Project entry point
-│   │   ├── character.ts               # ElizaOS template (preserved)
-│   │   ├── plugin.ts                  # Custom plugins
-│   │   └── __tests__/                 # Test suites
 │   ├── knowledge/                     # 📋 Operational knowledge base
-│   │   ├── operations/                # Basic operations and procedures
-│   │   ├── coordination/              # Contributor recognition systems
-│   │   └── processes/                 # Meeting and workflow templates
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 ```
@@ -112,28 +44,80 @@ refi-agent-ecosystem/
 **Character Definition**: `refi-knowledge-agent/src/refiKnowledgeAgent.ts`
 
 ```mermaid
-graph LR
-    subgraph "ReFi Knowledge Agent Flow"
-        U[User Question] --> P[Process Query]
-        P --> K[Knowledge Base<br/>224 Blog Posts<br/>Educational Content]
-        K --> G[Generate Educational Response]
-        G --> R[Response with<br/>Next Steps & Resources]
-        R --> A[Action Items<br/>Community Links]
+graph TB
+    subgraph "🔌 Input Channels"
+        I1[Twitter API]
+        I2[Telegram Bot]
+        I3[Direct Web Interface]
     end
     
-    subgraph "Knowledge Categories"
-        K1[ReFi Basics]
-        K2[DAO Structure]
-        K3[Local Nodes]
-        K4[Getting Started]
-        K5[Blog Archive]
+    subgraph "🧠 Core Agent"
+        A1[ReFi Knowledge Agent]
+        A2[Character: Educational Guide]
+        A3[Response Mode: Educational]
     end
     
-    K --> K1
-    K --> K2
-    K --> K3
-    K --> K4
-    K --> K5
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[Knowledge RAG]
+        P3[LLM Providers]
+        P4[Platform Connectors]
+        P5[Bootstrap Core]
+    end
+    
+    subgraph "📚 Knowledge Sources"
+        K1[224 Blog Posts]
+        K2[ReFi Basics]
+        K3[DAO Structure]
+        K4[Local Nodes]
+        K5[Getting Started]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Educational Responses]
+        O2[Resource Links]
+        O3[Community Connections]
+        O4[Next Steps Guide]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Conversation History]
+        D2[User Interactions]
+        D3[Knowledge Embeddings]
+        D4[Response Templates]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    A1 --> P5
+    
+    P2 --> K1
+    P2 --> K2
+    P2 --> K3
+    P2 --> K4
+    P2 --> K5
+    
+    P3 --> L1
+    P3 --> L2
+    P3 --> L3
+    P3 --> L4
+    P3 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
 ```
 
 **Core Capabilities**:
@@ -156,16 +140,6 @@ graph LR
 - Community onboarding guides (`knowledge/getting-started/`)
 - 224 ReFi DAO blog posts for comprehensive context (`knowledge/ReFi DAO Blog Posts/`)
 
-**Settings**:
-```typescript
-settings: {
-  ragKnowledge: true,
-  responseMode: 'educational',
-  maxResponseLength: 800,
-  supportedLanguages: ['en'],
-}
-```
-
 ### 2. ReFi Barcelona Agent (Regional Specialist)
 **Location**: `refi-barcelona/`
 **Purpose**: Regional expert for Barcelona's green economy and local ReFi initiatives
@@ -173,41 +147,94 @@ settings: {
 **Character Definition**: `refi-barcelona/src/character.ts`
 
 ```mermaid
-graph TD
-    subgraph "Barcelona Agent Context Mapping"
-        Q[Local Query] --> C[Contextualize to Barcelona]
-        C --> L[Local Knowledge Base]
-        L --> R[Regional ReFi Opportunities]
-        R --> A[Actionable Local Connections]
+graph TB
+    subgraph "🔌 Input Channels"
+        I1[Discord Server]
+        I2[Twitter Local Feed]
+        I3[Telegram Groups]
+        I4[Direct Inquiries]
     end
     
-    subgraph "Local Resources"
-        L1[Barcelona Climate Plan]
-        L2[Som Energia Cooperative]
-        L3[Fab City Hub]
-        L4[Impact Hub Barcelona]
-        L5[Blue Economy Projects]
+    subgraph "🧠 Core Agent"
+        A1[ReFi Barcelona Agent]
+        A2[Character: Regional Expert]
+        A3[Focus: Local Context]
     end
     
-    subgraph "ReFi Applications"
-        R1[Carbon Credits]
-        R2[Community Solar]
-        R3[Urban Reforestation]
-        R4[Circular Economy]
-        R5[Green Tech Innovation]
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[Knowledge RAG]
+        P3[LLM Providers]
+        P4[Multi-Platform]
+        P5[Bootstrap Core]
     end
     
-    L --> L1
-    L --> L2
-    L --> L3
-    L --> L4
-    L --> L5
+    subgraph "📍 Local Knowledge"
+        K1[Barcelona Climate Plan]
+        K2[Local Organizations]
+        K3[Regional Projects]
+        K4[Sustainability Hub]
+        K5[Community Resources]
+    end
     
-    R --> R1
-    R --> R2
-    R --> R3
-    R --> R4
-    R --> R5
+    subgraph "🌱 ReFi Integration"
+        R1[Carbon Markets]
+        R2[Tokenization]
+        R3[Community Projects]
+        R4[Impact Metrics]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Localized Responses]
+        O2[Community Connections]
+        O3[Project Recommendations]
+        O4[Action Steps]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Local Context]
+        D2[Community Data]
+        D3[Project Database]
+        D4[Regional Knowledge]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    I4 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    A1 --> P5
+    
+    P2 --> K1
+    P2 --> K2
+    P2 --> K3
+    P2 --> K4
+    P2 --> K5
+    
+    A1 --> R1
+    A1 --> R2
+    A1 --> R3
+    A1 --> R4
+    
+    P3 --> L1
+    P3 --> L2
+    P3 --> L3
+    P3 --> L4
+    P3 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
 ```
 
 **Core Capabilities**:
@@ -232,14 +259,6 @@ graph TD
 - Fab City Hub and Impact Hub Barcelona
 - Local climate tech and impact investing communities
 
-**Settings**:
-```typescript
-settings: {
-  ragKnowledge: true,
-  avatar: 'https://elizaos.github.io/eliza-avatars/Eliza/portrait.png',
-}
-```
-
 ### 3. ReFi DAO Coordinator (Internal Operations)
 **Location**: `refi-dao-coordinator/`
 **Purpose**: Internal coordination assistant for ReFi DAO organizational tasks
@@ -248,29 +267,93 @@ settings: {
 
 ```mermaid
 graph TB
-    subgraph "DAO Coordination Workflow"
-        T[Team Request] --> A[Assess Task Type]
-        A --> M[Meeting Coordination]
-        A --> P[Progress Tracking]
-        A --> C[Contributor Recognition]
-        A --> D[Documentation]
-        
-        M --> M1[Agenda Creation]
-        M --> M2[Scheduling]
-        M --> M3[Follow-up]
-        
-        P --> P1[Grant Tracking]
-        P --> P2[Project Monitoring]
-        P --> P3[Deadline Management]
-        
-        C --> C1[Achievement Recognition]
-        C --> C2[Team Highlights]
-        C --> C3[Contribution Tracking]
-        
-        D --> D1[Process Templates]
-        D --> D2[Meeting Notes]
-        D --> D3[Progress Reports]
+    subgraph "🔌 Input Channels"
+        I1[Telegram Private]
+        I2[Team Requests]
+        I3[Meeting Coordination]
+        I4[Progress Updates]
     end
+    
+    subgraph "🧠 Core Agent"
+        A1[ReFi DAO Coordinator]
+        A2[Character: Internal Assistant]
+        A3[Focus: Operations]
+    end
+    
+    subgraph "🔧 Plugins & Capabilities"
+        P1[SQL Database]
+        P2[LLM Providers]
+        P3[Telegram Integration]
+        P4[Bootstrap Core]
+    end
+    
+    subgraph "📋 Operational Areas"
+        O1[Meeting Coordination]
+        O2[Progress Tracking]
+        O3[Contributor Recognition]
+        O4[Documentation]
+    end
+    
+    subgraph "🏗️ Coordination Engine"
+        C1[Agenda Builder]
+        C2[Progress Tracker]
+        C3[Recognition System]
+        C4[Documentation Manager]
+    end
+    
+    subgraph "📤 Output & Actions"
+        O1[Structured Responses]
+        O2[Meeting Agendas]
+        O3[Progress Reports]
+        O4[Action Items]
+        O5[Recognition Announcements]
+    end
+    
+    subgraph "💾 Data Storage"
+        D1[Meeting Records]
+        D2[Project Tracking]
+        D3[Contributor Profiles]
+        D4[Process Templates]
+        D5[Progress Metrics]
+    end
+    
+    I1 --> A1
+    I2 --> A1
+    I3 --> A1
+    I4 --> A1
+    
+    A1 --> P1
+    A1 --> P2
+    A1 --> P3
+    A1 --> P4
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    
+    A1 --> C1
+    A1 --> C2
+    A1 --> C3
+    A1 --> C4
+    
+    P2 --> L1
+    P2 --> L2
+    P2 --> L3
+    P2 --> L4
+    P2 --> L5
+    
+    A1 --> O1
+    A1 --> O2
+    A1 --> O3
+    A1 --> O4
+    A1 --> O5
+    
+    P1 --> D1
+    P1 --> D2
+    P1 --> D3
+    P1 --> D4
+    P1 --> D5
 ```
 
 **Core Capabilities**:
@@ -297,13 +380,67 @@ graph TB
 - Documentation and process improvement
 - Team workflow coordination
 
-**Settings**:
-```typescript
-settings: {
-  responseMode: 'organized',
-  maxResponseLength: 1000,
-  avatar: 'https://elizaos.github.io/eliza-avatars/Eliza/portrait.png',
-}
+## 📊 Agent Template Diagrams
+
+### 4. Cross-Agent Comparison Matrix
+
+```mermaid
+graph LR
+    subgraph "Agent Types"
+        AT1[Knowledge Agent]
+        AT2[Barcelona Agent]
+        AT3[DAO Coordinator]
+    end
+    
+    subgraph "Primary Focus"
+        PF1[Education & Q&A]
+        PF2[Regional Expertise]
+        PF3[Internal Operations]
+    end
+    
+    subgraph "Target Audience"
+        TA1[Community Members]
+        TA2[Local Residents]
+        TA3[Team Members]
+    end
+    
+    subgraph "Key Platforms"
+        KP1[Twitter, Telegram]
+        KP2[Discord, Twitter, Telegram]
+        KP3[Telegram Private]
+    end
+    
+    subgraph "Knowledge Base"
+        KB1[224 Blog Posts + ReFi Docs]
+        KB2[Local Barcelona Content]
+        KB3[Operational Procedures]
+    end
+    
+    subgraph "Response Style"
+        RS1[Educational, Encouraging]
+        RS2[Knowledgeable, Inspiring]
+        RS3[Organized, Professional]
+    end
+    
+    AT1 --> PF1
+    AT2 --> PF2
+    AT3 --> PF3
+    
+    PF1 --> TA1
+    PF2 --> TA2
+    PF3 --> TA3
+    
+    TA1 --> KP1
+    TA2 --> KP2
+    TA3 --> KP3
+    
+    KP1 --> KB1
+    KP2 --> KB2
+    KP3 --> KB3
+    
+    KB1 --> RS1
+    KB2 --> RS2
+    KB3 --> RS3
 ```
 
 ## 🏗️ Architecture
