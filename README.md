@@ -44,7 +44,7 @@ refi-agent-ecosystem/
 **Character Definition**: `refi-knowledge-agent/src/refiKnowledgeAgent.ts`
 
 ```mermaid
-graph TB
+graph LR
     subgraph "🔌 Input Channels"
         I1[Twitter API]
         I2[Telegram Bot]
@@ -601,11 +601,7 @@ graph LR
     A1 --> R3
     A1 --> R4
     
-    P3 --> L1
-    P3 --> L2
-    P3 --> L3
-    P3 --> L4
-    P3 --> L5
+
     
     A1 --> O1
     A1 --> O2
