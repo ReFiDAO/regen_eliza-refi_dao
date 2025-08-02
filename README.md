@@ -22,9 +22,9 @@ graph TB
     %% Agent Layer - Three Specialized Agents
     subgraph "🤖 Agent Layer"
         subgraph "Agent Specializations"
-            A1[Community Agent<br/>Education & Onboarding]
-            A2[Local Node Agent<br/>Regional Expertise]
-            A3[Global Agent<br/>DAO Operations]
+            A1[ReF[AI] DAO Community Agent<br/>Education & Onboarding]
+            A2[ReF[AI] Local Node Agent<br/>Regional Expertise]
+            A3[ReF[AI] DAO Global Agent<br/>DAO Operations]
         end
     end
     
@@ -109,7 +109,7 @@ graph TB
 
 ## 🌱 Agent-Specific Architectures
 
-### 1. 🎓 Community Agent - Education & Onboarding
+### 1. 🎓 ReF[AI] DAO Community Agent - Education & Onboarding
 
 ```mermaid
 graph TB
@@ -120,8 +120,8 @@ graph TB
         PUB3[Web Interface<br/>Direct Inquiries]
     end
     
-    %% Community Agent
-    subgraph "🤖 Community Agent"
+    %% ReF[AI] DAO Community Agent
+    subgraph "🤖 ReF[AI] DAO Community Agent"
         CA[Education & Onboarding<br/>Public-Facing]
     end
     
@@ -179,7 +179,7 @@ graph TB
     CAP4 --> PUB2
 ```
 
-### 2. 🌍 Local Node Agent - Regional Expertise
+### 2. 🌍 ReF[AI] Local Node Agent - Regional Expertise
 
 ```mermaid
 graph TB
@@ -190,8 +190,8 @@ graph TB
         REG3[Local Events<br/>In-Person]
     end
     
-    %% Local Node Agent
-    subgraph "🤖 Local Node Agent"
+    %% ReF[AI] Local Node Agent
+    subgraph "🤖 ReF[AI] Local Node Agent"
         LNA[Regional Expertise<br/>Community Building]
     end
     
@@ -249,7 +249,7 @@ graph TB
     CAP8 --> REG1
 ```
 
-### 3. 🏛️ Global Agent - DAO Operations
+### 3. 🏛️ ReF[AI] DAO Global Agent - DAO Operations
 
 ```mermaid
 graph TB
@@ -260,8 +260,8 @@ graph TB
         INT3[Meeting Systems<br/>Scheduling]
     end
     
-    %% Global Agent
-    subgraph "🤖 Global Agent"
+    %% ReF[AI] DAO Global Agent
+    subgraph "🤖 ReF[AI] DAO Global Agent"
         GA[DAO Operations<br/>Internal Coordination]
     end
     
@@ -321,8 +321,8 @@ graph TB
 
 ## 🔄 Agent Comparison
 
-| Aspect | 🎓 Community Agent | 🌍 Local Node Agent | 🏛️ Global Agent |
-|--------|-------------------|---------------------|-----------------|
+| Aspect | 🎓 ReF[AI] DAO Community Agent | 🌍 ReF[AI] Local Node Agent | 🏛️ ReF[AI] DAO Global Agent |
+|--------|------------------------------|------------------------------|------------------------------|
 | **🎯 Target Audience** | Public, newcomers | Local communities | Internal team |
 | **🌐 Primary Platforms** | Twitter, Telegram | Discord, Twitter | Private Telegram |
 | **⚡ Core Capabilities** | Education, Onboarding | Regional expertise | Operations, Coordination |
@@ -359,19 +359,19 @@ refi-agent-ecosystem/
 ├── tsconfig.json                       # TypeScript configuration
 ├── bunfig.toml                         # Bun package manager configuration
 │
-├── refi-knowledge-agent/               # 🎓 External Q&A and Education Agent
+├── refi-knowledge-agent/               # 🎓 ReF[AI] DAO Community Agent
 │   ├── src/
 │   ├── knowledge/                     # 📚 Knowledge base for ReFi education
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
-├── refi-local-node-template/           # 🏛️ Local Node Template Agent
+├── refi-local-node-template/           # 🌍 ReF[AI] Local Node Agent
 │   ├── src/
 │   ├── knowledge/                     # 📍 Local region-specific knowledge
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
-├── refi-dao-coordinator/               # 🤝 Internal Operations Coordinator Agent
+├── refi-dao-coordinator/               # 🏛️ ReF[AI] DAO Global Agent
 │   ├── src/
 │   ├── knowledge/                     # 📋 Operational knowledge base
 │   ├── README.md                      # Agent-specific documentation
