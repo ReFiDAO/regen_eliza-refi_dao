@@ -22,9 +22,9 @@ refi-agent-ecosystem/
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
-├── refi-barcelona/                     # 🏛️ Barcelona Regional Specialist Agent
+├── refi-local-node-template/           # 🏛️ Local Node Template Agent
 │   ├── src/
-│   ├── knowledge/                     # 📍 Barcelona-specific knowledge
+│   ├── knowledge/                     # 📍 Local region-specific knowledge
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
@@ -71,6 +71,14 @@ graph TB
         K3[DAO Structure]
         K4[Local Nodes]
         K5[Getting Started]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"
@@ -140,11 +148,11 @@ graph TB
 - Community onboarding guides (`knowledge/getting-started/`)
 - 224 ReFi DAO blog posts for comprehensive context (`knowledge/ReFi DAO Blog Posts/`)
 
-### 2. ReFi Barcelona Agent (Regional Specialist)
-**Location**: `refi-barcelona/`
-**Purpose**: Regional expert for Barcelona's green economy and local ReFi initiatives
+### 2. ReFi Local Node Template Agent (Regional Specialist)
+**Location**: `refi-local-node-template/`
+**Purpose**: Regional expert for a specific local region's green economy and local ReFi initiatives
 
-**Character Definition**: `refi-barcelona/src/character.ts`
+**Character Definition**: `refi-local-node-template/src/character.ts`
 
 ```mermaid
 graph TB
@@ -156,7 +164,7 @@ graph TB
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi Barcelona Agent]
+        A1[ReFi Local Node Template Agent]
         A2[Character: Regional Expert]
         A3[Focus: Local Context]
     end
@@ -170,7 +178,7 @@ graph TB
     end
     
     subgraph "📍 Local Knowledge"
-        K1[Barcelona Climate Plan]
+        K1[Local Climate Plan]
         K2[Local Organizations]
         K3[Regional Projects]
         K4[Sustainability Hub]
@@ -182,6 +190,14 @@ graph TB
         R2[Tokenization]
         R3[Community Projects]
         R4[Impact Metrics]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"
@@ -238,25 +254,24 @@ graph TB
 ```
 
 **Core Capabilities**:
-- **Local Expertise**: Barcelona's sustainability landscape and green economy
-- **Target Audience**: Local residents, visitors, and sustainability professionals
+- **Local Expertise**: Specific local region's sustainability landscape and green economy
+- **Target Audience**: Local residents, visitors, and sustainability professionals in the region
 - **Primary Platforms**: Discord, Twitter, Telegram
 - **Response Style**: Knowledgeable, inspiring, action-oriented
 
 **Key Features**:
-- Connects ReFi concepts to Barcelona's local context
-- Provides information about local sustainability initiatives
-- Guides users to Barcelona-specific climate action groups
+- Connects ReFi concepts to the specific local region's context
+- Provides information about local sustainability initiatives in the region
+- Guides users to region-specific climate action groups
 - Explains carbon markets and environmental tokenization opportunities
 - Bridges traditional and innovative sustainability approaches
 
 **Specialized Knowledge Areas**:
-- Barcelona Climate Plan and carbon neutrality goals
+- Local climate plan and carbon neutrality goals
 - Local energy cooperatives (Som Energia)
 - Mediterranean blue economy initiatives
 - Community solar and urban reforestation projects
 - Circular economy marketplaces
-- Fab City Hub and Impact Hub Barcelona
 - Local climate tech and impact investing communities
 
 ### 3. ReFi DAO Coordinator (Internal Operations)
@@ -299,6 +314,14 @@ graph TB
         C2[Progress Tracker]
         C3[Recognition System]
         C4[Documentation Manager]
+    end
+    
+    subgraph "🤖 LLM Providers"
+        L1[Anthropic Claude]
+        L2[OpenAI GPT]
+        L3[Google Gemini]
+        L4[OpenRouter]
+        L5[Ollama Local]
     end
     
     subgraph "📤 Output & Actions"
@@ -469,7 +492,7 @@ graph TB
     P1 --> D4
 ```
 
-### 2. ReFi Barcelona Agent - Complete System Overview
+### 2. ReFi Local Node Template Agent - Complete System Overview
 
 ```mermaid
 graph TB
@@ -481,7 +504,7 @@ graph TB
     end
     
     subgraph "🧠 Core Agent"
-        A1[ReFi Barcelona Agent]
+        A1[ReFi Local Node Template Agent]
         A2[Character: Regional Expert]
         A3[Focus: Local Context]
     end
@@ -495,7 +518,7 @@ graph TB
     end
     
     subgraph "📍 Local Knowledge"
-        K1[Barcelona Climate Plan]
+        K1[Local Climate Plan]
         K2[Local Organizations]
         K3[Regional Projects]
         K4[Sustainability Hub]
@@ -677,7 +700,7 @@ graph TB
 graph TB
     subgraph "Agent Types"
         AT1[Knowledge Agent]
-        AT2[Barcelona Agent]
+        AT2[Local Node Template]
         AT3[DAO Coordinator]
     end
     
@@ -701,7 +724,7 @@ graph TB
     
     subgraph "Knowledge Base"
         KB1[224 Blog Posts + ReFi Docs]
-        KB2[Local Barcelona Content]
+        KB2[Local Region Content]
         KB3[Operational Procedures]
     end
     
@@ -741,7 +764,7 @@ graph TB
     subgraph "ElizaOS Architecture"
         subgraph "Agent Layer"
             A1[ReFi Knowledge Agent]
-            A2[ReFi Barcelona Agent]  
+            A2[ReFi Local Node Template]  
             A3[ReFi DAO Coordinator]
         end
         
@@ -838,7 +861,7 @@ graph LR
     
     subgraph "Agent Projects"
         AP1[refi-knowledge-agent]
-        AP2[refi-barcelona]
+        AP2[refi-local-node-template]
         AP3[refi-dao-coordinator]
     end
     
@@ -916,8 +939,8 @@ Each agent can be run independently:
 cd refi-knowledge-agent
 bun run start
 
-# ReFi Barcelona Agent
-cd refi-barcelona
+# ReFi Local Node Template Agent
+cd refi-local-node-template
 bun run start
 
 # ReFi DAO Coordinator
