@@ -6,139 +6,213 @@ A comprehensive framework for ReFi (Regenerative Finance) AI agents built on Eli
 
 This repository contains a collection of specialized AI agents focused on regenerative finance, sustainability, and community coordination. Each agent is designed to serve specific roles within the ReFi ecosystem, from education and community building to operational coordination.
 
-```mermaid
-graph TB
-    subgraph "ReFi Agent Ecosystem"
-        KA[🎓 ReFi Knowledge Agent<br/>External Q&A & Education]
-        LNT[🌍 ReFi Local Node Template<br/>Regional Template]
-        CA[🤝 ReFi DAO Coordinator<br/>Internal Operations]
-    end
-    
-    subgraph "Target Audiences"
-        EXT[External Users<br/>Newcomers & Community]
-        REG[Regional Users<br/>Local Communities]
-        INT[Internal Users<br/>DAO Team Members]
-    end
-    
-    subgraph "Platforms"
-        TW[Twitter/X]
-        TG[Telegram]
-        DC[Discord]
-    end
-    
-    subgraph "Knowledge Sources"
-        KB1[ReFi Education<br/>224 Blog Posts]
-        KB2[Local Templates<br/>Regional Guides]
-        KB3[Operations Manual<br/>Processes & Templates]
-    end
-    
-    KA --> EXT
-    LNT --> REG
-    CA --> INT
-    
-    KA --> TW
-    KA --> TG
-    LNT --> TW
-    LNT --> TG
-    LNT --> DC
-    CA --> TG
-    CA --> DC
-    
-    KB1 --> KA
-    KB2 --> LNT
-    KB3 --> CA
-```
+
 
 ## 🤖 ReFi Agent Template - Complete Plugin & Capability Overview
 
 ```mermaid
 graph LR
+    %% Input Channels
     subgraph "🔌 Input Channels"
         I1[Twitter API]
         I2[Telegram Bot]
-        I3[Direct Web Interface]
+        I3[Discord Server]
+        I4[Web Interface]
+        I5[API Requests]
     end
     
-    subgraph "🧠 Core Agent"
-        A1[ReFi Knowledge Agent]
-        A2[Character: Educational Guide]
-        A3[Response Mode: Educational]
-    end
-    
+    %% Data Storage (before plugins)
     subgraph "💾 Data Storage"
         D1[Conversation History]
         D2[User Interactions]
         D3[Knowledge Embeddings]
-        D4[Response Templates]
+        D4[Project Tracking]
+        D5[Meeting Records]
+        D6[Contributor Profiles]
     end
     
+    %% Knowledge Sources (before plugins)
     subgraph "📚 Knowledge Sources"
-        K1[224 Blog Posts]
-        K2[ReFi Basics]
-        K3[DAO Structure]
-        K4[Local Nodes]
-        K5[Getting Started]
+        K1[ReFi Blog Posts<br/>224 Articles]
+        K2[ReFi Basics<br/>Terminology]
+        K3[DAO Structure<br/>Organization]
+        K4[Local Knowledge<br/>Regional Data]
+        K5[Operational<br/>Procedures]
     end
     
+    %% Plugins
     subgraph "🔧 Plugins"
-        P1[SQL Database]
-        P2[Knowledge RAG]
-        P3[LLM Providers]
-        P4[Platform Connectors]
-        P5[Bootstrap Core]
+        P1[plugin-sql<br/>Database Integration]
+        P2[plugin-knowledge<br/>RAG Processing]
+        P3[plugin-openai<br/>OpenAI Models]
+        P4[plugin-anthropic<br/>Anthropic Models]
+        P5[plugin-openrouter<br/>OpenRouter Models]
+        P6[plugin-google-genai<br/>Google AI Models]
+        P7[plugin-ollama<br/>Local Models]
+        P8[plugin-discord<br/>Discord Platform]
+        P9[plugin-twitter<br/>Twitter Platform]
+        P10[plugin-telegram<br/>Telegram Platform]
+        P11[plugin-bootstrap<br/>Core Functions]
     end
     
+    %% Capabilities with plugin subsections
     subgraph "⚡ Capabilities"
-        C1[Database Storage]
-        C2[Document Processing]
-        C3[AI Generation]
-        C4[Multi-Platform]
-        C5[Core Functions]
+        subgraph "SQL Plugin Capabilities"
+            C1[Database Storage<br/>Conversation History]
+            C2[Data Querying<br/>User Interactions]
+            C3[Vector Storage<br/>Knowledge Embeddings]
+        end
+        
+        subgraph "Knowledge Plugin Capabilities"
+            C4[RAG Engine<br/>Retrieval-Augmented Generation]
+            C5[Document Processing<br/>Content Analysis]
+            C6[Vector Search<br/>Semantic Matching]
+            C7[Knowledge Base<br/>Specialized Content]
+        end
+        
+        subgraph "LLM Plugin Capabilities"
+            C8[AI Generation<br/>LLM Processing]
+            C9[Natural Language<br/>Understanding]
+            C10[Context Management<br/>Conversation Memory]
+            C11[Response Generation<br/>Tailored Outputs]
+        end
+        
+        subgraph "Platform Plugin Capabilities"
+            C12[Multi-Platform<br/>Cross-Channel Support]
+            C13[Platform-Specific<br/>Optimized Responses]
+            C14[Real-Time<br/>Live Interactions]
+            C15[Asynchronous<br/>Event Processing]
+        end
+        
+        subgraph "Bootstrap Plugin Capabilities"
+            C16[Task Management<br/>Workflow Automation]
+            C17[Meeting Coordination<br/>Agenda Management]
+            C18[Progress Tracking<br/>Project Monitoring]
+            C19[Team Communication<br/>Collaboration Tools]
+        end
+        
+        subgraph "Specialized Capabilities"
+            C20[Local Knowledge<br/>Regional Expertise]
+            C21[Community Integration<br/>Network Building]
+            C22[Regional Context<br/>Local Initiatives]
+            C23[ReFi Applications<br/>Sustainability Focus]
+        end
     end
     
+    %% Output Actions
     subgraph "📤 Output & Actions"
-        O1[Educational Responses]
-        O2[Resource Links]
-        O3[Community Connections]
-        O4[Next Steps Guide]
+        O1[Educational Responses<br/>Knowledge Sharing]
+        O2[Localized Guidance<br/>Regional Expertise]
+        O3[Operational Tasks<br/>Coordination & Management]
+        O4[Community Connections<br/>Network Building]
+        O5[Resource Links<br/>Helpful References]
+        O6[Meeting Agendas<br/>Structured Planning]
+        O7[Progress Reports<br/>Status Updates]
     end
     
-    I1 --> A1
-    I2 --> A1
-    I3 --> A1
+    %% Connections: Input -> Data Storage & Knowledge Sources
+    I1 --> D1
+    I2 --> D2
+    I3 --> D3
+    I4 --> D4
+    I5 --> D5
     
-    A1 --> D1
-    A1 --> D2
-    A1 --> D3
-    A1 --> D4
+    I1 --> K1
+    I2 --> K2
+    I3 --> K3
+    I4 --> K4
+    I5 --> K5
     
-    A1 --> K1
-    A1 --> K2
-    A1 --> K3
-    A1 --> K4
-    A1 --> K5
+    %% Data Storage & Knowledge Sources -> Plugins
+    D1 --> P1
+    D2 --> P1
+    D3 --> P2
+    D4 --> P1
+    D5 --> P1
+    D6 --> P1
     
-    A1 --> P1
-    A1 --> P2
-    A1 --> P3
-    A1 --> P4
-    A1 --> P5
+    K1 --> P2
+    K2 --> P2
+    K3 --> P2
+    K4 --> P2
+    K5 --> P2
     
+    %% Plugins -> Capabilities (by plugin)
     P1 --> C1
-    P2 --> C2
-    P3 --> C3
-    P4 --> C4
-    P5 --> C5
+    P1 --> C2
+    P1 --> C3
     
+    P2 --> C4
+    P2 --> C5
+    P2 --> C6
+    P2 --> C7
+    
+    P3 --> C8
+    P4 --> C8
+    P5 --> C8
+    P6 --> C8
+    P7 --> C8
+    
+    C8 --> C9
+    C8 --> C10
+    C8 --> C11
+    
+    P8 --> C12
+    P9 --> C12
+    P10 --> C12
+    
+    C12 --> C13
+    C12 --> C14
+    C12 --> C15
+    
+    P11 --> C16
+    P11 --> C17
+    P11 --> C18
+    P11 --> C19
+    
+    %% Specialized capabilities (from knowledge and platform plugins)
+    P2 --> C20
+    P2 --> C21
+    P2 --> C22
+    P2 --> C23
+    
+    %% Capabilities -> Output & Actions
     C1 --> O1
     C2 --> O1
     C3 --> O1
     C4 --> O1
     C5 --> O1
+    C6 --> O1
+    C7 --> O1
+    C8 --> O1
+    C9 --> O1
+    C10 --> O1
+    C11 --> O1
     
-    C1 --> O2
-    C2 --> O3
-    C3 --> O4
+    C20 --> O2
+    C21 --> O2
+    C22 --> O2
+    C23 --> O2
+    
+    C16 --> O3
+    C17 --> O3
+    C18 --> O3
+    C19 --> O3
+    
+    C12 --> O4
+    C13 --> O4
+    C14 --> O4
+    C15 --> O4
+    C21 --> O4
+    
+    C11 --> O5
+    C10 --> O5
+    
+    C17 --> O6
+    C16 --> O6
+    
+    C18 --> O7
+    C19 --> O7
 ```
 
 ### Template Agent Overview
