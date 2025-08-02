@@ -117,10 +117,15 @@ graph TB
     P2 --> K4
     P2 --> K5
     
-    A1 --> O1
-    A1 --> O2
-    A1 --> O3
-    A1 --> O4
+    C1 --> O1
+    C2 --> O1
+    C3 --> O1
+    C4 --> O1
+    C5 --> O1
+    
+    C1 --> O2
+    C2 --> O3
+    C3 --> O4
     
     P1 --> D1
     P1 --> D2
@@ -242,16 +247,15 @@ graph TB
     A1 --> R3
     A1 --> R4
     
-    P3 --> L1
-    P3 --> L2
-    P3 --> L3
-    P3 --> L4
-    P3 --> L5
+    C1 --> O1
+    C2 --> O1
+    C3 --> O1
+    C4 --> O1
+    C5 --> O1
     
-    A1 --> O1
-    A1 --> O2
-    A1 --> O3
-    A1 --> O4
+    C1 --> O2
+    C2 --> O3
+    C3 --> O4
     
     P1 --> D1
     P1 --> D2
@@ -324,10 +328,10 @@ graph TB
     end
     
     subgraph "🏗️ Coordination Engine"
-        C1[Agenda Builder]
-        C2[Progress Tracker]
-        C3[Recognition System]
-        C4[Documentation Manager]
+        CE1[Agenda Builder]
+        CE2[Progress Tracker]
+        CE3[Recognition System]
+        CE4[Documentation Manager]
     end
     
     subgraph "📤 Output & Actions"
@@ -361,22 +365,26 @@ graph TB
     A1 --> O3
     A1 --> O4
     
-    A1 --> C1
-    A1 --> C2
-    A1 --> C3
-    A1 --> C4
+    A1 --> CE1
+    A1 --> CE2
+    A1 --> CE3
+    A1 --> CE4
     
-    P2 --> L1
-    P2 --> L2
-    P2 --> L3
-    P2 --> L4
-    P2 --> L5
+    P1 --> C1
+    P2 --> C2
+    P3 --> C3
+    P4 --> C4
     
-    A1 --> O1
-    A1 --> O2
-    A1 --> O3
-    A1 --> O4
-    A1 --> O5
+    C1 --> O1
+    C2 --> O1
+    C3 --> O1
+    C4 --> O1
+    C5 --> O1
+    
+    C1 --> O2
+    C2 --> O3
+    C3 --> O4
+    C4 --> O5
     
     P1 --> D1
     P1 --> D2
@@ -487,10 +495,15 @@ graph TB
     P2 --> K4
     P2 --> K5
     
-    A1 --> O1
-    A1 --> O2
-    A1 --> O3
-    A1 --> O4
+    C1 --> O1
+    C2 --> O1
+    C3 --> O1
+    C4 --> O1
+    C5 --> O1
+    
+    C1 --> O2
+    C2 --> O3
+    C3 --> O4
     
     P1 --> D1
     P1 --> D2
@@ -645,10 +658,10 @@ graph TB
     end
     
     subgraph "🏗️ Coordination Engine"
-        C1[Agenda Builder]
-        C2[Progress Tracker]
-        C3[Recognition System]
-        C4[Documentation Manager]
+        CE1[Agenda Builder]
+        CE2[Progress Tracker]
+        CE3[Recognition System]
+        CE4[Documentation Manager]
     end
     
     subgraph "📤 Output & Actions"
@@ -682,22 +695,26 @@ graph TB
     A1 --> O3
     A1 --> O4
     
-    A1 --> C1
-    A1 --> C2
-    A1 --> C3
-    A1 --> C4
+    A1 --> CE1
+    A1 --> CE2
+    A1 --> CE3
+    A1 --> CE4
     
-    P2 --> L1
-    P2 --> L2
-    P2 --> L3
-    P2 --> L4
-    P2 --> L5
+    P1 --> C1
+    P2 --> C2
+    P3 --> C3
+    P4 --> C4
     
-    A1 --> O1
-    A1 --> O2
-    A1 --> O3
-    A1 --> O4
-    A1 --> O5
+    C1 --> O1
+    C2 --> O1
+    C3 --> O1
+    C4 --> O1
+    C5 --> O1
+    
+    C1 --> O2
+    C2 --> O3
+    C3 --> O4
+    C4 --> O5
     
     P1 --> D1
     P1 --> D2
