@@ -23,8 +23,8 @@ graph LR
     subgraph "🤖 Agent Layer"
         subgraph "Agent Specializations"
             A1["ReF[AI] DAO Community Agent<br/>Education & Onboarding"]
-            A2["ReF[AI] Local Node Agent<br/>Regional Expertise"]
-            A3["ReF[AI] DAO Global Agent<br/>DAO Operations"]
+            A2["ReF[AI] DAO Global Agent<br/>DAO Operations"]
+            A3["ReF[AI] Local Node Agent<br/>Regional Expertise"]
         end
     end
     
@@ -109,7 +109,9 @@ graph LR
 
 ## 🌱 Agent-Specific Architectures
 
-### 1. 🎓 ReF[AI] DAO Community Agent - Education & Onboarding
+### 1. 🌱 ReF[AI] DAO Community Agent
+
+**🔗 Agent Documentation**: [`refi-dao-community-agent/README.md`](refi-dao-community-agent/README.md)
 
 ```mermaid
 graph LR
@@ -179,77 +181,15 @@ graph LR
     CAP4 --> PUB2
 ```
 
-### 2. 🌍 ReF[AI] Local Node Agent - Regional Expertise
+**🎯 Target Audience**: Public, newcomers  
+**🌐 Primary Platforms**: Twitter, Telegram  
+**⚡ Core Capabilities**: Education, Onboarding  
+**📚 Knowledge Focus**: ReFi concepts, Blog posts  
+**🔧 Plugin Emphasis**: Knowledge RAG, Social  
 
-```mermaid
-graph LR
-    %% External Interfaces - Regional Focus
-    subgraph "🌐 Regional Interfaces"
-        REG1["Discord<br/>Community Hubs"]
-        REG2["Twitter<br/>Local Outreach"]
-        REG3["Local Events<br/>In-Person"]
-    end
-    
-    %% ReF[AI] Local Node Agent
-    subgraph "🤖 ReF[AI] Local Node Agent"
-        LNA["Regional Expertise<br/>Community Building"]
-    end
-    
-    %% ElizaOS Runtime
-    subgraph "⚙️ ElizaOS Runtime"
-        RT2["AgentRuntime"]
-        MEM2["Memory System"]
-    end
-    
-    %% Regional Plugins
-    subgraph "🔧 Regional Plugins"
-        PLG4["Knowledge RAG<br/>Regional Content"]
-        PLG5["Platform Connectors<br/>Discord • Twitter"]
-        PLG6["SQL Database<br/>Local Data Tracking"]
-    end
-    
-    %% Regional Capabilities
-    subgraph "⚡ Regional Capabilities"
-        CAP5["Local Setup Assistance"]
-        CAP6["Community Development"]
-        CAP7["Sustainability Projects"]
-        CAP8["Regional Partnerships"]
-    end
-    
-    %% Regional Knowledge
-    subgraph "📚 Regional Knowledge"
-        KB4["Local Climate Data<br/>Environmental Context"]
-        KB5["Local Organizations<br/>Community Partners"]
-        KB6["Sustainability Projects<br/>Regional Initiatives"]
-    end
-    
-    %% Data Flow
-    REG1 --> LNA
-    REG2 --> LNA
-    REG3 --> LNA
-    
-    LNA --> RT2
-    RT2 --> PLG4
-    RT2 --> PLG5
-    RT2 --> PLG6
-    RT2 --> MEM2
-    
-    PLG4 --> KB4
-    PLG4 --> KB5
-    PLG4 --> KB6
-    
-    PLG4 --> CAP5
-    PLG5 --> CAP6
-    PLG6 --> CAP7
-    PLG4 --> CAP8
-    
-    CAP5 --> REG1
-    CAP6 --> REG2
-    CAP7 --> REG3
-    CAP8 --> REG1
-```
+### 2. 🌐 ReF[AI] DAO Global Agent
 
-### 3. 🏛️ ReF[AI] DAO Global Agent - DAO Operations
+**🔗 Agent Documentation**: [`refi-dao-global-agent/README.md`](refi-dao-global-agent/README.md)
 
 ```mermaid
 graph LR
@@ -319,15 +259,99 @@ graph LR
     CAP12 --> INT1
 ```
 
+**🎯 Target Audience**: Internal team  
+**🌐 Primary Platforms**: Telegram  
+**⚡ Core Capabilities**: Operations, Coordination  
+**📚 Knowledge Focus**: DAO governance, Processes  
+**🔧 Plugin Emphasis**: SQL Database, Task management  
+
+### 3. 🌍 ReF[AI] Local Node Agent
+
+**🔗 Agent Documentation**: [`refi-local-node-agent/README.md`](refi-local-node-agent/README.md)
+
+```mermaid
+graph LR
+    %% External Interfaces - Regional Focus
+    subgraph "🌐 Regional Interfaces"
+        REG1["Discord<br/>Community Hubs"]
+        REG2["Twitter<br/>Local Outreach"]
+        REG3["Local Events<br/>In-Person"]
+    end
+    
+    %% ReF[AI] Local Node Agent
+    subgraph "🤖 ReF[AI] Local Node Agent"
+        LNA["Regional Expertise<br/>Community Building"]
+    end
+    
+    %% ElizaOS Runtime
+    subgraph "⚙️ ElizaOS Runtime"
+        RT2["AgentRuntime"]
+        MEM2["Memory System"]
+    end
+    
+    %% Regional Plugins
+    subgraph "🔧 Regional Plugins"
+        PLG4["Knowledge RAG<br/>Regional Content"]
+        PLG5["Platform Connectors<br/>Discord • Twitter"]
+        PLG6["SQL Database<br/>Local Data Tracking"]
+    end
+    
+    %% Regional Capabilities
+    subgraph "⚡ Regional Capabilities"
+        CAP5["Local Setup Assistance"]
+        CAP6["Community Development"]
+        CAP7["Sustainability Projects"]
+        CAP8["Regional Partnerships"]
+    end
+    
+    %% Regional Knowledge
+    subgraph "📚 Regional Knowledge"
+        KB4["Local Climate Data<br/>Environmental Context"]
+        KB5["Local Organizations<br/>Community Partners"]
+        KB6["Sustainability Projects<br/>Regional Initiatives"]
+    end
+    
+    %% Data Flow
+    REG1 --> LNA
+    REG2 --> LNA
+    REG3 --> LNA
+    
+    LNA --> RT2
+    RT2 --> PLG4
+    RT2 --> PLG5
+    RT2 --> PLG6
+    RT2 --> MEM2
+    
+    PLG4 --> KB4
+    PLG4 --> KB5
+    PLG4 --> KB6
+    
+    PLG4 --> CAP5
+    PLG5 --> CAP6
+    PLG6 --> CAP7
+    PLG4 --> CAP8
+    
+    CAP5 --> REG1
+    CAP6 --> REG2
+    CAP7 --> REG3
+    CAP8 --> REG1
+```
+
+**🎯 Target Audience**: Local nodes & communities  
+**🌐 Primary Platforms**: Telegram, Twitter  
+**⚡ Core Capabilities**: Regional expertise  
+**📚 Knowledge Focus**: Local data, Climate info  
+**🔧 Plugin Emphasis**: Knowledge RAG, Data tracking
+
 ## 🔄 Agent Comparison
 
-| Aspect | 🎓 ReF[AI] DAO Community Agent | 🌍 ReF[AI] Local Node Agent | 🏛️ ReF[AI] DAO Global Agent |
+| Aspect | 🌱 ReF[AI] DAO Community Agent | 🌐 ReF[AI] DAO Global Agent | 🌍 ReF[AI] Local Node Agent |
 |--------|------------------------------|------------------------------|------------------------------|
-| **🎯 Target Audience** | Public, newcomers | Local communities | Internal team |
-| **🌐 Primary Platforms** | Twitter, Telegram | Discord, Twitter | Private Telegram |
-| **⚡ Core Capabilities** | Education, Onboarding | Regional expertise | Operations, Coordination |
-| **📚 Knowledge Focus** | ReFi concepts, Blog posts | Local data, Climate info | DAO governance, Processes |
-| **🔧 Plugin Emphasis** | Knowledge RAG, Social | Knowledge RAG, Data tracking | SQL Database, Task management |
+| **🎯 Target Audience** | Public, newcomers | Internal team | Local nodes & communities |
+| **🌐 Primary Platforms** | Twitter, Telegram | Telegram | Telegram, Twitter |
+| **⚡ Core Capabilities** | Education, Onboarding | Operations, Coordination | Regional expertise |
+| **📚 Knowledge Focus** | ReFi concepts, Blog posts | DAO governance, Processes | Local data, Climate info |
+| **🔧 Plugin Emphasis** | Knowledge RAG, Social | SQL Database, Task management | Knowledge RAG, Data tracking |
 
 ### 🔧 Shared Foundation
 
@@ -359,21 +383,21 @@ refi-agent-ecosystem/
 ├── tsconfig.json                       # TypeScript configuration
 ├── bunfig.toml                         # Bun package manager configuration
 │
-├── refi-knowledge-agent/               # 🎓 ReF[AI] DAO Community Agent
+├── refi-dao-community-agent/           # 🌱 ReF[AI] DAO Community Agent
 │   ├── src/
 │   ├── knowledge/                     # 📚 Knowledge base for ReFi education
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
-├── refi-local-node-template/           # 🌍 ReF[AI] Local Node Agent
+├── refi-dao-global-agent/              # 🌐 ReF[AI] DAO Global Agent
 │   ├── src/
-│   ├── knowledge/                     # 📍 Local region-specific knowledge
+│   ├── knowledge/                     # 📋 Operational knowledge base
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 │
-├── refi-dao-coordinator/               # 🏛️ ReF[AI] DAO Global Agent
+├── refi-local-node-agent/              # 🌍 ReF[AI] Local Node Agent
 │   ├── src/
-│   ├── knowledge/                     # 📋 Operational knowledge base
+│   ├── knowledge/                     # 📍 Local region-specific knowledge
 │   ├── README.md                      # Agent-specific documentation
 │   └── package.json                   # Agent dependencies
 ```
@@ -382,7 +406,7 @@ refi-agent-ecosystem/
 
 ### Core Components
 - **Character Definition**: Personality, knowledge, and behavior configuration
-- **Plugin System**: Modular capabilities (SQL, knowledge, platform integrations)  
+- **Plugin System**: Modular capabilities (SQL, knowledge, platform integrations)
 - **Knowledge Base**: RAG-enabled document processing for specialized knowledge
 - **Platform Connectors**: Discord, Twitter, Telegram integrations
 - **Runtime Environment**: ElizaOS agent runtime with full feature support
@@ -396,7 +420,7 @@ All agents use a common plugin configuration with conditional loading:
 
 ### Monorepo Structure
 - **Root Configuration**: Shared TypeScript, Bun, and Turbo configurations
-- **Individual Agents**: Self-contained projects with their own dependencies  
+- **Individual Agents**: Self-contained projects with their own dependencies
 - **Shared Dependencies**: Core ElizaOS packages shared across all agents
 - **Build System**: Turbo for efficient building and development
 
@@ -446,15 +470,15 @@ Each agent can be run independently:
 
 ```bash
 # ReF[AI] DAO Community Agent
-cd refi-knowledge-agent
+cd refi-dao-community-agent
+bun run start
+
+# ReF[AI] DAO Global Agent  
+cd refi-dao-global-agent
 bun run start
 
 # ReF[AI] Local Node Agent
-cd refi-local-node-template
-bun run start
-
-# ReF[AI] DAO Global Agent
-cd refi-dao-coordinator
+cd refi-local-node-agent
 bun run start
 ```
 
@@ -465,7 +489,7 @@ bun run start
 bun run test
 
 # Run tests for specific agent
-cd refi-knowledge-agent
+cd refi-dao-community-agent
 bun run test
 
 # Development mode with hot reload
