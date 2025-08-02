@@ -160,7 +160,7 @@ graph TB
 **Character Definition**: `refi-local-node-template/src/character.ts`
 
 ```mermaid
-graph TB
+graph LR
     subgraph "🔌 Input Channels"
         I1[Discord Server]
         I2[Twitter Local Feed]
@@ -291,7 +291,7 @@ graph TB
 **Character Definition**: `refi-dao-coordinator/src/refiDaoCoordinator.ts`
 
 ```mermaid
-graph TB
+graph LR
     subgraph "🔌 Input Channels"
         I1[Telegram Private]
         I2[Team Requests]
@@ -422,7 +422,7 @@ graph TB
 ### 1. ReFi Knowledge Agent - Complete System Overview
 
 ```mermaid
-graph TB
+graph LR
     subgraph "🔌 Input Channels"
         I1[Twitter API]
         I2[Telegram Bot]
@@ -514,7 +514,7 @@ graph TB
 ### 2. ReFi Local Node Template Agent - Complete System Overview
 
 ```mermaid
-graph TB
+graph LR
     subgraph "🔌 Input Channels"
         I1[Discord Server]
         I2[Twitter Local Feed]
@@ -621,7 +621,7 @@ graph TB
 ### 3. ReFi DAO Coordinator - Complete System Overview
 
 ```mermaid
-graph TB
+graph LR
     subgraph "🔌 Input Channels"
         I1[Telegram Private]
         I2[Team Requests]
